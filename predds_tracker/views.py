@@ -10,6 +10,12 @@ def home(request):
         context={'regions': sorted(list(Region.objects.all()), key=lambda x: x.name)}
     )
 
+def profile(request):
+    return render(
+        request, 'predds_tracker/profile.html',
+        context={}
+    )
+
 def log(request):
     return render(
         request, 'predds_tracker/log.html',
