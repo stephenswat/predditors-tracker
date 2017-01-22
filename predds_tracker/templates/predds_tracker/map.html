@@ -1,0 +1,17 @@
+{% extends "predds_tracker/base.html" %}
+{% block title %}Map{% endblock %}
+{% block content %}
+
+<h1>{{ region.name }}</h1>
+
+<ul>
+{% for c in campers %}
+<li>{{ c }}</li>
+{% endfor %}
+</ul>
+
+<div id="outermap" style="width: 1024px; height: 768px;">
+<object data="{% url 'region_svg' region=region.id %}" width="100%" height="768px" type="image/svg+xml"></object>
+</div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "predds_tracker/base.html" %}
+{% block title %}Log{% endblock %}
+{% block content %}
+
+<h1>Your Last 200 Records</h1>
+
+<table class="table table-striped">
+<thead>
+<tr>
+  <th>Time</th>
+  <th>Online</th>
+  <th>System</th>
+</tr>
+</thead>
+<tbody>
+{% for x in items %}
+<tr>
+  <td>{{ x.time }}</td>
+  <td>{{ x.online }}</td>
+  <td>{{ x.system.name }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}

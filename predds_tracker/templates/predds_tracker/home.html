@@ -1,0 +1,15 @@
+{% extends "predds_tracker/base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="alert alert-danger">
+  <strong>Opsec!</strong> Please only log your cloaky camping alts into this app!
+</div>
+
+<h1>Predditors Cloaky Camping Alt Tracker</h1>
+
+<div class="row">
+{% for x in regions %}
+<div class="col-md-2"><a href="{% url 'display_region' region=x.id %}">{{ x.name }}</a></div>
+{% endfor %}
+</div>
+{% endblock %}
