@@ -13,6 +13,7 @@ class Character(AbstractUser):
     """
 
     latest = models.ForeignKey('LocationRecord', related_name='+', null=True)
+    track = models.BooleanField(default=True)
 
     @property
     def ship_location(self):

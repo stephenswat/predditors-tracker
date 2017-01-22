@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from predds_tracker.models import LocationRecord, Character
+from predds_tracker.forms import CharacterForm
 from eve_sde.models import Region
 from collections import defaultdict
 
@@ -10,10 +12,16 @@ def home(request):
         context={'regions': sorted(list(Region.objects.all()), key=lambda x: x.name)}
     )
 
+@login_required
 def profile(request):
+    if request.method == 'POST':
+        form = CharacterForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+
     return render(
         request, 'predds_tracker/profile.html',
-        context={}
+        context={'form': CharacterForm(instance=request.user)}
     )
 
 def log(request):
