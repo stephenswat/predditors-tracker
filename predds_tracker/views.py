@@ -47,8 +47,6 @@ def map_svg(request, region):
     for x in campers:
         count[int(x.latest.system.id)] = True
 
-    print(count)
-
     return render(
         request, 'predds_tracker/maps/%d.svg' % int(region),
         context={'region': get_object_or_404(Region, id=region), 'camped': dict(count)},
