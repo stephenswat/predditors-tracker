@@ -1,12 +1,6 @@
 import os
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-SECRET_KEY = 'predds'
-
-DEBUG = True
-
-ALLOWED_HOSTS = []
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -67,18 +61,8 @@ WSGI_APPLICATION = 'predds_tracker.wsgi.application'
 AUTH_USER_MODEL = 'predds_tracker.Character'
 AUTHENTICATION_BACKENDS = ('social_core.backends.eveonline.EVEOnlineOAuth2',)
 SOCIAL_AUTH_EVEONLINE_SCOPE = ['characterLocationRead', 'esi-location.read_location.v1', 'esi-location.read_ship_type.v1']
-SOCIAL_AUTH_EVEONLINE_KEY = ''
-SOCIAL_AUTH_EVEONLINE_SECRET = ''
-SOCIAL_AUTH_REDIRECT_IS_HTTPS = False
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/login/eveonline/'
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 LANGUAGE_CODE = 'en-us'
 

@@ -23,7 +23,7 @@ you have the following scopes:
 Setup a configuration file (add the secret key and ID from the EVE developers
 page):
 
-    cp settings.py local_settings.py
+    cp predds_tracker/settings/local.template.py predds_tracker/settings/local.py
 
 Make the database with all the necessary tables and fill it with SDE data:
 
