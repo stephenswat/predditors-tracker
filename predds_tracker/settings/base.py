@@ -65,10 +65,10 @@ LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/login/eveonline/'
 
 LANGUAGE_CODE = 'en-us'
+DATETIME_FORMAT = 'F j, Y, H:i'
 
 TIME_ZONE = 'UTC'
 USE_I18N = False
-USE_L10N = False
 USE_TZ = False
 
 STATIC_URL = '/static/'
