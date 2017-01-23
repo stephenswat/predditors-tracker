@@ -1,283 +1,4 @@
 {% extends "predds_tracker/map_base.svg" %}{% block content %}
-<defs>
-    <symbol id="def30003599">
-        <a xlink:href="http://evemaps.dotlan.net/system/Faurulle" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003599 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Faurulle</text>
-        </a>
-    </symbol>
-    <symbol id="def30003600">
-        <a xlink:href="http://evemaps.dotlan.net/system/Agaullores" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003600 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Agaullores</text>
-        </a>
-    </symbol>
-    <symbol id="def30003593">
-        <a xlink:href="http://evemaps.dotlan.net/system/Stoure" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003593 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Stoure</text>
-        </a>
-    </symbol>
-    <symbol id="def30003601">
-        <a xlink:href="http://evemaps.dotlan.net/system/Babirmoult" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003601 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Babirmoult</text>
-        </a>
-    </symbol>
-    <symbol id="def30003598">
-        <a xlink:href="http://evemaps.dotlan.net/system/Ogaria" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003598 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Ogaria</text>
-        </a>
-    </symbol>
-    <symbol id="def30003597">
-        <a xlink:href="http://evemaps.dotlan.net/system/Hare" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003597 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Hare</text>
-        </a>
-    </symbol>
-    <symbol id="def30003592">
-        <a xlink:href="http://evemaps.dotlan.net/system/Lazer" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003592 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Lazer</text>
-        </a>
-    </symbol>
-    <symbol id="def30003596">
-        <a xlink:href="http://evemaps.dotlan.net/system/Oruse" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003596 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Oruse</text>
-        </a>
-    </symbol>
-    <symbol id="def30003595">
-        <a xlink:href="http://evemaps.dotlan.net/system/Arittant" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003595 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Arittant</text>
-        </a>
-    </symbol>
-    <symbol id="def30003594">
-        <a xlink:href="http://evemaps.dotlan.net/system/Heluene" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003594 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Heluene</text>
-        </a>
-    </symbol>
-    <symbol id="def30003590">
-        <a xlink:href="http://evemaps.dotlan.net/system/Arasare" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003590 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Arasare</text>
-        </a>
-    </symbol>
-    <symbol id="def30003606">
-        <a xlink:href="http://evemaps.dotlan.net/system/Toustain" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003606 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Toustain</text>
-        </a>
-    </symbol>
-    <symbol id="def30003607">
-        <a xlink:href="http://evemaps.dotlan.net/system/Straloin" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003607 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Straloin</text>
-        </a>
-    </symbol>
-    <symbol id="def30003591">
-        <a xlink:href="http://evemaps.dotlan.net/system/Yvelet" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003591 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Yvelet</text>
-        </a>
-    </symbol>
-    <symbol id="def30003605">
-        <a xlink:href="http://evemaps.dotlan.net/system/Eggheron" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003605 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Eggheron</text>
-        </a>
-    </symbol>
-    <symbol id="def30003589">
-        <a xlink:href="http://evemaps.dotlan.net/system/Vecodie" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003589 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Vecodie</text>
-        </a>
-    </symbol>
-    <symbol id="def30003586">
-        <a xlink:href="http://evemaps.dotlan.net/system/Gererique" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003586 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Gererique</text>
-        </a>
-    </symbol>
-    <symbol id="def30003604">
-        <a xlink:href="http://evemaps.dotlan.net/system/Pochelympe" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003604 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Pochelympe</text>
-        </a>
-    </symbol>
-    <symbol id="def30003603">
-        <a xlink:href="http://evemaps.dotlan.net/system/Ondree" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003603 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Ondree</text>
-        </a>
-    </symbol>
-    <symbol id="def30003602">
-        <a xlink:href="http://evemaps.dotlan.net/system/Ratillose" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003602 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Ratillose</text>
-        </a>
-    </symbol>
-    <symbol id="def30003572">
-        <a xlink:href="http://evemaps.dotlan.net/system/Vevelonel" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003572 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Vevelonel</text>
-        </a>
-    </symbol>
-    <symbol id="def30003571">
-        <a xlink:href="http://evemaps.dotlan.net/system/Anckee" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003571 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Anckee</text>
-        </a>
-    </symbol>
-    <symbol id="def30003588">
-        <a xlink:href="http://evemaps.dotlan.net/system/Yvaeroure" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003588 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Yvaeroure</text>
-        </a>
-    </symbol>
-    <symbol id="def30003582">
-        <a xlink:href="http://evemaps.dotlan.net/system/Odinesyn" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003582 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Odinesyn</text>
-        </a>
-    </symbol>
-    <symbol id="def30003587">
-        <a xlink:href="http://evemaps.dotlan.net/system/Harner" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003587 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Harner</text>
-        </a>
-    </symbol>
-    <symbol id="def30003585">
-        <a xlink:href="http://evemaps.dotlan.net/system/Aeter" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003585 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Aeter</text>
-        </a>
-    </symbol>
-    <symbol id="def30003570">
-        <a xlink:href="http://evemaps.dotlan.net/system/Elore" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003570 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Elore</text>
-        </a>
-    </symbol>
-    <symbol id="def30003568">
-        <a xlink:href="http://evemaps.dotlan.net/system/Meunvon" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003568 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Meunvon</text>
-        </a>
-    </symbol>
-    <symbol id="def30003581">
-        <a xlink:href="http://evemaps.dotlan.net/system/Postouvin" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003581 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Postouvin</text>
-        </a>
-    </symbol>
-    <symbol id="def30003584">
-        <a xlink:href="http://evemaps.dotlan.net/system/Sarline" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003584 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Sarline</text>
-        </a>
-    </symbol>
-    <symbol id="def30003567">
-        <a xlink:href="http://evemaps.dotlan.net/system/Yveve" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003567 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Yveve</text>
-        </a>
-    </symbol>
-    <symbol id="def30003578">
-        <a xlink:href="http://evemaps.dotlan.net/system/Octanneve" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003578 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Octanneve</text>
-        </a>
-    </symbol>
-    <symbol id="def30003565">
-        <a xlink:href="http://evemaps.dotlan.net/system/Conomette" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003565 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Conomette</text>
-        </a>
-    </symbol>
-    <symbol id="def30003580">
-        <a xlink:href="http://evemaps.dotlan.net/system/Niballe" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003580 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Niballe</text>
-        </a>
-    </symbol>
-    <symbol id="def30003566">
-        <a xlink:href="http://evemaps.dotlan.net/system/Aimoguier" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003566 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Aimoguier</text>
-        </a>
-    </symbol>
-    <symbol id="def30003576">
-        <a xlink:href="http://evemaps.dotlan.net/system/Maire" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003576 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Maire</text>
-        </a>
-    </symbol>
-    <symbol id="def30003575">
-        <a xlink:href="http://evemaps.dotlan.net/system/Lour" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003575 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Lour</text>
-        </a>
-    </symbol>
-    <symbol id="def30003583">
-        <a xlink:href="http://evemaps.dotlan.net/system/Weraroix" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003583 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Weraroix</text>
-        </a>
-    </symbol>
-    <symbol id="def30003569">
-        <a xlink:href="http://evemaps.dotlan.net/system/Cadelanne" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003569 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Cadelanne</text>
-        </a>
-    </symbol>
-    <symbol id="def30003579">
-        <a xlink:href="http://evemaps.dotlan.net/system/Larryn" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003579 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Larryn</text>
-        </a>
-    </symbol>
-    <symbol id="def30003577">
-        <a xlink:href="http://evemaps.dotlan.net/system/Oerse" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003577 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Oerse</text>
-        </a>
-    </symbol>
-    <symbol id="def30003574">
-        <a xlink:href="http://evemaps.dotlan.net/system/Boystin" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003574 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Boystin</text>
-        </a>
-    </symbol>
-    <symbol id="def30003573">
-        <a xlink:href="http://evemaps.dotlan.net/system/Pertnineere" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003573 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Pertnineere</text>
-        </a>
-    </symbol>
-    <symbol id="def30004233">
-        <a xlink:href="http://evemaps.dotlan.net/system/Shirshocin" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30004233 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Shirshocin</text>
-        </a>
-    </symbol>
-    <symbol id="def30003345">
-        <a xlink:href="http://evemaps.dotlan.net/system/D85-VD" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003345 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">D85-VD</text>
-        </a>
-    </symbol>
-    <symbol id="def30003307">
-        <a xlink:href="http://evemaps.dotlan.net/system/Y9G-KS" target="_top">
-            <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003307 %}camped{% endif %}" />
-            <text x="28" y="18" class="ss" text-anchor="middle">Y9G-KS</text>
-        </a>
-    </symbol>
-</defs>
-
 <g>
     <line x1="673.5" y1="279.5" x2="793.5" y2="289.5" class="jr" />
     <line x1="673.5" y1="279.5" x2="688.5" y2="219.5" class="j" />
@@ -335,52 +56,280 @@
     <line x1="318.5" y1="74.5" x2="318.5" y2="119.5" class="j" />
 </g>
 
-<g>
-    <use x="45" y="265" width="62.5" height="30" xlink:href="#def30003599" />
-    <use x="45" y="340" width="62.5" height="30" xlink:href="#def30003600" />
-    <use x="105" y="515" width="62.5" height="30" xlink:href="#def30003593" />
-    <use x="110" y="215" width="62.5" height="30" xlink:href="#def30003601" />
-    <use x="110" y="305" width="62.5" height="30" xlink:href="#def30003598" />
-    <use x="170" y="265" width="62.5" height="30" xlink:href="#def30003597" />
-    <use x="175" y="420" width="62.5" height="30" xlink:href="#def30003592" />
-    <use x="195" y="320" width="62.5" height="30" xlink:href="#def30003596" />
-    <use x="240" y="215" width="62.5" height="30" xlink:href="#def30003595" />
-    <use x="240" y="265" width="62.5" height="30" xlink:href="#def30003594" />
-    <use x="270" y="420" width="62.5" height="30" xlink:href="#def30003590" />
-    <use x="290" y="60" width="62.5" height="30" xlink:href="#def30003606" />
-    <use x="290" y="105" width="62.5" height="30" xlink:href="#def30003607" />
-    <use x="315" y="365" width="62.5" height="30" xlink:href="#def30003591" />
-    <use x="335" y="15" width="62.5" height="30" xlink:href="#def30003605" />
-    <use x="340" y="490" width="62.5" height="30" xlink:href="#def30003589" />
-    <use x="355" y="585" width="62.5" height="30" xlink:href="#def30003586" />
-    <use x="380" y="60" width="62.5" height="30" xlink:href="#def30003604" />
-    <use x="380" y="105" width="62.5" height="30" xlink:href="#def30003603" />
-    <use x="380" y="150" width="62.5" height="30" xlink:href="#def30003602" />
-    <use x="380" y="220" width="62.5" height="30" xlink:href="#def30003572" />
-    <use x="380" y="265" width="62.5" height="30" xlink:href="#def30003571" />
-    <use x="425" y="505" width="62.5" height="30" xlink:href="#def30003588" />
-    <use x="450" y="570" width="62.5" height="30" xlink:href="#def30003582" />
-    <use x="450" y="640" width="62.5" height="30" xlink:href="#def30003587" />
-    <use x="450" y="700" width="62.5" height="30" xlink:href="#def30003585" />
-    <use x="470" y="265" width="62.5" height="30" xlink:href="#def30003570" />
-    <use x="515" y="225" width="62.5" height="30" xlink:href="#def30003568" />
-    <use x="545" y="570" width="62.5" height="30" xlink:href="#def30003581" />
-    <use x="550" y="660" width="62.5" height="30" xlink:href="#def30003584" />
-    <use x="555" y="265" width="62.5" height="30" xlink:href="#def30003567" />
-    <use x="570" y="495" width="62.5" height="30" xlink:href="#def30003578" />
-    <use x="645" y="265" width="62.5" height="30" xlink:href="#def30003565" />
-    <use x="645" y="575" width="62.5" height="30" xlink:href="#def30003580" />
-    <use x="660" y="205" width="62.5" height="30" xlink:href="#def30003566" />
-    <use x="670" y="480" width="62.5" height="30" xlink:href="#def30003576" />
-    <use x="695" y="400" width="62.5" height="30" xlink:href="#def30003575" />
-    <use x="695" y="645" width="62.5" height="30" xlink:href="#def30003583" />
-    <use x="700" y="165" width="62.5" height="30" xlink:href="#def30003569" />
-    <use x="750" y="590" width="62.5" height="30" xlink:href="#def30003579" />
-    <use x="800" y="460" width="62.5" height="30" xlink:href="#def30003577" />
-    <use x="820" y="400" width="62.5" height="30" xlink:href="#def30003574" />
-    <use x="830" y="325" width="62.5" height="30" xlink:href="#def30003573" />
-    <use x="5" y="410" width="62.5" height="30" xlink:href="#def30004233" />
-    <use x="15" y="195" width="62.5" height="30" xlink:href="#def30003345" />
-    <use x="765" y="275" width="62.5" height="30" xlink:href="#def30003307" />
+<g id="def30003579" transform="translate(750, 590)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Larryn" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003579 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Larryn</text>
+    </a>
+</g>
+<g id="def30003605" transform="translate(335, 15)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Eggheron" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003605 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Eggheron</text>
+    </a>
+</g>
+<g id="def30004233" transform="translate(5, 410)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Shirshocin" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30004233 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Shirshocin</text>
+    </a>
+</g>
+<g id="def30003583" transform="translate(695, 645)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Weraroix" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003583 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Weraroix</text>
+    </a>
+</g>
+<g id="def30003580" transform="translate(645, 575)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Niballe" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003580 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Niballe</text>
+    </a>
+</g>
+<g id="def30003569" transform="translate(700, 165)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Cadelanne" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003569 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Cadelanne</text>
+    </a>
+</g>
+<g id="def30003582" transform="translate(450, 570)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Odinesyn" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003582 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Odinesyn</text>
+    </a>
+</g>
+<g id="def30003345" transform="translate(15, 195)">
+    <a xlink:href="http://evemaps.dotlan.net/system/D85-VD" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003345 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">D85-VD</text>
+    </a>
+</g>
+<g id="def30003581" transform="translate(545, 570)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Postouvin" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003581 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Postouvin</text>
+    </a>
+</g>
+<g id="def30003590" transform="translate(270, 420)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Arasare" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003590 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Arasare</text>
+    </a>
+</g>
+<g id="def30003591" transform="translate(315, 365)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Yvelet" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003591 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Yvelet</text>
+    </a>
+</g>
+<g id="def30003592" transform="translate(175, 420)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Lazer" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003592 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Lazer</text>
+    </a>
+</g>
+<g id="def30003593" transform="translate(105, 515)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Stoure" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003593 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Stoure</text>
+    </a>
+</g>
+<g id="def30003594" transform="translate(240, 265)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Heluene" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003594 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Heluene</text>
+    </a>
+</g>
+<g id="def30003595" transform="translate(240, 215)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Arittant" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003595 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Arittant</text>
+    </a>
+</g>
+<g id="def30003596" transform="translate(195, 320)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Oruse" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003596 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Oruse</text>
+    </a>
+</g>
+<g id="def30003597" transform="translate(170, 265)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Hare" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003597 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Hare</text>
+    </a>
+</g>
+<g id="def30003598" transform="translate(110, 305)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Ogaria" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003598 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Ogaria</text>
+    </a>
+</g>
+<g id="def30003599" transform="translate(45, 265)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Faurulle" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003599 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Faurulle</text>
+    </a>
+</g>
+<g id="def30003574" transform="translate(820, 400)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Boystin" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003574 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Boystin</text>
+    </a>
+</g>
+<g id="def30003575" transform="translate(695, 400)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Lour" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003575 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Lour</text>
+    </a>
+</g>
+<g id="def30003572" transform="translate(380, 220)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Vevelonel" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003572 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Vevelonel</text>
+    </a>
+</g>
+<g id="def30003573" transform="translate(830, 325)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Pertnineere" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003573 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Pertnineere</text>
+    </a>
+</g>
+<g id="def30003570" transform="translate(470, 265)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Elore" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003570 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Elore</text>
+    </a>
+</g>
+<g id="def30003571" transform="translate(380, 265)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Anckee" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003571 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Anckee</text>
+    </a>
+</g>
+<g id="def30003587" transform="translate(450, 640)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Harner" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003587 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Harner</text>
+    </a>
+</g>
+<g id="def30003568" transform="translate(515, 225)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Meunvon" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003568 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Meunvon</text>
+    </a>
+</g>
+<g id="def30003585" transform="translate(450, 700)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Aeter" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003585 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Aeter</text>
+    </a>
+</g>
+<g id="def30003584" transform="translate(550, 660)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Sarline" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003584 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Sarline</text>
+    </a>
+</g>
+<g id="def30003576" transform="translate(670, 480)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Maire" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003576 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Maire</text>
+    </a>
+</g>
+<g id="def30003577" transform="translate(800, 460)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Oerse" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003577 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Oerse</text>
+    </a>
+</g>
+<g id="def30003307" transform="translate(765, 275)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Y9G-KS" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003307 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Y9G-KS</text>
+    </a>
+</g>
+<g id="def30003578" transform="translate(570, 495)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Octanneve" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003578 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Octanneve</text>
+    </a>
+</g>
+<g id="def30003600" transform="translate(45, 340)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Agaullores" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003600 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Agaullores</text>
+    </a>
+</g>
+<g id="def30003601" transform="translate(110, 215)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Babirmoult" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003601 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Babirmoult</text>
+    </a>
+</g>
+<g id="def30003602" transform="translate(380, 150)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Ratillose" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003602 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Ratillose</text>
+    </a>
+</g>
+<g id="def30003603" transform="translate(380, 105)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Ondree" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003603 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Ondree</text>
+    </a>
+</g>
+<g id="def30003604" transform="translate(380, 60)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Pochelympe" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003604 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Pochelympe</text>
+    </a>
+</g>
+<g id="def30003586" transform="translate(355, 585)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Gererique" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003586 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Gererique</text>
+    </a>
+</g>
+<g id="def30003606" transform="translate(290, 60)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Toustain" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003606 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Toustain</text>
+    </a>
+</g>
+<g id="def30003607" transform="translate(290, 105)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Straloin" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003607 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Straloin</text>
+    </a>
+</g>
+<g id="def30003589" transform="translate(340, 490)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Vecodie" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003589 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Vecodie</text>
+    </a>
+</g>
+<g id="def30003588" transform="translate(425, 505)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Yvaeroure" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003588 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Yvaeroure</text>
+    </a>
+</g>
+<g id="def30003565" transform="translate(645, 265)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Conomette" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003565 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Conomette</text>
+    </a>
+</g>
+<g id="def30003567" transform="translate(555, 265)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Yveve" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003567 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Yveve</text>
+    </a>
+</g>
+<g id="def30003566" transform="translate(660, 205)">
+    <a xlink:href="http://evemaps.dotlan.net/system/Aimoguier" target="_top">
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003566 %}camped{% endif %}" />
+        <text x="28" y="18" class="ss" text-anchor="middle">Aimoguier</text>
+    </a>
 </g>
 {% endblock %}
