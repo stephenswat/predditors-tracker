@@ -26,6 +26,7 @@ def profile(request):
     )
 
 
+@login_required
 def log(request):
     return render(
         request, 'predds_tracker/log.html',
