@@ -1,4 +1,6 @@
-{% extends "predds_tracker/map_base.svg" %}{% block content %}
+{% extends "predds_tracker/map_base.svg" %}
+{% load map_colour %}
+{% block content %}
 <g>
     <line x1="333.5" y1="459.5" x2="363.5" y2="499.5" class="j" />
     <line x1="333.5" y1="459.5" x2="268.5" y2="459.5" class="j" />
@@ -146,655 +148,764 @@
 
 <g id="def30002642" transform="translate(35, 395)">
     <a xlink:href="http://evemaps.dotlan.net/system/Iyen-Oursta" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30002642 %}camped{% endif %}" />
+        <title>Iyen-Oursta: {{ npc_kills.30002642 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30002642 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Iyen-Oursta</text>
     </a>
 </g>
 <g id="def30000168" transform="translate(785, 185)">
     <a xlink:href="http://evemaps.dotlan.net/system/Friggi" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000168 %}camped{% endif %}" />
+        <title>Friggi: {{ npc_kills.30000168 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000168 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Friggi</text>
     </a>
 </g>
 <g id="def30000169" transform="translate(770, 135)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ihakana" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000169 %}camped{% endif %}" />
+        <title>Ihakana: {{ npc_kills.30000169 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000169 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ihakana</text>
     </a>
 </g>
 <g id="def30010141" transform="translate(0, 290)">
     <a xlink:href="http://evemaps.dotlan.net/system/Sakenta" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30010141 %}camped{% endif %}" />
+        <title>Sakenta: {{ npc_kills.30010141 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30010141 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Sakenta</text>
     </a>
 </g>
 <g id="def30000160" transform="translate(740, 515)">
     <a xlink:href="http://evemaps.dotlan.net/system/Reisen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000160 %}camped{% endif %}" />
+        <title>Reisen: {{ npc_kills.30000160 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000160 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Reisen</text>
     </a>
 </g>
 <g id="def30000161" transform="translate(670, 535)">
     <a xlink:href="http://evemaps.dotlan.net/system/Purjola" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000161 %}camped{% endif %}" />
+        <title>Purjola: {{ npc_kills.30000161 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000161 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Purjola</text>
     </a>
 </g>
 <g id="def30000162" transform="translate(705, 575)">
     <a xlink:href="http://evemaps.dotlan.net/system/Maila" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000162 %}camped{% endif %}" />
+        <title>Maila: {{ npc_kills.30000162 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000162 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Maila</text>
     </a>
 </g>
 <g id="def30000163" transform="translate(795, 565)">
     <a xlink:href="http://evemaps.dotlan.net/system/Akora" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000163 %}camped{% endif %}" />
+        <title>Akora: {{ npc_kills.30000163 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000163 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Akora</text>
     </a>
 </g>
 <g id="def30000164" transform="translate(780, 600)">
     <a xlink:href="http://evemaps.dotlan.net/system/Messoya" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000164 %}camped{% endif %}" />
+        <title>Messoya: {{ npc_kills.30000164 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000164 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Messoya</text>
     </a>
 </g>
 <g id="def30000165" transform="translate(785, 280)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ishisomo" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000165 %}camped{% endif %}" />
+        <title>Ishisomo: {{ npc_kills.30000165 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000165 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ishisomo</text>
     </a>
 </g>
 <g id="def30000166" transform="translate(755, 235)">
     <a xlink:href="http://evemaps.dotlan.net/system/Airmia" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000166 %}camped{% endif %}" />
+        <title>Airmia: {{ npc_kills.30000166 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000166 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Airmia</text>
     </a>
 </g>
 <g id="def30000167" transform="translate(830, 230)">
     <a xlink:href="http://evemaps.dotlan.net/system/Sakkikainen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000167 %}camped{% endif %}" />
+        <title>Sakkikainen: {{ npc_kills.30000167 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000167 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Sakkikainen</text>
     </a>
 </g>
 <g id="def30000250" transform="translate(151, 1)">
     <a xlink:href="http://evemaps.dotlan.net/system/P3EN-E" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000250 %}camped{% endif %}" />
+        <title>P3EN-E: {{ npc_kills.30000250 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000250 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">P3EN-E</text>
     </a>
 </g>
 <g id="def30030141" transform="translate(200, 545)">
     <a xlink:href="http://evemaps.dotlan.net/system/Uitra" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30030141 %}camped{% endif %}" />
+        <title>Uitra: {{ npc_kills.30030141 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30030141 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Uitra</text>
     </a>
 </g>
 <g id="def30002754" transform="translate(305, 235)">
     <a xlink:href="http://evemaps.dotlan.net/system/Alikara" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30002754 %}camped{% endif %}" />
+        <title>Alikara: {{ npc_kills.30002754 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30002754 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Alikara</text>
     </a>
 </g>
 <g id="def30000159" transform="translate(680, 495)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ikami" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000159 %}camped{% endif %}" />
+        <title>Ikami: {{ npc_kills.30000159 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000159 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ikami</text>
     </a>
 </g>
 <g id="def30000158" transform="translate(785, 335)">
     <a xlink:href="http://evemaps.dotlan.net/system/Olo" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000158 %}camped{% endif %}" />
+        <title>Olo: {{ npc_kills.30000158 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000158 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Olo</text>
     </a>
 </g>
 <g id="def30000155" transform="translate(720, 345)">
     <a xlink:href="http://evemaps.dotlan.net/system/Obanen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000155 %}camped{% endif %}" />
+        <title>Obanen: {{ npc_kills.30000155 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000155 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Obanen</text>
     </a>
 </g>
 <g id="def30000154" transform="translate(650, 315)">
     <a xlink:href="http://evemaps.dotlan.net/system/Liekuri" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000154 %}camped{% endif %}" />
+        <title>Liekuri: {{ npc_kills.30000154 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000154 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Liekuri</text>
     </a>
 </g>
 <g id="def30000157" transform="translate(595, 370)">
     <a xlink:href="http://evemaps.dotlan.net/system/Otela" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000157 %}camped{% endif %}" />
+        <title>Otela: {{ npc_kills.30000157 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000157 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Otela</text>
     </a>
 </g>
 <g id="def30000156" transform="translate(574, 294)">
     <a xlink:href="http://evemaps.dotlan.net/system/Josameto" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000156 %}camped{% endif %}" />
+        <title>Josameto: {{ npc_kills.30000156 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000156 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Josameto</text>
     </a>
 </g>
 <g id="def30000151" transform="translate(475, 360)">
     <a xlink:href="http://evemaps.dotlan.net/system/Uoyonen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000151 %}camped{% endif %}" />
+        <title>Uoyonen: {{ npc_kills.30000151 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000151 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Uoyonen</text>
     </a>
 </g>
 <g id="def30000150" transform="translate(550, 490)">
     <a xlink:href="http://evemaps.dotlan.net/system/Hurtoken" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000150 %}camped{% endif %}" />
+        <title>Hurtoken: {{ npc_kills.30000150 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000150 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Hurtoken</text>
     </a>
 </g>
 <g id="def30000153" transform="translate(675, 390)">
     <a xlink:href="http://evemaps.dotlan.net/system/Poinen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000153 %}camped{% endif %}" />
+        <title>Poinen: {{ npc_kills.30000153 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000153 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Poinen</text>
     </a>
 </g>
 <g id="def30000152" transform="translate(525, 445)">
     <a xlink:href="http://evemaps.dotlan.net/system/Hampinen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000152 %}camped{% endif %}" />
+        <title>Hampinen: {{ npc_kills.30000152 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000152 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Hampinen</text>
     </a>
 </g>
 <g id="def30001393" transform="translate(302, 300)">
     <a xlink:href="http://evemaps.dotlan.net/system/Malkalen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30001393 %}camped{% endif %}" />
+        <title>Malkalen: {{ npc_kills.30001393 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30001393 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Malkalen</text>
     </a>
 </g>
 <g id="def30000142" transform="translate(224, 343)">
     <a xlink:href="http://evemaps.dotlan.net/system/Jita" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000142 %}camped{% endif %}" />
+        <title>Jita: {{ npc_kills.30000142 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000142 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Jita</text>
     </a>
 </g>
 <g id="def30000143" transform="translate(147, 327)">
     <a xlink:href="http://evemaps.dotlan.net/system/Niyabainen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000143 %}camped{% endif %}" />
+        <title>Niyabainen: {{ npc_kills.30000143 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000143 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Niyabainen</text>
     </a>
 </g>
 <g id="def30000140" transform="translate(226, 403)">
     <a xlink:href="http://evemaps.dotlan.net/system/Maurasi" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000140 %}camped{% endif %}" />
+        <title>Maurasi: {{ npc_kills.30000140 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000140 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Maurasi</text>
     </a>
 </g>
 <g id="def30000141" transform="translate(160, 480)">
     <a xlink:href="http://evemaps.dotlan.net/system/Kisogo" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000141 %}camped{% endif %}" />
+        <title>Kisogo: {{ npc_kills.30000141 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000141 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Kisogo</text>
     </a>
 </g>
 <g id="def30000146" transform="translate(445, 500)">
     <a xlink:href="http://evemaps.dotlan.net/system/Saisio" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000146 %}camped{% endif %}" />
+        <title>Saisio: {{ npc_kills.30000146 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000146 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Saisio</text>
     </a>
 </g>
 <g id="def30000147" transform="translate(505, 525)">
     <a xlink:href="http://evemaps.dotlan.net/system/Abagawa" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000147 %}camped{% endif %}" />
+        <title>Abagawa: {{ npc_kills.30000147 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000147 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Abagawa</text>
     </a>
 </g>
 <g id="def30000144" transform="translate(146, 380)">
     <a xlink:href="http://evemaps.dotlan.net/system/Perimeter" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000144 %}camped{% endif %}" />
+        <title>Perimeter: {{ npc_kills.30000144 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000144 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Perimeter</text>
     </a>
 </g>
 <g id="def30000145" transform="translate(225, 279)">
     <a xlink:href="http://evemaps.dotlan.net/system/New Caldari" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000145 %}camped{% endif %}" />
+        <title>New Caldari: {{ npc_kills.30000145 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000145 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">New Caldari</text>
     </a>
 </g>
 <g id="def30000148" transform="translate(440, 450)">
     <a xlink:href="http://evemaps.dotlan.net/system/Jakanerva" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000148 %}camped{% endif %}" />
+        <title>Jakanerva: {{ npc_kills.30000148 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000148 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Jakanerva</text>
     </a>
 </g>
 <g id="def30000149" transform="translate(455, 410)">
     <a xlink:href="http://evemaps.dotlan.net/system/Gekutami" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000149 %}camped{% endif %}" />
+        <title>Gekutami: {{ npc_kills.30000149 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000149 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Gekutami</text>
     </a>
 </g>
 <g id="def30002802" transform="translate(25, 465)">
     <a xlink:href="http://evemaps.dotlan.net/system/Kusomonmon" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30002802 %}camped{% endif %}" />
+        <title>Kusomonmon: {{ npc_kills.30002802 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30002802 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Kusomonmon</text>
     </a>
 </g>
 <g id="def30002355" transform="translate(655, 740)">
     <a xlink:href="http://evemaps.dotlan.net/system/LXQ2-T" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30002355 %}camped{% endif %}" />
+        <title>LXQ2-T: {{ npc_kills.30002355 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30002355 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">LXQ2-T</text>
     </a>
 </g>
 <g id="def30000137" transform="translate(35, 100)">
     <a xlink:href="http://evemaps.dotlan.net/system/Eskunen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000137 %}camped{% endif %}" />
+        <title>Eskunen: {{ npc_kills.30000137 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000137 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Eskunen</text>
     </a>
 </g>
 <g id="def30000136" transform="translate(80, 145)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ohmahailen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000136 %}camped{% endif %}" />
+        <title>Ohmahailen: {{ npc_kills.30000136 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000136 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ohmahailen</text>
     </a>
 </g>
 <g id="def30000135" transform="translate(0, 145)">
     <a xlink:href="http://evemaps.dotlan.net/system/Outuni" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000135 %}camped{% endif %}" />
+        <title>Outuni: {{ npc_kills.30000135 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000135 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Outuni</text>
     </a>
 </g>
 <g id="def30000134" transform="translate(45, 190)">
     <a xlink:href="http://evemaps.dotlan.net/system/Hykkota" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000134 %}camped{% endif %}" />
+        <title>Hykkota: {{ npc_kills.30000134 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000134 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Hykkota</text>
     </a>
 </g>
 <g id="def30000133" transform="translate(134, 243)">
     <a xlink:href="http://evemaps.dotlan.net/system/Hirtamon" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000133 %}camped{% endif %}" />
+        <title>Hirtamon: {{ npc_kills.30000133 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000133 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Hirtamon</text>
     </a>
 </g>
 <g id="def30000132" transform="translate(66, 229)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ansila" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000132 %}camped{% endif %}" />
+        <title>Ansila: {{ npc_kills.30000132 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000132 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ansila</text>
     </a>
 </g>
 <g id="def30000131" transform="translate(485, 620)">
     <a xlink:href="http://evemaps.dotlan.net/system/Nomaa" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000131 %}camped{% endif %}" />
+        <title>Nomaa: {{ npc_kills.30000131 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000131 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Nomaa</text>
     </a>
 </g>
 <g id="def30000130" transform="translate(200, 620)">
     <a xlink:href="http://evemaps.dotlan.net/system/Shihuken" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000130 %}camped{% endif %}" />
+        <title>Shihuken: {{ npc_kills.30000130 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000130 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Shihuken</text>
     </a>
 </g>
 <g id="def30003446" transform="translate(800, 740)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ofage" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30003446 %}camped{% endif %}" />
+        <title>Ofage: {{ npc_kills.30003446 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30003446 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ofage</text>
     </a>
 </g>
 <g id="def30000139" transform="translate(95, 490)">
     <a xlink:href="http://evemaps.dotlan.net/system/Urlen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000139 %}camped{% endif %}" />
+        <title>Urlen: {{ npc_kills.30000139 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000139 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Urlen</text>
     </a>
 </g>
 <g id="def30000138" transform="translate(94, 272)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ikuchi" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000138 %}camped{% endif %}" />
+        <title>Ikuchi: {{ npc_kills.30000138 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000138 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ikuchi</text>
     </a>
 </g>
 <g id="def30020141" transform="translate(265, 580)">
     <a xlink:href="http://evemaps.dotlan.net/system/Senda" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30020141 %}camped{% endif %}" />
+        <title>Senda: {{ npc_kills.30020141 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30020141 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Senda</text>
     </a>
 </g>
 <g id="def30000205" transform="translate(150, 40)">
     <a xlink:href="http://evemaps.dotlan.net/system/Obe" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000205 %}camped{% endif %}" />
+        <title>Obe: {{ npc_kills.30000205 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000205 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Obe</text>
     </a>
 </g>
 <g id="def30000204" transform="translate(225, 40)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ohkunen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000204 %}camped{% endif %}" />
+        <title>Ohkunen: {{ npc_kills.30000204 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000204 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ohkunen</text>
     </a>
 </g>
 <g id="def30000207" transform="translate(400, 40)">
     <a xlink:href="http://evemaps.dotlan.net/system/Osaa" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000207 %}camped{% endif %}" />
+        <title>Osaa: {{ npc_kills.30000207 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000207 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Osaa</text>
     </a>
 </g>
 <g id="def30000206" transform="translate(225, 95)">
     <a xlink:href="http://evemaps.dotlan.net/system/Wirashoda" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000206 %}camped{% endif %}" />
+        <title>Wirashoda: {{ npc_kills.30000206 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000206 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Wirashoda</text>
     </a>
 </g>
 <g id="def30000201" transform="translate(300, 95)">
     <a xlink:href="http://evemaps.dotlan.net/system/Uchoshi" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000201 %}camped{% endif %}" />
+        <title>Uchoshi: {{ npc_kills.30000201 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000201 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Uchoshi</text>
     </a>
 </g>
 <g id="def30000200" transform="translate(595, 665)">
     <a xlink:href="http://evemaps.dotlan.net/system/Akkio" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000200 %}camped{% endif %}" />
+        <title>Akkio: {{ npc_kills.30000200 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000200 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Akkio</text>
     </a>
 </g>
 <g id="def30000203" transform="translate(355, 5)">
     <a xlink:href="http://evemaps.dotlan.net/system/Eruka" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000203 %}camped{% endif %}" />
+        <title>Eruka: {{ npc_kills.30000203 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000203 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Eruka</text>
     </a>
 </g>
 <g id="def30000202" transform="translate(300, 40)">
     <a xlink:href="http://evemaps.dotlan.net/system/Mastakomon" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000202 %}camped{% endif %}" />
+        <title>Mastakomon: {{ npc_kills.30000202 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000202 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Mastakomon</text>
     </a>
 </g>
 <g id="def30000124" transform="translate(355, 415)">
     <a xlink:href="http://evemaps.dotlan.net/system/Kylmabe" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000124 %}camped{% endif %}" />
+        <title>Kylmabe: {{ npc_kills.30000124 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000124 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Kylmabe</text>
     </a>
 </g>
 <g id="def30000125" transform="translate(370, 455)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ahtulaima" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000125 %}camped{% endif %}" />
+        <title>Ahtulaima: {{ npc_kills.30000125 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000125 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ahtulaima</text>
     </a>
 </g>
 <g id="def30000126" transform="translate(410, 645)">
     <a xlink:href="http://evemaps.dotlan.net/system/Geras" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000126 %}camped{% endif %}" />
+        <title>Geras: {{ npc_kills.30000126 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000126 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Geras</text>
     </a>
 </g>
 <g id="def30000127" transform="translate(265, 675)">
     <a xlink:href="http://evemaps.dotlan.net/system/Sirseshin" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000127 %}camped{% endif %}" />
+        <title>Sirseshin: {{ npc_kills.30000127 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000127 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Sirseshin</text>
     </a>
 </g>
 <g id="def30000120" transform="translate(335, 485)">
     <a xlink:href="http://evemaps.dotlan.net/system/Mitsolen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000120 %}camped{% endif %}" />
+        <title>Mitsolen: {{ npc_kills.30000120 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000120 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Mitsolen</text>
     </a>
 </g>
 <g id="def30000121" transform="translate(240, 445)">
     <a xlink:href="http://evemaps.dotlan.net/system/Jatate" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000121 %}camped{% endif %}" />
+        <title>Jatate: {{ npc_kills.30000121 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000121 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Jatate</text>
     </a>
 </g>
 <g id="def30000122" transform="translate(360, 520)">
     <a xlink:href="http://evemaps.dotlan.net/system/Mahtista" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000122 %}camped{% endif %}" />
+        <title>Mahtista: {{ npc_kills.30000122 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000122 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Mahtista</text>
     </a>
 </g>
 <g id="def30000123" transform="translate(265, 480)">
     <a xlink:href="http://evemaps.dotlan.net/system/Vaankalen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000123 %}camped{% endif %}" />
+        <title>Vaankalen: {{ npc_kills.30000123 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000123 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Vaankalen</text>
     </a>
 </g>
 <g id="def30000128" transform="translate(305, 640)">
     <a xlink:href="http://evemaps.dotlan.net/system/Tuuriainas" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000128 %}camped{% endif %}" />
+        <title>Tuuriainas: {{ npc_kills.30000128 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000128 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Tuuriainas</text>
     </a>
 </g>
 <g id="def30000129" transform="translate(135, 575)">
     <a xlink:href="http://evemaps.dotlan.net/system/Unpas" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000129 %}camped{% endif %}" />
+        <title>Unpas: {{ npc_kills.30000129 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000129 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Unpas</text>
     </a>
 </g>
 <g id="def30002062" transform="translate(535, 695)">
     <a xlink:href="http://evemaps.dotlan.net/system/Todifrauan" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30002062 %}camped{% endif %}" />
+        <title>Todifrauan: {{ npc_kills.30002062 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30002062 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Todifrauan</text>
     </a>
 </g>
 <g id="def30000191" transform="translate(565, 75)">
     <a xlink:href="http://evemaps.dotlan.net/system/Walvalin" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000191 %}camped{% endif %}" />
+        <title>Walvalin: {{ npc_kills.30000191 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000191 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Walvalin</text>
     </a>
 </g>
 <g id="def30021407" transform="translate(145, 205)">
     <a xlink:href="http://evemaps.dotlan.net/system/Aokannitoh" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30021407 %}camped{% endif %}" />
+        <title>Aokannitoh: {{ npc_kills.30021407 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30021407 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Aokannitoh</text>
     </a>
 </g>
 <g id="def30000193" transform="translate(410, 95)">
     <a xlink:href="http://evemaps.dotlan.net/system/Vouskiaho" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000193 %}camped{% endif %}" />
+        <title>Vouskiaho: {{ npc_kills.30000193 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000193 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Vouskiaho</text>
     </a>
 </g>
 <g id="def30000192" transform="translate(565, 40)">
     <a xlink:href="http://evemaps.dotlan.net/system/Otanuomi" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000192 %}camped{% endif %}" />
+        <title>Otanuomi: {{ npc_kills.30000192 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000192 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Otanuomi</text>
     </a>
 </g>
 <g id="def30000195" transform="translate(745, 635)">
     <a xlink:href="http://evemaps.dotlan.net/system/Tasti" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000195 %}camped{% endif %}" />
+        <title>Tasti: {{ npc_kills.30000195 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000195 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Tasti</text>
     </a>
 </g>
 <g id="def30000194" transform="translate(650, 100)">
     <a xlink:href="http://evemaps.dotlan.net/system/Otsela" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000194 %}camped{% endif %}" />
+        <title>Otsela: {{ npc_kills.30000194 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000194 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Otsela</text>
     </a>
 </g>
 <g id="def30000197" transform="translate(730, 690)">
     <a xlink:href="http://evemaps.dotlan.net/system/Uemon" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000197 %}camped{% endif %}" />
+        <title>Uemon: {{ npc_kills.30000197 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000197 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Uemon</text>
     </a>
 </g>
 <g id="def30000196" transform="translate(680, 660)">
     <a xlink:href="http://evemaps.dotlan.net/system/Otosela" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000196 %}camped{% endif %}" />
+        <title>Otosela: {{ npc_kills.30000196 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000196 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Otosela</text>
     </a>
 </g>
 <g id="def30000199" transform="translate(800, 705)">
     <a xlink:href="http://evemaps.dotlan.net/system/Fuskunen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000199 %}camped{% endif %}" />
+        <title>Fuskunen: {{ npc_kills.30000199 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000199 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Fuskunen</text>
     </a>
 </g>
 <g id="def30000198" transform="translate(655, 705)">
     <a xlink:href="http://evemaps.dotlan.net/system/Paala" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000198 %}camped{% endif %}" />
+        <title>Paala: {{ npc_kills.30000198 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000198 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Paala</text>
     </a>
 </g>
 <g id="def30000119" transform="translate(305, 445)">
     <a xlink:href="http://evemaps.dotlan.net/system/Itamo" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000119 %}camped{% endif %}" />
+        <title>Itamo: {{ npc_kills.30000119 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000119 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Itamo</text>
     </a>
 </g>
 <g id="def30001379" transform="translate(60, 335)">
     <a xlink:href="http://evemaps.dotlan.net/system/Tunttaras" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30001379 %}camped{% endif %}" />
+        <title>Tunttaras: {{ npc_kills.30001379 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30001379 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Tunttaras</text>
     </a>
 </g>
 <g id="def30002440" transform="translate(890, 515)">
     <a xlink:href="http://evemaps.dotlan.net/system/BWF-ZZ" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30002440 %}camped{% endif %}" />
+        <title>BWF-ZZ: {{ npc_kills.30002440 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30002440 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">BWF-ZZ</text>
     </a>
 </g>
 <g id="def30002791" transform="translate(45, 590)">
     <a xlink:href="http://evemaps.dotlan.net/system/Sirppala" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30002791 %}camped{% endif %}" />
+        <title>Sirppala: {{ npc_kills.30002791 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30002791 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Sirppala</text>
     </a>
 </g>
 <g id="def30000186" transform="translate(810, 510)">
     <a xlink:href="http://evemaps.dotlan.net/system/Oijanen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000186 %}camped{% endif %}" />
+        <title>Oijanen: {{ npc_kills.30000186 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000186 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Oijanen</text>
     </a>
 </g>
 <g id="def30000187" transform="translate(885, 315)">
     <a xlink:href="http://evemaps.dotlan.net/system/Wuos" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000187 %}camped{% endif %}" />
+        <title>Wuos: {{ npc_kills.30000187 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000187 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Wuos</text>
     </a>
 </g>
 <g id="def30000184" transform="translate(920, 355)">
     <a xlink:href="http://evemaps.dotlan.net/system/Uminas" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000184 %}camped{% endif %}" />
+        <title>Uminas: {{ npc_kills.30000184 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000184 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Uminas</text>
     </a>
 </g>
 <g id="def30000185" transform="translate(810, 470)">
     <a xlink:href="http://evemaps.dotlan.net/system/Airaken" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000185 %}camped{% endif %}" />
+        <title>Airaken: {{ npc_kills.30000185 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000185 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Airaken</text>
     </a>
 </g>
 <g id="def30000182" transform="translate(855, 350)">
     <a xlink:href="http://evemaps.dotlan.net/system/Inaya" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000182 %}camped{% endif %}" />
+        <title>Inaya: {{ npc_kills.30000182 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000182 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Inaya</text>
     </a>
 </g>
 <g id="def30000183" transform="translate(870, 430)">
     <a xlink:href="http://evemaps.dotlan.net/system/Nuken" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000183 %}camped{% endif %}" />
+        <title>Nuken: {{ npc_kills.30000183 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000183 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Nuken</text>
     </a>
 </g>
 <g id="def30000180" transform="translate(805, 390)">
     <a xlink:href="http://evemaps.dotlan.net/system/Osmon" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000180 %}camped{% endif %}" />
+        <title>Osmon: {{ npc_kills.30000180 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000180 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Osmon</text>
     </a>
 </g>
 <g id="def30000181" transform="translate(810, 435)">
     <a xlink:href="http://evemaps.dotlan.net/system/Korsiki" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000181 %}camped{% endif %}" />
+        <title>Korsiki: {{ npc_kills.30000181 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000181 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Korsiki</text>
     </a>
 </g>
 <g id="def30000188" transform="translate(565, 170)">
     <a xlink:href="http://evemaps.dotlan.net/system/Hentogaira" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000188 %}camped{% endif %}" />
+        <title>Hentogaira: {{ npc_kills.30000188 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000188 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Hentogaira</text>
     </a>
 </g>
 <g id="def30000189" transform="translate(565, 130)">
     <a xlink:href="http://evemaps.dotlan.net/system/Kiainti" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000189 %}camped{% endif %}" />
+        <title>Kiainti: {{ npc_kills.30000189 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000189 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Kiainti</text>
     </a>
 </g>
 <g id="def30002475" transform="translate(535, 650)">
     <a xlink:href="http://evemaps.dotlan.net/system/EOA-ZC" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30002475 %}camped{% endif %}" />
+        <title>EOA-ZC: {{ npc_kills.30002475 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30002475 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">EOA-ZC</text>
     </a>
 </g>
 <g id="def30002788" transform="translate(100, 665)">
     <a xlink:href="http://evemaps.dotlan.net/system/Inaro" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30002788 %}camped{% endif %}" />
+        <title>Inaro: {{ npc_kills.30002788 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30002788 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Inaro</text>
     </a>
 </g>
 <g id="def30002780" transform="translate(304, 375)">
     <a xlink:href="http://evemaps.dotlan.net/system/Muvolailen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30002780 %}camped{% endif %}" />
+        <title>Muvolailen: {{ npc_kills.30002780 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30002780 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Muvolailen</text>
     </a>
 </g>
 <g id="def30000190" transform="translate(485, 100)">
     <a xlink:href="http://evemaps.dotlan.net/system/Vasala" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000190 %}camped{% endif %}" />
+        <title>Vasala: {{ npc_kills.30000190 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000190 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Vasala</text>
     </a>
 </g>
 <g id="def30001448" transform="translate(82, 39)">
     <a xlink:href="http://evemaps.dotlan.net/system/Hakonen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30001448 %}camped{% endif %}" />
+        <title>Hakonen: {{ npc_kills.30001448 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30001448 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Hakonen</text>
     </a>
 </g>
 <g id="def30000179" transform="translate(685, 265)">
     <a xlink:href="http://evemaps.dotlan.net/system/Silen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000179 %}camped{% endif %}" />
+        <title>Silen: {{ npc_kills.30000179 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000179 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Silen</text>
     </a>
 </g>
 <g id="def30000178" transform="translate(550, 220)">
     <a xlink:href="http://evemaps.dotlan.net/system/Akkilen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000178 %}camped{% endif %}" />
+        <title>Akkilen: {{ npc_kills.30000178 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000178 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Akkilen</text>
     </a>
 </g>
 <g id="def30001363" transform="translate(306, 335)">
     <a xlink:href="http://evemaps.dotlan.net/system/Sobaseki" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30001363 %}camped{% endif %}" />
+        <title>Sobaseki: {{ npc_kills.30001363 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30001363 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Sobaseki</text>
     </a>
 </g>
 <g id="def30000173" transform="translate(535, 260)">
     <a xlink:href="http://evemaps.dotlan.net/system/Vattuolen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000173 %}camped{% endif %}" />
+        <title>Vattuolen: {{ npc_kills.30000173 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000173 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Vattuolen</text>
     </a>
 </g>
 <g id="def30000172" transform="translate(835, 95)">
     <a xlink:href="http://evemaps.dotlan.net/system/Otomainen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000172 %}camped{% endif %}" />
+        <title>Otomainen: {{ npc_kills.30000172 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000172 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Otomainen</text>
     </a>
 </g>
 <g id="def30000171" transform="translate(875, 135)">
     <a xlink:href="http://evemaps.dotlan.net/system/Otitoh" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000171 %}camped{% endif %}" />
+        <title>Otitoh: {{ npc_kills.30000171 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000171 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Otitoh</text>
     </a>
 </g>
 <g id="def30000170" transform="translate(900, 220)">
     <a xlink:href="http://evemaps.dotlan.net/system/Vahunomi" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000170 %}camped{% endif %}" />
+        <title>Vahunomi: {{ npc_kills.30000170 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000170 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Vahunomi</text>
     </a>
 </g>
 <g id="def30000177" transform="translate(330, 180)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ukkalen" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000177 %}camped{% endif %}" />
+        <title>Ukkalen: {{ npc_kills.30000177 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000177 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ukkalen</text>
     </a>
 </g>
 <g id="def30000176" transform="translate(400, 200)">
     <a xlink:href="http://evemaps.dotlan.net/system/Keikaken" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000176 %}camped{% endif %}" />
+        <title>Keikaken: {{ npc_kills.30000176 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000176 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Keikaken</text>
     </a>
 </g>
 <g id="def30000175" transform="translate(615, 250)">
     <a xlink:href="http://evemaps.dotlan.net/system/Soshin" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000175 %}camped{% endif %}" />
+        <title>Soshin: {{ npc_kills.30000175 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000175 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Soshin</text>
     </a>
 </g>
 <g id="def30000174" transform="translate(470, 220)">
     <a xlink:href="http://evemaps.dotlan.net/system/Onuse" target="_top">
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s {% if camped.30000174 %}camped{% endif %}" />
+        <title>Onuse: {{ npc_kills.30000174 }} NPC kills</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s" style="fill: {{ npc_kills.30000174 | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Onuse</text>
     </a>
 </g>
