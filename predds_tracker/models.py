@@ -96,7 +96,7 @@ class SystemMetadata(models.Model):
     note = models.TextField()
 
 class SystemStatistic(models.Model):
-    system = models.OneToOneField(SolarSystem, related_name='statistics')
+    system = models.ForeignKey(SolarSystem, related_name='statistics')
     time = models.DateTimeField(db_index=True)
     ship_kills = models.IntegerField()
     pod_kills = models.IntegerField()

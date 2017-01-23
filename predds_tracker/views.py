@@ -1,9 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.db.models import Max
 from django.http import HttpResponse
-from predds_tracker.models import LocationRecord, Character
+from predds_tracker.models import LocationRecord, Character, SystemStatistic
 from predds_tracker.forms import CharacterForm
-from eve_sde.models import Region
+from eve_sde.models import Region, SolarSystem
 from collections import defaultdict
 
 def home(request):
@@ -50,14 +51,20 @@ def help(request):
 
 def map_svg(request, region):
     campers = Character.objects.filter(latest__system__constellation__region__id=region, latest__online=True)
+    latest = SystemStatistic.objects.aggregate(Max('time'))['time__max']
+    systems = SolarSystem.objects.filter(constellation__region__id=region, statistics__time=latest).values_list('id', 'statistics__npc_kills')
 
     count = defaultdict(bool)
 
     for x in campers:
-        count[int(x.latest.system.id)] = True
+        count[x.latest.system.id] = True
 
     return render(
         request, 'predds_tracker/maps/%d.svg' % int(region),
-        context={'region': get_object_or_404(Region, id=region), 'camped': dict(count)},
+        context={
+            'region': get_object_or_404(Region, id=region),
+            'camped': dict(count),
+            'npc_kills': {x[0]: x[1] for x in systems}
+        },
         content_type="image/svg+xml"
     )
