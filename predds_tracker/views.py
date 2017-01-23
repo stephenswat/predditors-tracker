@@ -12,6 +12,7 @@ def home(request):
         context={'regions': sorted(list(Region.objects.all()), key=lambda x: x.name)}
     )
 
+
 @login_required
 def profile(request):
     if request.method == 'POST':
@@ -24,11 +25,13 @@ def profile(request):
         context={'form': CharacterForm(instance=request.user)}
     )
 
+
 def log(request):
     return render(
         request, 'predds_tracker/log.html',
         context={'items': LocationRecord.objects.filter(character=request.user).order_by('-time')[:200]}
     )
+
 
 def map(request, region):
     return render(
@@ -38,6 +41,11 @@ def map(request, region):
             'region': get_object_or_404(Region, id=region)
         },
     )
+
+
+def help(request):
+    return render(request, 'predds_tracker/help.html')
+
 
 def map_svg(request, region):
     campers = Character.objects.filter(latest__system__constellation__region__id=region, latest__online=True)
