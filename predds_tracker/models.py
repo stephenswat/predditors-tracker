@@ -71,10 +71,13 @@ class Character(AbstractUser):
         ) - datetime.now()).total_seconds()
 
         if difference < 10:
-            provider.refresh_token(load_strategy())
-            expiry = datetime.now() + timedelta(seconds=1200)
-            provider.extra_data['expires'] = expiry.strftime("%Y-%m-%dT%H:%M:%S")
-            provider.save()
+            try:
+                provider.refresh_token(load_strategy())
+                expiry = datetime.now() + timedelta(seconds=1200)
+                provider.extra_data['expires'] = expiry.strftime("%Y-%m-%dT%H:%M:%S")
+                provider.save()
+            except requests.exceptions.HTTPError as e:
+                print(e)
 
         return provider.extra_data
 
