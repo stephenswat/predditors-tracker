@@ -10,8 +10,8 @@ def npc_kill_colour(value):
     kills = value
 
     if kills <= 1000:
-        gradient = list(Color('white').range_to(Color('#BFFF00'), 10))
+        gradient = list(Color('white').range_to(Color('#BFFF00'), 11))
         return gradient[(kills + 99) // 100]
     else:
-        gradient = list(Color('#BFFF00').range_to(Color('red'), 30))
+        gradient = list(Color('#BFFF00').range_to(Color('red'), 31))
         return gradient[min(kills + 99 - 1000, 2000) // 100]
