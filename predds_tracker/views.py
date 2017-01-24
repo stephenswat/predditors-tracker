@@ -36,35 +36,29 @@ def log(request):
 
 
 def map(request, region):
-    return render(
-        request, 'predds_tracker/map.html',
-        context={
-            'region': get_object_or_404(Region, id=region),
-            'region': get_object_or_404(Region, id=region)
-        },
-    )
-
-
-def help(request):
-    return render(request, 'predds_tracker/help.html')
-
-
-def map_svg(request, region):
     campers = Character.objects.filter(latest__system__constellation__region__id=region, latest__online=True)
     latest = SystemStatistic.objects.aggregate(Max('time'))['time__max']
     systems = SolarSystem.objects.filter(constellation__region__id=region, statistics__time=latest).values_list('id', 'statistics__npc_kills')
 
     count = defaultdict(bool)
+    names = set()
 
     for x in campers:
+        names.add(x.latest.system.name)
         count[x.latest.system.id] = True
+
+    print(','.join(names))
 
     return render(
         request, 'predds_tracker/maps/%d.svg' % int(region),
         context={
             'region': get_object_or_404(Region, id=region),
             'camped': dict(count),
-            'npc_kills': {x[0]: x[1] for x in systems}
-        },
-        content_type="image/svg+xml"
+            'npc_kills': {x[0]: x[1] for x in systems},
+            'dotlan': ','.join(names)
+        }
     )
+
+
+def help(request):
+    return render(request, 'predds_tracker/help.html')

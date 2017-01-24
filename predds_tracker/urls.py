@@ -5,7 +5,6 @@ from predds_tracker import views
 
 regionpatterns = [
     url(r'^$', views.map, name='display_region'),
-    url(r'^svg/$', views.map_svg, name='region_svg'),
 ]
 
 urlpatterns = [
