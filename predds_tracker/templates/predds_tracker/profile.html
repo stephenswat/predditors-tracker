@@ -6,6 +6,12 @@
   <h1>{{ user.get_full_name }}</h1>
 </div>
 
+<h2>Public information</h2>
+<dl>
+  <dt>Corporation</dt><dd>{{ user.corporation_id }}</dd>
+  <dt>Alliance</dt><dd>{{ user.alliance_id }}</dd>
+</dl>
+
 <h2>Your alts</h2>
 <ul>
 {% for a in user.alts.all %}
