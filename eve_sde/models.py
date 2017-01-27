@@ -25,3 +25,13 @@ class SolarSystem(models.Model):
 
     def __str__(self):
         return self.name
+
+class ItemType(models.Model):
+    id = models.IntegerField(primary_key=True)
+    group = models.IntegerField(db_index=True)
+    name = models.CharField(max_length=128)
+    description = models.TextField()
+    volume = models.DecimalField(max_digits=25, decimal_places=5)
+
+    def __str__(self):
+        return self.name
