@@ -6,47 +6,10 @@ from datetime import datetime, timedelta
 from eve_sde.models import SolarSystem
 import requests
 
-class Character(AbstractUser):
-    """
-    A database model which is used by the EVE Online SSO to create, store and
-    check logins. Stores information from the EVE API such as the character ID.
-    """
-
-    latest = models.ForeignKey('LocationRecord', related_name='+', null=True)
-    track = models.BooleanField(default=True)
-
-    @property
-    def ship_location(self):
-        res = self.location.copy()
-        res.update(self.ship_type)
-        res['online'] = self.online
-        return res
-
-    @property
-    def online(self):
-        res = requests.get('https://crest-tq.eveonline.com/characters/%d/location/' % self.character_id,
-            headers={'Authorization': 'Bearer ' + self.access_token})
-        return res.status_code == 200 and len(res.json()) > 0
-
-    @property
-    def location(self):
-        res = requests.get('https://esi.tech.ccp.is/latest/characters/%d/location/' % self.character_id,
-            headers={'Authorization': 'Bearer ' + self.access_token})
-        return res.json()
-
-    @property
-    def ship_type(self):
-        res = requests.get('https://esi.tech.ccp.is/latest/characters/%d/ship/' % self.character_id,
-            headers={'Authorization': 'Bearer ' + self.access_token})
-        return res.json()
-
-    @property
-    def character_id(self):
-        """
-        Returns the EVE ID of the character.
-        """
-
-        return self.__crest['id']
+class EveCharacter(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    name = models.CharField(max_length=128)
+    data = models.ForeignKey('social_django.UserSocialAuth', null=True)
 
     @property
     def access_token(self):
@@ -63,26 +26,68 @@ class Character(AbstractUser):
         expires.
         """
 
-        provider = self.social_auth.get(provider='eveonline')
-
         difference = (datetime.strptime(
-            provider.extra_data['expires'],
+            self.data.extra_data['expires'],
             "%Y-%m-%dT%H:%M:%S"
         ) - datetime.now()).total_seconds()
 
         if difference < 10:
             try:
-                provider.refresh_token(load_strategy())
+                self.data.refresh_token(load_strategy())
                 expiry = datetime.now() + timedelta(seconds=1200)
-                provider.extra_data['expires'] = expiry.strftime("%Y-%m-%dT%H:%M:%S")
-                provider.save()
+                self.data.extra_data['expires'] = expiry.strftime("%Y-%m-%dT%H:%M:%S")
+                self.data.save()
             except requests.exceptions.HTTPError as e:
                 print(e)
 
-        return provider.extra_data
+        return self.data.extra_data
+
+    def get_full_name(self):
+        return self.name
+
+    class Meta:
+        abstract = True
+
+class Character(AbstractUser, EveCharacter):
+    """
+    A database model which is used by the EVE Online SSO to create, store and
+    check logins. Stores information from the EVE API such as the character ID.
+    """
+
+    pass
+
+class Alt(EveCharacter):
+    main = models.ForeignKey(Character, related_name='alts')
+    latest = models.ForeignKey('LocationRecord', related_name='+', null=True)
+    track = models.BooleanField(default=True)
+
+    @property
+    def ship_location(self):
+        res = self.location.copy()
+        res.update(self.ship_type)
+        res['online'] = self.online
+        return res
+
+    @property
+    def online(self):
+        res = requests.get('https://crest-tq.eveonline.com/characters/%d/location/' % self.id,
+            headers={'Authorization': 'Bearer ' + self.access_token})
+        return res.status_code == 200 and len(res.json()) > 0
+
+    @property
+    def location(self):
+        res = requests.get('https://esi.tech.ccp.is/latest/characters/%d/location/' % self.id,
+            headers={'Authorization': 'Bearer ' + self.access_token})
+        return res.json()
+
+    @property
+    def ship_type(self):
+        res = requests.get('https://esi.tech.ccp.is/latest/characters/%d/ship/' % self.id,
+            headers={'Authorization': 'Bearer ' + self.access_token})
+        return res.json()
 
 class LocationRecord(models.Model):
-    character = models.ForeignKey(Character, db_index=True)
+    character = models.ForeignKey(Alt, db_index=True)
     system = models.ForeignKey(SolarSystem, db_index=True)
     time = models.DateTimeField(auto_now_add=True, db_index=True)
     online = models.BooleanField()

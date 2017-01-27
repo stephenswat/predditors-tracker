@@ -2,8 +2,8 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.db.models import Max
 from django.http import HttpResponse
-from predds_tracker.models import LocationRecord, Character, SystemStatistic
-from predds_tracker.forms import CharacterForm
+from predds_tracker.models import LocationRecord, Alt, Character, SystemStatistic
+from predds_tracker.forms import AltForm
 from eve_sde.models import Region, SolarSystem
 from collections import defaultdict
 
@@ -17,13 +17,13 @@ def home(request):
 @login_required
 def profile(request):
     if request.method == 'POST':
-        form = CharacterForm(request.POST, instance=request.user)
+        form = AltForm(request.POST, instance=request.user)
         if form.is_valid():
             form.save()
 
     return render(
         request, 'predds_tracker/profile.html',
-        context={'form': CharacterForm(instance=request.user)}
+        context={'form': AltForm(instance=request.user)}
     )
 
 
@@ -31,12 +31,12 @@ def profile(request):
 def log(request):
     return render(
         request, 'predds_tracker/log.html',
-        context={'items': LocationRecord.objects.filter(character=request.user).order_by('-time')[:200]}
+        context={'items': LocationRecord.objects.filter(character__main=request.user).order_by('-time')[:200]}
     )
 
 
 def map(request, region):
-    campers = Character.objects.filter(latest__system__constellation__region__id=region, latest__online=True)
+    campers = Alt.objects.filter(latest__system__constellation__region__id=region, latest__online=True)
     latest = SystemStatistic.objects.aggregate(Max('time'))['time__max']
     systems = SolarSystem.objects.filter(constellation__region__id=region, statistics__time=latest).values_list('id', 'statistics__npc_kills')
 

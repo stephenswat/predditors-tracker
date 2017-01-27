@@ -1,7 +1,7 @@
 from django.forms import ModelForm
-from predds_tracker.models import Character
+from predds_tracker.models import Character, Alt
 
-class CharacterForm(ModelForm):
+class AltForm(ModelForm):
     class Meta:
-        model = Character
+        model = Alt
         fields = ['track']

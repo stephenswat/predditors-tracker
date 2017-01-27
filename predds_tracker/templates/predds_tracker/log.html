@@ -9,6 +9,7 @@
 <thead>
 <tr>
   <th>Time</th>
+  <th>Character</th>
   <th>Online</th>
   <th>System</th>
   <th>Ship ID</th>
@@ -20,6 +21,7 @@
 {% for x in items %}
 <tr>
   <td>{{ x.time }}</td>
+  <td>{{ x.character.name }}</td>
   <td>{{ x.online }}</td>
   <td>{{ x.system.name }}</td>
   <td>{{ x.ship_id }}</td>

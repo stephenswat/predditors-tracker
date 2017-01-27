@@ -1,9 +1,9 @@
-from predds_tracker.models import Character, LocationRecord
+from predds_tracker.models import Alt, LocationRecord
 from django.core.management.base import BaseCommand, CommandError
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-        for c in Character.objects.filter(track=True):
+        for c in Alt.objects.filter(track=True):
             print(c, "...")
             try:
                 res = c.ship_location
