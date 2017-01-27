@@ -9,7 +9,7 @@
 
 <tbody>
 {% for m in mains %}
-<h2>{{ m.name }} ({{ m.alts.count }} alts)</h2>
+<h2>{{ m.get_full_name }} ({{ m.alts.count }} alts)</h2>
 <table class="table table-striped">
 <thead>
     <tr>
@@ -27,7 +27,7 @@
   <td>{{ a.latest.ship_type_id }}</td>
 </tr>
 {% endfor %}
-{% endfor %}
 </tbody>
 </table>
+{% endfor %}
 {% endblock %}
