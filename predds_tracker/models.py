@@ -4,6 +4,7 @@ from django.utils.functional import cached_property
 from social_django.utils import load_strategy
 from datetime import datetime, timedelta
 from eve_sde.models import SolarSystem, ItemType
+import xml.etree.ElementTree
 import requests
 
 class EveCharacter(models.Model):
@@ -57,7 +58,25 @@ class Character(AbstractUser, EveCharacter):
     check logins. Stores information from the EVE API such as the character ID.
     """
 
-    pass
+    corporation_id = models.BigIntegerField(null=True)
+    alliance_id = models.BigIntegerField(null=True)
+
+    def update_data(self):
+        tree = xml.etree.ElementTree.fromstring(requests.get('https://api.eveonline.com/eve/CharacterInfo.xml.aspx?characterID=%d' % self.id).text)[1]
+
+        corporation_tag = tree.find('corporationID')
+        if corporation_tag is not None:
+            self.corporation_id = int(corporation_tag.text)
+        else:
+            self.corporation_id = None
+
+        alliance_tag = tree.find('allianceID')
+        if alliance_tag is not None:
+            self.alliance_id = int(alliance_tag.text)
+        else:
+            self.alliance_id = None
+
+        self.save()
 
 class Alt(EveCharacter):
     main = models.ForeignKey(Character, related_name='alts')
