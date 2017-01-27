@@ -1,6 +1,7 @@
 {% extends "predds_tracker/base.html" %}
 {% block title %}Map{% endblock %}
 {% block content %}
+{% load map_colour %}
 
 <div class="page-header">
   <h1>{{ region.name }}</h1>
@@ -49,6 +50,20 @@
 
 <g id="map">
 {% block map %}{% endblock %}
+
+<div class="container">
+  <h1> Color Scale </h1>
+  <p> This scale should give you a good guess as to the npc kill amount for a system. The gernal idea is
+  that the more kills there are, the closer it gets to red.</p>
+<div class="row">
+  <div class="col-sm-2" style="background-color:{{ 0 | npc_kill_colour }}"> 0 </div>
+  <div class="col-sm-2" style="background-color:{{ 250 | npc_kill_colour }}"> 250 </div>
+  <div class="col-sm-2" style="background-color:{{ 500 | npc_kill_colour }}"> 500 </div>
+  <div class="col-sm-2" style="background-color:{{ 1000 | npc_kill_colour }}"> 1000</div>
+  <div class="col-sm-2" style="background-color:{{ 3000 | npc_kill_colour }}"> 3000 </div>
+  <div class="col-sm-2" style="background-color:{{ 3500 | npc_kill_colour }}"> 3500 </div>
+</div>
+</br>
 </g>
 </svg>
 
