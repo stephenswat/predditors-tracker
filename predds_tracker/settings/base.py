@@ -32,6 +32,7 @@ SOCIAL_AUTH_PIPELINE = (
     'predds_tracker.pipeline.create_user',
     'social.pipeline.social_auth.associate_user',
     'social.pipeline.social_auth.load_extra_data',
+    'predds_tracker.pipeline.create_alt',
     'social.pipeline.user.user_details',
 )
 
