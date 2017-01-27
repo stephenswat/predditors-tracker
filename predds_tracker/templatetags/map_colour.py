@@ -5,7 +5,7 @@ register = template.Library()
 
 @register.filter(name='npc_kill_colour')
 def npc_kill_colour(value):
-    if type(value) == str:
+    if value is None or type(value) == str:
         return "#FFFFFF"
     kills = value
 
