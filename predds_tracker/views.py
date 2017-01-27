@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.contrib.auth.decorators import login_required, permission_required
+from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
 from django.db.models import Max
 from django.http import HttpResponse
 from predds_tracker.models import LocationRecord, Alt, Character, SystemStatistic
@@ -28,6 +28,7 @@ def profile(request):
 
 
 @login_required
+@user_passes_test(Character.alliance_valid, login_url='/logout/')
 def log(request):
     return render(
         request, 'predds_tracker/log.html',
@@ -36,6 +37,7 @@ def log(request):
 
 
 @login_required
+@user_passes_test(Character.alliance_valid, login_url='/logout/')
 @permission_required('predds_tracker.view_all_alts', raise_exception=True)
 def all_alts(request):
     return render(
@@ -44,6 +46,8 @@ def all_alts(request):
     )
 
 
+@login_required
+@user_passes_test(Character.alliance_valid, login_url='/logout/')
 def map(request, region):
     campers = Alt.objects.filter(latest__system__constellation__region__id=region, latest__online=True)
     latest = SystemStatistic.objects.aggregate(Max('time'))['time__max']

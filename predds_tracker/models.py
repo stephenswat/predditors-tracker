@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils.functional import cached_property
+from django.conf import settings
 from social_django.utils import load_strategy
 from datetime import datetime, timedelta
 from eve_sde.models import SolarSystem, ItemType
@@ -60,6 +61,9 @@ class Character(AbstractUser, EveCharacter):
 
     corporation_id = models.BigIntegerField(null=True)
     alliance_id = models.BigIntegerField(null=True)
+
+    def alliance_valid(self):
+        return self.alliance_id in settings.VALID_ALLIANCE_IDS
 
     def update_data(self):
         tree = xml.etree.ElementTree.fromstring(requests.get('https://api.eveonline.com/eve/CharacterInfo.xml.aspx?characterID=%d' % self.id).text)[1]
