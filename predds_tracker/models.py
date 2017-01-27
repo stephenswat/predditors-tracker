@@ -3,7 +3,7 @@ from django.contrib.auth.models import AbstractUser
 from django.utils.functional import cached_property
 from social_django.utils import load_strategy
 from datetime import datetime, timedelta
-from eve_sde.models import SolarSystem
+from eve_sde.models import SolarSystem, ItemType
 import requests
 
 class EveCharacter(models.Model):
@@ -101,7 +101,7 @@ class LocationRecord(models.Model):
     online = models.BooleanField()
     station_id = models.BigIntegerField(null=True)
     ship_id = models.BigIntegerField()
-    ship_type_id = models.BigIntegerField()
+    ship_type = models.ForeignKey(ItemType)
     ship_name = models.CharField(max_length=128)
 
 class SystemMetadata(models.Model):
