@@ -30,16 +30,12 @@ Make the database with all the necessary tables and fill it with SDE data:
     python manage.py migrate
     python manage.py loaddata eve_sde/fixtures/map.json
     python manage.py loaddata eve_sde/fixtures/items.json
-    python manage.py update-statistics
-    python manage.py update-locations
 
 You should now be able to run a local server using the following command:
 
     python manage.py runserver
 
 You need to run the update-statistics and update-locations commands every time
-you want to get the latest values from the EVE API
-
-To run the test suite:
-
-    python -m unittest discover
+you want to get the latest values from the EVE API. You may want to set a
+cronjob to run update-locations every 5 minutes and update-alliances and
+update-statistics every hour.
