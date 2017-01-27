@@ -38,3 +38,7 @@ You should now be able to run a local server using the following command:
 
 You need to run the update-statistics and update-locations commands every time 
 you want to get the latest values from the EVE API
+
+To run the test suite:
+
+    python -m unittest discover
