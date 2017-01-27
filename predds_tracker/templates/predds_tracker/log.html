@@ -11,6 +11,9 @@
   <th>Time</th>
   <th>Online</th>
   <th>System</th>
+  <th>Ship ID</th>
+  <th>Ship type</th>
+  <th>Ship name</th>
 </tr>
 </thead>
 <tbody>
@@ -19,6 +22,9 @@
   <td>{{ x.time }}</td>
   <td>{{ x.online }}</td>
   <td>{{ x.system.name }}</td>
+  <td>{{ x.ship_id }}</td>
+  <td>{{ x.ship_type_id }}</td>
+  <td>{{ x.ship_name }}</td>
 </tr>
 {% endfor %}
 </tbody>

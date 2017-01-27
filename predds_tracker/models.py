@@ -89,6 +89,7 @@ class LocationRecord(models.Model):
     station_id = models.BigIntegerField(null=True)
     ship_id = models.BigIntegerField()
     ship_type_id = models.BigIntegerField()
+    ship_name = models.CharField(max_length=128)
 
 class SystemMetadata(models.Model):
     system = models.OneToOneField(SolarSystem, related_name='data')

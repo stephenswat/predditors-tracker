@@ -22,7 +22,8 @@ class Command(BaseCommand):
                     system_id = res['solar_system_id'],
                     station_id = station_id,
                     ship_id = res['ship_item_id'],
-                    ship_type_id = res['ship_item_id']
+                    ship_type_id = res['ship_item_id'],
+                    ship_name = res['ship_name']
                 )
 
                 new_entry.save()
