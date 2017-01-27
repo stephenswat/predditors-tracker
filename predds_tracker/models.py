@@ -54,10 +54,13 @@ class Character(AbstractUser):
         return provider.extra_data
 
 class Alt(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    name = models.CharField(max_length=128)
     main = models.ForeignKey(Character, related_name='alts')
     data = models.ForeignKey('social_django.UserSocialAuth')
     latest = models.ForeignKey('LocationRecord', related_name='+', null=True)
     track = models.BooleanField(default=True)
+
 
     @property
     def ship_location(self):
