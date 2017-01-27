@@ -1,0 +1,33 @@
+{% extends "predds_tracker/base.html" %}
+{% block title %}Log{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>Your last 200 records</h1>
+</div>
+
+<div class="alert alert-info" role="alert"><strong>Heads up!</strong> This page has staff-only access and linking it to other might not work.</div>
+
+<tbody>
+{% for m in mains %}
+<h2>{{ m.name }} ({{ m.alts.count }} alts)</h2>
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th>Alt</th>
+        <th>Online</th>
+        <th>System</th>
+        <th>Ship type</th>
+    </tr>
+</thead>
+{% for a in m.alts.all %}
+<tr>
+  <td>{{ a.name }}</td>
+  <td>{{ a.latest.online }}</td>
+  <td>{{ a.latest.system.name }}</td>
+  <td>{{ a.latest.ship_type_id }}</td>
+</tr>
+{% endfor %}
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}

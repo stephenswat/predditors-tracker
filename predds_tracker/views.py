@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, permission_required
 from django.db.models import Max
 from django.http import HttpResponse
 from predds_tracker.models import LocationRecord, Alt, Character, SystemStatistic
@@ -32,6 +32,15 @@ def log(request):
     return render(
         request, 'predds_tracker/log.html',
         context={'items': LocationRecord.objects.filter(character__main=request.user).order_by('-time')[:200]}
+    )
+
+
+@login_required
+@permission_required('predds_tracker.view_all_alts', raise_exception=True)
+def all_alts(request):
+    return render(
+        request, 'predds_tracker/alts.html',
+        context={'mains': Character.objects.all()}
     )
 
 
