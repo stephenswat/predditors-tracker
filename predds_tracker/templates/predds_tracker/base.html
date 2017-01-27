@@ -70,7 +70,7 @@
           <ul class="nav navbar-nav navbar-right">
             {% if user.is_authenticated %}
             <li><a href="{% url 'profile' %}"><img src="https://image.eveonline.com/Character/{{ user.id }}_32.jpg" style="position: relative; top: -6px; float: left; left: -6px;" /> {{ user.get_full_name }}</a></li>
-            <li><a href="{% url 'social:begin' backend='eveonline' %}">Add alt</a></li>
+            <li><a href="{% url 'social:begin' backend='eveonline' %}?alt">Add alt</a></li>
             <li><a href="{% url 'logout' %}">Log out&nbsp;&nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
             {% else %}
             <li><a href="{% url 'social:begin' backend='eveonline' %}">Log in</a></li>
