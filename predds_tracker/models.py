@@ -12,6 +12,50 @@ class Character(AbstractUser):
     check logins. Stores information from the EVE API such as the character ID.
     """
 
+    @property
+    def character_id(self):
+        """
+        Returns the EVE ID of the character.
+        """
+
+        return self.__crest['id']
+
+    @property
+    def access_token(self):
+        """
+        Returns the access token which can be used for CREST calls.
+        """
+
+        return self.__crest['access_token']
+
+    @cached_property
+    def __crest(self):
+        """
+        Helper function to occasionally refresh the access token whenever it
+        expires.
+        """
+
+        provider = self.social_auth.get(provider='eveonline')
+
+        difference = (datetime.strptime(
+            provider.extra_data['expires'],
+            "%Y-%m-%dT%H:%M:%S"
+        ) - datetime.now()).total_seconds()
+
+        if difference < 10:
+            try:
+                provider.refresh_token(load_strategy())
+                expiry = datetime.now() + timedelta(seconds=1200)
+                provider.extra_data['expires'] = expiry.strftime("%Y-%m-%dT%H:%M:%S")
+                provider.save()
+            except requests.exceptions.HTTPError as e:
+                print(e)
+
+        return provider.extra_data
+
+class Alt(models.Model):
+    main = models.ForeignKey(Character, related_name='alts')
+    data = models.ForeignKey('social_django.UserSocialAuth')
     latest = models.ForeignKey('LocationRecord', related_name='+', null=True)
     track = models.BooleanField(default=True)
 
@@ -82,7 +126,7 @@ class Character(AbstractUser):
         return provider.extra_data
 
 class LocationRecord(models.Model):
-    character = models.ForeignKey(Character, db_index=True)
+    character = models.ForeignKey(Alt, db_index=True)
     system = models.ForeignKey(SolarSystem, db_index=True)
     time = models.DateTimeField(auto_now_add=True, db_index=True)
     online = models.BooleanField()

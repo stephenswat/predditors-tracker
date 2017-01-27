@@ -30,9 +30,9 @@ SOCIAL_AUTH_PIPELINE = (
     'social.pipeline.social_auth.social_user',
     'social.pipeline.user.get_username',
     'social.pipeline.user.create_user',
-    'predds_tracker.pipeline.single_association',
     'social.pipeline.social_auth.associate_user',
     'social.pipeline.social_auth.load_extra_data',
+    'predds_tracker.pipeline.single_association',
     'social.pipeline.user.user_details',
 )
 
