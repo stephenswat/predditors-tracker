@@ -1,11 +1,10 @@
-from django.core.exceptions import PermissionDenied, ObjectDoesNotExist
 from predds_tracker.models import Alt
 
-def single_association(backend, user, response, *args, **kwargs):
-    if kwargs['new_association'] and not kwargs['is_new']:
-        Alt(
-            id=response['CharacterID'],
-            name=response['CharacterName'],
-            main=user,
-            data=kwargs['social']
-        ).save()
+def create_user(strategy, details, backend, user=None, *args, **kwargs):
+    if user:
+        return {'is_new': False}
+
+    return {
+        'is_new': True,
+        'user': strategy.create_user(username=kwargs['username'], id=kwargs['response']['CharacterID'])
+    }

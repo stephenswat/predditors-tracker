@@ -29,7 +29,7 @@ SOCIAL_AUTH_PIPELINE = (
     'social.pipeline.social_auth.auth_allowed',
     'social.pipeline.social_auth.social_user',
     'social.pipeline.user.get_username',
-    'social.pipeline.user.create_user',
+    'predds_tracker.pipeline.create_user',
     'social.pipeline.social_auth.associate_user',
     'social.pipeline.social_auth.load_extra_data',
     'predds_tracker.pipeline.single_association',
@@ -57,7 +57,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'predds_tracker.wsgi.application'
-
 AUTH_USER_MODEL = 'predds_tracker.Character'
 AUTHENTICATION_BACKENDS = ('social_core.backends.eveonline.EVEOnlineOAuth2',)
 SOCIAL_AUTH_EVEONLINE_SCOPE = ['characterLocationRead', 'esi-location.read_location.v1', 'esi-location.read_ship_type.v1']
