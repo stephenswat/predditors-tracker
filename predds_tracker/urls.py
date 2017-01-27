@@ -10,6 +10,7 @@ regionpatterns = [
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^log/$', views.log, name='log'),
+    url(r'^alts/$', views.all_alts, name='alts'),
     url(r'^profile/$', views.profile, name='profile'),
     url(r'^region/(?P<region>[0-9]+)/', include(regionpatterns)),
     url(r'^help/', views.help, name='help'),

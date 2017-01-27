@@ -86,6 +86,11 @@ class Alt(EveCharacter):
             headers={'Authorization': 'Bearer ' + self.access_token})
         return res.json()
 
+    class Meta:
+        permissions = (
+            ("view_all_alts", "Can view lists of all alts and their owners."),
+        )
+
 class LocationRecord(models.Model):
     character = models.ForeignKey(Alt, db_index=True)
     system = models.ForeignKey(SolarSystem, db_index=True)

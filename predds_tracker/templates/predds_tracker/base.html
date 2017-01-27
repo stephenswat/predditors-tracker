@@ -65,7 +65,7 @@
           <ul class="nav navbar-nav">
             <li><a href="{% url 'log' %}">Log</a></li>
             <li><a href="{% url 'help' %}">Help</a></li>
-            <!-- <li><a href="#">Characters</a></li> -->
+            {% if perms.predds_tracker.view_all_alts %}<li><a href="{% url 'alts' %}">Alts</a></li>{% endif %}
           </ul>
           <ul class="nav navbar-nav navbar-right">
             {% if user.is_authenticated %}
