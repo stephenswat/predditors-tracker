@@ -11,7 +11,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social_django',
     'predds_tracker',
-    'eve_sde'
+    'eve_sde',
+    'django_cron'
 ]
 
 MIDDLEWARE = [
@@ -35,6 +36,12 @@ SOCIAL_AUTH_PIPELINE = (
     'predds_tracker.pipeline.create_alt',
     'social.pipeline.user.user_details',
 )
+
+CRON_CLASSES = [
+    'predds_tracker.cron.UpdateStatistics',
+    'predds_tracker.cron.UpdateLocations',
+    'predds_tracker.cron.UpdateAlliances',
+]
 
 ROOT_URLCONF = 'predds_tracker.urls'
 

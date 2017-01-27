@@ -35,7 +35,7 @@ You should now be able to run a local server using the following command:
 
     python manage.py runserver
 
-You need to run the update-statistics and update-locations commands every time
-you want to get the latest values from the EVE API. You may want to set a
-cronjob to run update-locations every 5 minutes and update-alliances and
-update-statistics every hour.
+You can update all the information in the database with the following command. I
+recommend making a cronjob without the force flag.
+
+    python manage.py runcrons --force
