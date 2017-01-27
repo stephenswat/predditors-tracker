@@ -29,7 +29,12 @@ Make the database with all the necessary tables and fill it with SDE data:
 
     python manage.py migrate
     python manage.py loaddata eve_sde/fixtures/result.json
+    python manage.py update-statistics
+    python manage.py update-locations
 
 You should now be able to run a local server using the following command:
 
     python manage.py runserver
+
+You need to run the update-statistics and update-locations commands every time 
+you want to get the latest values from the EVE API
