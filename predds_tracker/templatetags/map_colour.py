@@ -3,20 +3,25 @@ from colour import Color
 
 register = template.Library()
 
-noKillsColor=Color('white')
-thousandKillsColor=Color('#BFFF00')
-maxKillsColor=Color('red')
-
 @register.filter(name='npc_kill_colour')
 def npc_kill_colour(value):
+
+    colors = [
+        Color('white'),
+        Color('#54C45E'),
+        Color('#76A654'),
+        Color('#98884A'),
+        Color('#BA6B41'),
+        Color('#DC4D37'),
+    ]
     
     if value is None or type(value) == str:
-        return noKillsColor
+        return colors[0]
     kills = value
 
-    if kills <= 1000:
-        gradient = list(noKillsColor.range_to(thousandKillsColor, 11))
-        return gradient[(kills + 99) // 100]
+    if kills < 5:
+        return colors[0]
+    elif kills <= 1000:
+        return colors[(kills + 199) // 200]
     else:
-        gradient = list(thousandKillsColor.range_to(maxKillsColor, 31))
-        return gradient[min(kills + 99 - 1000, 3000) // 100]
+        return colors[-1]

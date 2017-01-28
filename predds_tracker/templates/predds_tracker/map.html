@@ -50,21 +50,31 @@
 
 <g id="map">
 {% block map %}{% endblock %}
-
-<div class="container">
-  <h1> Color Scale </h1>
-  <p> This scale should give you a good guess as to the npc kill amount for a system. The gernal idea is
-  that the more kills there are, the closer it gets to red.</p>
-<div class="row">
-  <div class="col-sm-2" style="background-color:{{ 0 | npc_kill_colour }}"> 0 </div>
-  <div class="col-sm-2" style="background-color:{{ 250 | npc_kill_colour }}"> 250 </div>
-  <div class="col-sm-2" style="background-color:{{ 500 | npc_kill_colour }}"> 500 </div>
-  <div class="col-sm-2" style="background-color:{{ 1000 | npc_kill_colour }}"> 1000</div>
-  <div class="col-sm-2" style="background-color:{{ 3000 | npc_kill_colour }}"> 3000 </div>
-  <div class="col-sm-2" style="background-color:{{ 3500 | npc_kill_colour }}"> 3500 </div>
-</div>
-</br>
 </g>
 </svg>
+
+<div class="container">
+  <h1> Color Guide </h1>
+<div class="row">
+  <div class="col-sm-1" style="background-color:{{ 0 | npc_kill_colour }}">&nbsp;</div>
+  <div class="col-sm-1" style="background-color:{{ 200 | npc_kill_colour }}">&nbsp;</div>
+  <div class="col-sm-1" style="background-color:{{ 400 | npc_kill_colour }}">&nbsp;</div>
+  <div class="col-sm-1" style="background-color:{{ 600 | npc_kill_colour }}">&nbsp;</div>
+  <div class="col-sm-1" style="background-color:{{ 800 | npc_kill_colour }}">&nbsp;</div>
+  <div class="col-sm-1" style="background-color:{{ 1000 | npc_kill_colour }}">&nbsp;</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1" > 0 </div>
+  <div class="col-sm-1" > 5 - 200 </div>
+  <div class="col-sm-1" > 201 - 400 </div>
+  <div class="col-sm-1" > 401 - 600</div>
+  <div class="col-sm-1" > 601 - 800 </div>
+  <div class="col-sm-1" > > 1000</div>
+</div>
+
+</div>
+</br>
+</br>
 
 {% endblock %}
