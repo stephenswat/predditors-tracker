@@ -66,7 +66,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'predds_tracker.wsgi.application'
 AUTH_USER_MODEL = 'predds_tracker.Character'
-AUTHENTICATION_BACKENDS = ('predds_tracker.auth.CustomEVEOnlineOAuth2',)
+AUTHENTICATION_BACKENDS = ['predds_tracker.auth.CustomEVEOnlineOAuth2', 'django.contrib.auth.backends.ModelBackend']
 SOCIAL_AUTH_EVEONLINE_SCOPE = []
 SOCIAL_AUTH_PROTECTED_USER_FIELDS = ['email', 'first_name', 'last_name']
 LOGIN_REDIRECT_URL = '/'
