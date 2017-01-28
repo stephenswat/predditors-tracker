@@ -75,3 +75,7 @@ def map(request, region):
 
 def help(request):
     return render(request, 'predds_tracker/help.html')
+
+
+def login_warning(request):
+    return render(request, 'predds_tracker/login_warning.html')

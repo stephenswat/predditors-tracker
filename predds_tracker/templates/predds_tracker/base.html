@@ -73,7 +73,7 @@
             <li><a href="{% url 'social:begin' backend='eveonline' %}?alt">Add alt</a></li>
             <li><a href="{% url 'logout' %}">Log out&nbsp;&nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
             {% else %}
-            <li><a href="{% url 'social:begin' backend='eveonline' %}">Log in</a></li>
+            <li><a href="{% url 'login_warning' %}">Log in</a></li>
             {% endif %}
           </ul>
         </div>

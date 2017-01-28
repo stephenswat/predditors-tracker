@@ -1,0 +1,21 @@
+{% extends "predds_tracker/base.html" %}
+{% block title %}Warning{% endblock %}
+{% block content %}
+
+<div class="page-header">
+<h1>Please read this!</h1>
+</div>
+
+<p>The structure of this web app has recently been modified significantly. In
+order to allow both us and you to more effectively administer your alts, we now
+require you to make the first login with your main account. This will not
+require any scopes and is thus <strong>completely safe</strong>.</p>
+
+<p>You can <strong>add your alts later</strong>; when you have logged in your
+main, using the <em>'Add alt'</em> link at the top of the screen.</p>
+
+<a href="{% url 'social:begin' backend='eveonline' %}" class="btn btn-primary
+btn-lg active" role="button" aria-pressed="true">I have read the above and I
+will <strong>only</strong> use this form to log in my main</a>
+
+{% endblock %}
