@@ -14,8 +14,9 @@ require any scopes and is thus <strong>completely safe</strong>.</p>
 <p>You can <strong>add your alts later</strong>; when you have logged in your
 main, using the <em>'Add alt'</em> link at the top of the screen.</p>
 
-<a href="{% url 'social:begin' backend='eveonline' %}" class="btn btn-primary
-btn-lg active" role="button" aria-pressed="true">I have read the above and I
-will <strong>only</strong> use this form to log in my main</a>
+<h2>Do <strong>not</strong> use this to log in your alts!</h2><br />
+
+<a href="{% url 'social:begin' backend='eveonline' %}" class="btn btn-lg btn-danger" role="button" aria-pressed="true" style="font-size: 24px;">I have read the above and I
+will <strong>only</strong> use this form to log in my <strong>main</strong></a>
 
 {% endblock %}
