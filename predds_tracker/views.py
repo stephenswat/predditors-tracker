@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
-from django.db.models import Max
+from django.db.models import Max, F
 from django.http import HttpResponse
 from predds_tracker.models import LocationRecord, Alt, Character, SystemStatistic, SystemMetadata
 from predds_tracker.forms import AltForm, DeleteAccountForm
@@ -51,7 +51,7 @@ def all_alts(request):
 def map(request, region):
     campers = Alt.objects.filter(latest__system__constellation__region__id=region, latest__online=True)
     latest = SystemStatistic.objects.aggregate(Max('time'))['time__max']
-    systems = SolarSystem.objects.filter(constellation__region__id=region, statistics__time=latest).values_list('id', 'statistics__npc_kills')
+    systems = SolarSystem.objects.select_related().filter(constellation__region__id=region).filter(statistics__time=latest).annotate(npc_kills=F('statistics__npc_kills'))
 
     count = defaultdict(bool)
     names = set()
@@ -67,7 +67,7 @@ def map(request, region):
         context={
             'region': get_object_or_404(Region, id=region),
             'camped': dict(count),
-            'npc_kills': {x[0]: x[1] for x in systems},
+            'systems': {x.id: x for x in systems},
             'dotlan': ','.join(names)
         }
     )
