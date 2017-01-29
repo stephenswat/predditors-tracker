@@ -1,9 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
 from django.db.models import Max
 from django.http import HttpResponse
 from predds_tracker.models import LocationRecord, Alt, Character, SystemStatistic
-from predds_tracker.forms import AltForm
+from predds_tracker.forms import AltForm, DeleteAccountForm
 from eve_sde.models import Region, SolarSystem
 from collections import defaultdict
 
@@ -16,14 +16,9 @@ def home(request):
 
 @login_required
 def profile(request):
-    if request.method == 'POST':
-        form = AltForm(request.POST, instance=request.user)
-        if form.is_valid():
-            form.save()
-
     return render(
         request, 'predds_tracker/profile.html',
-        context={'form': AltForm(instance=request.user)}
+        context={'form': DeleteAccountForm()}
     )
 
 
@@ -71,6 +66,16 @@ def map(request, region):
             'dotlan': ','.join(names)
         }
     )
+
+
+@login_required
+def delete_account(request):
+    if request.method == 'POST':
+        form = DeleteAccountForm(request.POST)
+        if form.is_valid() and form.cleaned_data['delete']:
+            request.user.delete()
+
+    return redirect('/')
 
 
 def help(request):

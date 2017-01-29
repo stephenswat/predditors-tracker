@@ -1,7 +1,10 @@
-from django.forms import ModelForm
+from django import forms
 from predds_tracker.models import Character, Alt
 
-class AltForm(ModelForm):
+class AltForm(forms.ModelForm):
     class Meta:
         model = Alt
         fields = ['track']
+
+class DeleteAccountForm(forms.Form):
+    delete = forms.BooleanField('Confirmation')

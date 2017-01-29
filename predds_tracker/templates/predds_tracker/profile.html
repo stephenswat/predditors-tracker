@@ -20,4 +20,13 @@
 <li>You don't have any! Blue Ice is disappointed!</li>
 {% endfor %}
 </ul>
+
+<h2>Delete account</h2>
+This will also delete all your alts!
+
+<form action="{% url 'delete_account' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+</form>
 {% endblock %}
