@@ -2,13 +2,23 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 <div class="page-header">
-  <h1>Predditors Cloaky Camping Alt Tracker</h1>
+  <h1>Predditors alt tracker</h1>
 </div>
 
 <div class="alert alert-success">
   <strong>Good news!</strong> You can now log your mains into this shit!
 </div>
 
+<h2>Important regions</h2>
+<div class="row">
+{% for x in regions %}
+{% if x.id in important %}
+<div class="col-md-2"><a href="{% url 'display_region' region=x.id %}" class="lead">{{ x.name }}</a></div>
+{% endif %}
+{% endfor %}
+</div>
+
+<h2>All regions</h2>
 <div class="row">
 {% for x in regions %}
 <div class="col-md-2"><a href="{% url 'display_region' region=x.id %}">{{ x.name }}</a></div>

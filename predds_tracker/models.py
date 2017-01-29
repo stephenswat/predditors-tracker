@@ -130,7 +130,7 @@ class LocationRecord(models.Model):
 class SystemMetadata(models.Model):
     system = models.OneToOneField(SolarSystem, related_name='data')
     important = models.BooleanField()
-    note = models.TextField()
+    note = models.TextField(blank=True)
 
 class SystemStatistic(models.Model):
     system = models.ForeignKey(SolarSystem, related_name='statistics')
