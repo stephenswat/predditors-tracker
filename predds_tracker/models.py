@@ -113,7 +113,11 @@ class Character(EveCharacter, AbstractBaseUser, PermissionsMixin):
 class Alt(EveCharacter):
     main = models.ForeignKey(Character, related_name='alts')
     latest = models.ForeignKey('LocationRecord', related_name='+', null=True)
-    track = models.BooleanField(default=True)
+    track = models.BooleanField(
+        'Enable tracking',
+        default=True,
+        help_text='If disabled, temporarily stop this character from being tracked.'
+    )
 
     @property
     def ship_location(self):

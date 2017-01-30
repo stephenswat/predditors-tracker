@@ -6,6 +6,13 @@ class LocationRecordAdmin(admin.ModelAdmin):
     list_display = ('character', 'system', 'online', 'station_id', 'ship_id', 'ship_type_id', 'time')
 
 class AltAdmin(admin.ModelAdmin):
+    fieldsets = (
+        (None, {'fields': ('name', 'id', 'corporation_id', 'alliance_id')}),
+        ('Tracker', {'fields': ('main', 'track')})
+    )
+
+    readonly_fields = ('id', 'name', 'corporation_id', 'alliance_id', 'data')
+
     list_display = ('id', 'name', 'main', 'track')
 
 class SystemMetadataAdmin(admin.ModelAdmin):
@@ -13,13 +20,13 @@ class SystemMetadataAdmin(admin.ModelAdmin):
 
 class UserAdmin(admin.ModelAdmin):
     fieldsets = (
-        (None, {'fields': ('name',)}),
+        (None, {'fields': ('id', 'name', 'corporation_id', 'alliance_id', 'last_login')}),
         ('Permissions', {'fields': ('is_staff', 'is_superuser', 'groups', 'user_permissions')}),
-        ('Important dates', {'fields': ('last_login',)}),
     )
 
-    list_display = ('name', 'is_staff')
+    list_display = ('id', 'name', 'is_staff')
     list_filter = ('is_staff', 'groups')
+    readonly_fields = ('id', 'name', 'corporation_id', 'alliance_id', 'data', 'last_login')
     search_fields = ('name',)
     ordering = ('name',)
 
