@@ -11,7 +11,7 @@ import requests
 class EveCharacter(models.Model):
     id = models.BigIntegerField(primary_key=True)
     name = models.CharField(max_length=128)
-    data = models.ForeignKey('social_django.UserSocialAuth', null=True)
+    data = models.OneToOneField('social_django.UserSocialAuth', null=True)
 
     @property
     def access_token(self):
