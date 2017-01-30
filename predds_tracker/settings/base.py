@@ -35,7 +35,6 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.associate_user',
     'social_core.pipeline.social_auth.load_extra_data',
     'predds_tracker.pipeline.create_alt',
-    'social_core.pipeline.user.user_details',
 )
 
 CRON_CLASSES = [
