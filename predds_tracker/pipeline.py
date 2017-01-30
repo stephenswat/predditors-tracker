@@ -1,5 +1,6 @@
 from predds_tracker.models import Alt
 
+
 def create_alt(backend, user, response, *args, **kwargs):
     if kwargs['new_association'] and not kwargs['is_new']:
         Alt(
@@ -9,6 +10,7 @@ def create_alt(backend, user, response, *args, **kwargs):
             data=kwargs['social']
         ).save()
 
+
 def create_user(strategy, details, backend, user=None, *args, **kwargs):
     if user:
         if user.id == kwargs['uid'] and user.name != kwargs['username']:
@@ -16,13 +18,18 @@ def create_user(strategy, details, backend, user=None, *args, **kwargs):
             user.save()
         return {'is_new': False}
 
-    user = strategy.create_user(username=kwargs['username'], id=kwargs['response']['CharacterID'])
+    user = strategy.create_user(
+        username=kwargs['username'],
+        id=kwargs['response']['CharacterID']
+    )
+
     user.update_data()
 
     return {
         'is_new': True,
         'user': user
     }
+
 
 def get_username(strategy, details, backend, user=None, *args, **kwargs):
     return {'username': details['fullname']}

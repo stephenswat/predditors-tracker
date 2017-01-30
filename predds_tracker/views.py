@@ -1,11 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
 from django.db.models import Max, F
-from django.http import HttpResponse
 from predds_tracker.models import LocationRecord, Alt, Character, SystemStatistic, SystemMetadata
-from predds_tracker.forms import AltForm, DeleteAccountForm
+from predds_tracker.forms import DeleteAccountForm
 from eve_sde.models import Region, SolarSystem
 from collections import defaultdict
+
 
 def home(request):
     important = set(SystemMetadata.objects.filter(important=True).values_list('system__constellation__region', flat=True).distinct())

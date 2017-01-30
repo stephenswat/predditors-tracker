@@ -3,6 +3,7 @@ from colour import Color
 
 register = template.Library()
 
+
 @register.filter(name='npc_kill_colour')
 def npc_kill_colour(value):
 
@@ -14,7 +15,7 @@ def npc_kill_colour(value):
         Color('#BA6B41'),
         Color('#DC4D37'),
     ]
-    
+
     if value is None or type(value) == str:
         return colors[0]
     kills = value

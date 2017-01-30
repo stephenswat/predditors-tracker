@@ -8,6 +8,7 @@ from collections import defaultdict
 from eve_sde.models import SolarSystem
 import requests
 
+
 class UpdateLocations(CronJobBase):
     RUN_EVERY_MINS = 5
     schedule = Schedule(run_every_mins=RUN_EVERY_MINS)
@@ -29,13 +30,13 @@ class UpdateLocations(CronJobBase):
                     station_id = res['structure_id']
 
                 new_entry = LocationRecord(
-                    character = c,
-                    online = res['online'],
-                    system_id = res['solar_system_id'],
-                    station_id = station_id,
-                    ship_id = res['ship_item_id'],
-                    ship_type_id = res['ship_type_id'],
-                    ship_name = res['ship_name']
+                    character=c,
+                    online=res['online'],
+                    system_id=res['solar_system_id'],
+                    station_id=station_id,
+                    ship_id=res['ship_item_id'],
+                    ship_type_id=res['ship_type_id'],
+                    ship_name=res['ship_name']
                 )
 
                 new_entry.save()

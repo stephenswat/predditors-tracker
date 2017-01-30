@@ -1,5 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, \
+                                       BaseUserManager
 from django.utils.functional import cached_property
 from django.conf import settings
 from social_django.utils import load_strategy
@@ -8,12 +9,32 @@ from eve_sde.models import SolarSystem, ItemType
 import xml.etree.ElementTree
 import requests
 
+
+CHARACTER_INFO_URL = 'https://api.eveonline.com/eve/CharacterInfo.xml.aspx?characterID=%d'
+
+
 class EveCharacter(models.Model):
-    id = models.BigIntegerField(primary_key=True)
-    name = models.CharField(max_length=128, unique=True)
-    data = models.OneToOneField('social_django.UserSocialAuth', null=True)
-    corporation_id = models.BigIntegerField(null=True)
-    alliance_id = models.BigIntegerField(null=True)
+    id = models.BigIntegerField(
+        primary_key=True
+    )
+
+    name = models.CharField(
+        max_length=128,
+        unique=True
+    )
+
+    data = models.OneToOneField(
+        'social_django.UserSocialAuth',
+        null=True
+    )
+
+    corporation_id = models.BigIntegerField(
+        null=True
+    )
+
+    alliance_id = models.BigIntegerField(
+        null=True
+    )
 
     @property
     def access_token(self):
@@ -50,7 +71,9 @@ class EveCharacter(models.Model):
         return self.alliance_id in settings.VALID_ALLIANCE_IDS
 
     def update_data(self):
-        tree = xml.etree.ElementTree.fromstring(requests.get('https://api.eveonline.com/eve/CharacterInfo.xml.aspx?characterID=%d' % self.id).text)[1]
+        tree = xml.etree.ElementTree.fromstring(
+            requests.get(CHARACTER_INFO_URL % self.id).text
+        )[1]
 
         corporation_tag = tree.find('corporationID')
         if corporation_tag is not None:
@@ -78,6 +101,7 @@ class EveCharacter(models.Model):
     class Meta:
         abstract = True
 
+
 class UserManager(BaseUserManager):
     use_in_migrations = True
 
@@ -88,6 +112,7 @@ class UserManager(BaseUserManager):
         user = self.model(name=name, **extra_fields)
         user.save(using=self._db)
         return user
+
 
 class Character(EveCharacter, AbstractBaseUser, PermissionsMixin):
     """
@@ -110,6 +135,7 @@ class Character(EveCharacter, AbstractBaseUser, PermissionsMixin):
         verbose_name = 'User'
         verbose_name_plural = 'Users'
 
+
 class Alt(EveCharacter):
     main = models.ForeignKey(Character, related_name='alts')
     latest = models.ForeignKey('LocationRecord', related_name='+', null=True)
@@ -128,26 +154,36 @@ class Alt(EveCharacter):
 
     @property
     def online(self):
-        res = requests.get('https://crest-tq.eveonline.com/characters/%d/location/' % self.id,
-            headers={'Authorization': 'Bearer ' + self.access_token})
+        res = requests.get(
+            'https://crest-tq.eveonline.com/characters/%d/location/' % self.id,
+            headers={'Authorization': 'Bearer ' + self.access_token}
+        )
+
         return res.status_code == 200 and len(res.json()) > 0
 
     @property
     def location(self):
-        res = requests.get('https://esi.tech.ccp.is/latest/characters/%d/location/' % self.id,
-            headers={'Authorization': 'Bearer ' + self.access_token})
+        res = requests.get(
+            'https://esi.tech.ccp.is/latest/characters/%d/location/' % self.id,
+            headers={'Authorization': 'Bearer ' + self.access_token}
+        )
+
         return res.json()
 
     @property
     def ship_type(self):
-        res = requests.get('https://esi.tech.ccp.is/latest/characters/%d/ship/' % self.id,
-            headers={'Authorization': 'Bearer ' + self.access_token})
+        res = requests.get(
+            'https://esi.tech.ccp.is/latest/characters/%d/ship/' % self.id,
+            headers={'Authorization': 'Bearer ' + self.access_token}
+        )
+
         return res.json()
 
     class Meta:
         permissions = (
             ("view_all_alts", "Can view lists of all alts and their owners."),
         )
+
 
 class LocationRecord(models.Model):
     character = models.ForeignKey(Alt, db_index=True)
@@ -159,10 +195,12 @@ class LocationRecord(models.Model):
     ship_type = models.ForeignKey(ItemType)
     ship_name = models.CharField(max_length=128)
 
+
 class SystemMetadata(models.Model):
     system = models.OneToOneField(SolarSystem, related_name='data')
     important = models.BooleanField()
     note = models.TextField(blank=True)
+
 
 class SystemStatistic(models.Model):
     system = models.ForeignKey(SolarSystem, related_name='statistics')

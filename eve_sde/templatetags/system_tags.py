@@ -2,6 +2,7 @@ from django import template
 
 register = template.Library()
 
+
 def security_background_colour(value):
     if value >= 1.0:
         return "#2FEFEF"
@@ -26,11 +27,13 @@ def security_background_colour(value):
     else:
         return "#F00000"
 
+
 def security_text_colour(value):
     if value >= 0.5:
         return "#000000"
     else:
         return "#FFFFFF"
+
 
 register.filter('security_background_colour', security_background_colour)
 register.filter('security_text_colour', security_text_colour)
