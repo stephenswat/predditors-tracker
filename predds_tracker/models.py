@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 from django.utils.functional import cached_property
 from django.conf import settings
 from social_django.utils import load_strategy
@@ -10,7 +10,7 @@ import requests
 
 class EveCharacter(models.Model):
     id = models.BigIntegerField(primary_key=True)
-    name = models.CharField(max_length=128)
+    name = models.CharField(max_length=128, unique=True)
     data = models.OneToOneField('social_django.UserSocialAuth', null=True)
 
     @property
@@ -53,7 +53,18 @@ class EveCharacter(models.Model):
     class Meta:
         abstract = True
 
-class Character(AbstractUser, EveCharacter):
+class UserManager(BaseUserManager):
+    use_in_migrations = True
+
+    def create_user(self, name, email=None, password=None, **extra_fields):
+        extra_fields.setdefault('is_staff', False)
+        extra_fields.setdefault('is_superuser', False)
+
+        user = self.model(name=name, **extra_fields)
+        user.save(using=self._db)
+        return user
+
+class Character(AbstractBaseUser, PermissionsMixin, EveCharacter):
     """
     A database model which is used by the EVE Online SSO to create, store and
     check logins. Stores information from the EVE API such as the character ID.
@@ -61,6 +72,17 @@ class Character(AbstractUser, EveCharacter):
 
     corporation_id = models.BigIntegerField(null=True)
     alliance_id = models.BigIntegerField(null=True)
+
+    is_staff = models.BooleanField(
+        'Staff status',
+        default=False,
+        help_text='Designates whether the user can log into this admin site.',
+    )
+    password = None
+    
+    USERNAME_FIELD = 'name'
+
+    objects = UserManager()
 
     def alliance_valid(self):
         return self.alliance_id in settings.VALID_ALLIANCE_IDS
@@ -81,6 +103,16 @@ class Character(AbstractUser, EveCharacter):
             self.alliance_id = None
 
         self.save()
+
+    def get_full_name(self):
+        return self.name
+
+    def get_short_name(self):
+        return self.get_full_name()
+
+    class Meta:
+        verbose_name = 'User'
+        verbose_name_plural = 'Users'
 
 class Alt(EveCharacter):
     main = models.ForeignKey(Character, related_name='alts')
