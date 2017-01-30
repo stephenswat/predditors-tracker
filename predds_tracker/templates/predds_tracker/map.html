@@ -2,12 +2,13 @@
 {% block title %}Map{% endblock %}
 {% block content %}
 {% load map_colour %}
+{% load region_path %}
 
 <div class="page-header">
   <h1>{{ region.name }}</h1>
 </div>
 
-<p><a href="http://evemaps.dotlan.net/map/{{ region.name }}/{{ dotlan }}/">View on Dotlan</a></p>
+<p><a href="http://evemaps.dotlan.net/map/{{ region | region_path }}/{% if dotlan %}{{ dotlan }}/{% endif%}">View on Dotlan</a></p>
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="768">
 <style type="text/css">
