@@ -11,6 +11,9 @@ def create_alt(backend, user, response, *args, **kwargs):
 
 def create_user(strategy, details, backend, user=None, *args, **kwargs):
     if user:
+        if user.id == kwargs['uid'] and user.name != kwargs['username']:
+            user.name = details['username']
+            user.save()
         return {'is_new': False}
 
     user = strategy.create_user(username=kwargs['username'], id=kwargs['response']['CharacterID'])
