@@ -20,3 +20,6 @@ def create_user(strategy, details, backend, user=None, *args, **kwargs):
         'is_new': True,
         'user': user
     }
+
+def get_username(strategy, details, backend, user=None, *args, **kwargs):
+    return {'username': details['fullname']}
