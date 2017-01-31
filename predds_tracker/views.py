@@ -37,7 +37,7 @@ def profile(request):
 def log(request):
     return render(
         request, 'predds_tracker/log.html',
-        context={'items': LocationRecord.objects.filter(character__main=request.user).order_by('-time')[:200]}
+        context={'items': LocationRecord.objects.select_related('ship_type', 'system', 'character').filter(character__main=request.user).order_by('-time')[:200]}
     )
 
 
@@ -56,7 +56,7 @@ def all_alts(request):
 def map(request, region):
     campers = Alt.objects.filter(latest__system__constellation__region__id=region, latest__online=True)
     latest = SystemStatistic.objects.aggregate(Max('time'))['time__max']
-    systems = SolarSystem.objects.select_related().filter(constellation__region__id=region).filter(statistics__time=latest).annotate(npc_kills=F('statistics__npc_kills'))
+    systems = SolarSystem.objects.select_related('data').filter(constellation__region__id=region).filter(statistics__time=latest).annotate(npc_kills=F('statistics__npc_kills'))
 
     count = defaultdict(bool)
     names = set()
