@@ -75,6 +75,8 @@ class EveCharacter(models.Model):
             requests.get(CHARACTER_INFO_URL % self.id).text
         )[1]
 
+        self.name = tree.find('characterName').text
+
         corporation_tag = tree.find('corporationID')
         if corporation_tag is not None:
             self.corporation_id = int(corporation_tag.text)
