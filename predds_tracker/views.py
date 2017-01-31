@@ -65,8 +65,6 @@ def map(request, region):
         names.add(x.latest.system.name)
         count[x.latest.system.id] = True
 
-    print(','.join(names))
-
     return render(
         request, 'predds_tracker/maps/%d.svg' % int(region),
         context={
