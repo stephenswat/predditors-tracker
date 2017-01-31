@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
 from django.db.models import Max, F
 from predds_tracker.models import LocationRecord, Alt, Character, SystemStatistic, SystemMetadata
-from predds_tracker.forms import DeleteAccountForm
+from predds_tracker.forms import DeleteAccountForm, AltSetForm
 from eve_sde.models import Region, SolarSystem
 from collections import defaultdict
 
@@ -21,9 +21,14 @@ def home(request):
 
 @login_required
 def profile(request):
+    if request.method == 'POST':
+        form = AltSetForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+
     return render(
         request, 'predds_tracker/profile.html',
-        context={'form': DeleteAccountForm()}
+        context={'form': DeleteAccountForm(), 'altform': AltSetForm(instance=request.user)}
     )
 
 

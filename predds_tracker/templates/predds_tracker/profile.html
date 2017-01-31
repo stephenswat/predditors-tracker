@@ -13,13 +13,22 @@
 </dl>
 
 <h2>Your alts</h2>
-<ul>
-{% for a in user.alts.all %}
-<li>{{ a.name }}</li>
-{% empty %}
-<li>You don't have any! Blue Ice is disappointed!</li>
-{% endfor %}
-</ul>
+<p>Uncheck the checkboxes to stop tracking of certain alts.</p>
+<form method="POST" class="form-horizontal">
+    {% csrf_token %}
+    {{ altform.management_form }}
+
+    <ul>
+        {% for form in altform %}
+        {{ form.id }}
+        <li>{{ form.track }}&nbsp;&nbsp;{{ form.instance.name }} </li>
+        {% empty %}
+        <li>You don't have any! Blue Ice is disappointed!</li>
+        {% endfor %}
+    </ul>
+    <input type="submit" value="Submit" />
+</form>
+
 
 <h2>Delete account</h2>
 This will also delete all your alts!
