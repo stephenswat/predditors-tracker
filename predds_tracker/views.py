@@ -71,7 +71,8 @@ def map(request, region):
             'region': get_object_or_404(Region, id=region),
             'camped': dict(count),
             'systems': {x.id: x for x in systems},
-            'dotlan': ','.join(names)
+            'dotlan': ','.join(names),
+            'coverage': 100*len(names) / systems.count()
         }
     )
 
