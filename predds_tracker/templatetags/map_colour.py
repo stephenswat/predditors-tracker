@@ -6,7 +6,6 @@ register = template.Library()
 
 @register.filter(name='npc_kill_colour')
 def npc_kill_colour(value):
-
     colors = [
         Color('white'),
         Color('#54C45E'),
