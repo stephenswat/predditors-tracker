@@ -1,0 +1,7 @@
+language: python
+python:
+  - "3.5"
+install:
+  - pip install -r requirements.txt
+  - cp predds_tracker/settings/local.template.py predds_tracker/settings/local.py
+script: python manage.py test
