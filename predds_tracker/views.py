@@ -54,7 +54,7 @@ def all_alts(request):
 @login_required
 @user_passes_test(Character.alliance_valid, login_url='/logout/')
 def map(request, region):
-    campers = Alt.objects.filter(latest__system__constellation__region__id=region, latest__online=True)
+    campers = Alt.objects.select_related('latest__system').filter(latest__system__constellation__region__id=region, latest__online=True)
     latest = SystemStatistic.objects.aggregate(Max('time'))['time__max']
     systems = SolarSystem.objects.select_related('data').filter(constellation__region__id=region).filter(statistics__time=latest).annotate(npc_kills=F('statistics__npc_kills'))
 
