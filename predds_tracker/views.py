@@ -13,7 +13,7 @@ def home(request):
     return render(
         request, 'predds_tracker/home.html',
         context={
-            'region_ids': sorted(list(Region.objects.filter(id__lt=11000000)), key=lambda x: x.name),
+            'regions': sorted(list(Region.objects.filter(id__lt=11000000)), key=lambda x: x.name),
             'important': important
         }
     )
