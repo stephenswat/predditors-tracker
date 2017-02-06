@@ -13,7 +13,7 @@
 <div class="row">
 {% for x in regions %}
 {% if x.id in important %}
-<div class="col-md-2"><a href="{% url 'display_region' region=x.id %}" class="lead">{{ x.name }}</a></div>
+<div class="col-md-2"><a href="{% url 'display_region' region_id=x.id %}" class="lead">{{ x.name }}</a></div>
 {% endif %}
 {% endfor %}
 </div>
@@ -21,7 +21,7 @@
 <h2>All regions</h2>
 <div class="row">
 {% for x in regions %}
-<div class="col-md-2"><a href="{% url 'display_region' region=x.id %}">{{ x.name }}</a></div>
+<div class="col-md-2"><a href="{% url 'display_region' region_id=x.id %}">{{ x.name }}</a></div>
 {% endfor %}
 </div>
 {% endblock %}

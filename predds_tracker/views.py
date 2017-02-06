@@ -53,10 +53,10 @@ def all_alts(request):
 
 @login_required
 @user_passes_test(Character.alliance_valid, login_url='/logout/')
-def map(request, region):
-    campers = Alt.objects.select_related('latest__system').filter(latest__system__constellation__region__id=region, latest__online=True)
+def map(request, region_id):
+    campers = Alt.objects.select_related('latest__system').filter(latest__system__constellation__region__id=region_id, latest__online=True)
     latest = SystemStatistic.objects.aggregate(Max('time'))['time__max']
-    systems = SolarSystem.objects.select_related('data').filter(constellation__region__id=region).filter(statistics__time=latest).annotate(npc_kills=F('statistics__npc_kills'))
+    systems = SolarSystem.objects.select_related('data').filter(constellation__region__id=region_id).filter(statistics__time=latest).annotate(npc_kills=F('statistics__npc_kills'))
 
     count = defaultdict(bool)
     names = set()
@@ -66,9 +66,9 @@ def map(request, region):
         count[x.latest.system.id] = True
 
     return render(
-        request, 'predds_tracker/maps/%d.svg' % int(region),
+        request, 'predds_tracker/maps/%d.svg' % int(region_id),
         context={
-            'region': get_object_or_404(Region, id=region),
+            'region': get_object_or_404(Region, id=region_id),
             'camped': dict(count),
             'systems': {x.id: x for x in systems},
             'dotlan': ','.join(names),
