@@ -70,9 +70,12 @@ class EveCharacter(models.Model):
     def alliance_valid(self):
         return self.alliance_id in settings.VALID_ALLIANCE_IDS
 
-    def update_data(self):
+    def update_data_url(self):
+        return CHARACTER_INFO_URL % self.id
+
+    def update_data(self, request=None):
         tree = xml.etree.ElementTree.fromstring(
-            requests.get(CHARACTER_INFO_URL % self.id).text
+            (request or requests.get(self.update_data_url())).text
         )[1]
 
         self.name = tree.find('characterName').text
@@ -147,39 +150,17 @@ class Alt(EveCharacter):
         help_text='If disabled, temporarily stop this character from being tracked.'
     )
 
-    @property
-    def ship_location(self):
-        res = self.location.copy()
-        res.update(self.ship_type)
-        res['online'] = self.online
-        return res
+    def get_location_url(self):
+        return 'https://esi.tech.ccp.is/latest/characters/%d/location/' % self.id
 
-    @property
-    def online(self):
-        res = requests.get(
-            'https://crest-tq.eveonline.com/characters/%d/location/' % self.id,
-            headers={'Authorization': 'Bearer ' + self.access_token}
-        )
+    def get_ship_type_url(self):
+        return 'https://esi.tech.ccp.is/latest/characters/%d/ship/' % self.id
 
-        return res.status_code == 200 and len(res.json()) > 0
+    def get_online_url(self):
+        return 'https://crest-tq.eveonline.com/characters/%d/location/' % self.id
 
-    @property
-    def location(self):
-        res = requests.get(
-            'https://esi.tech.ccp.is/latest/characters/%d/location/' % self.id,
-            headers={'Authorization': 'Bearer ' + self.access_token}
-        )
-
-        return res.json()
-
-    @property
-    def ship_type(self):
-        res = requests.get(
-            'https://esi.tech.ccp.is/latest/characters/%d/ship/' % self.id,
-            headers={'Authorization': 'Bearer ' + self.access_token}
-        )
-
-        return res.json()
+    def get_headers(self):
+        return {'Authorization': 'Bearer ' + self.access_token}
 
     class Meta:
         permissions = (
