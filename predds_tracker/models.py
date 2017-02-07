@@ -6,11 +6,10 @@ from django.conf import settings
 from social_django.utils import load_strategy
 from datetime import datetime, timedelta
 from eve_sde.models import SolarSystem, ItemType
-import xml.etree.ElementTree
 import requests
 
 
-CHARACTER_INFO_URL = 'https://api.eveonline.com/eve/CharacterInfo.xml.aspx?characterID=%d'
+CHARACTER_INFO_URL = 'https://esi.tech.ccp.is/latest/characters/%d/'
 
 
 class EveCharacter(models.Model):
@@ -74,23 +73,11 @@ class EveCharacter(models.Model):
         return CHARACTER_INFO_URL % self.id
 
     def update_data(self, request=None):
-        tree = xml.etree.ElementTree.fromstring(
-            (request or requests.get(self.update_data_url())).text
-        )[1]
+        data = (request or requests.get(self.update_data_url())).json()
 
-        self.name = tree.find('characterName').text
-
-        corporation_tag = tree.find('corporationID')
-        if corporation_tag is not None:
-            self.corporation_id = int(corporation_tag.text)
-        else:
-            self.corporation_id = None
-
-        alliance_tag = tree.find('allianceID')
-        if alliance_tag is not None:
-            self.alliance_id = int(alliance_tag.text)
-        else:
-            self.alliance_id = None
+        self.name = data['name']
+        self.corporation_id = data['corporation_id']
+        self.alliance_id = data.get('alliance_id', None)
 
         self.save()
 
