@@ -1,9 +1,10 @@
+from predds_tracker.models import LocationRecord, Alt, Character, SystemStatistic, SystemMetadata
+from predds_tracker.forms import DeleteAccountForm, AltSetForm, ProfileSettingsForm
+from eve_sde.models import Region, SolarSystem
+
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
 from django.db.models import Max, F
-from predds_tracker.models import LocationRecord, Alt, Character, SystemStatistic, SystemMetadata
-from predds_tracker.forms import DeleteAccountForm, AltSetForm
-from eve_sde.models import Region, SolarSystem
 from collections import defaultdict
 
 
@@ -28,9 +29,19 @@ def profile(request):
 
     return render(
         request, 'predds_tracker/profile.html',
-        context={'form': DeleteAccountForm(), 'altform': AltSetForm(instance=request.user)}
+        context={'form': DeleteAccountForm(), 'altform': AltSetForm(instance=request.user),
+                 'profile_form': ProfileSettingsForm(instance=request.user)}
     )
 
+
+@login_required
+def update_profile(request):
+    if request.method == 'POST':
+        form = ProfileSettingsForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+
+        return redirect('/profile')
 
 @login_required
 @user_passes_test(Character.alliance_valid, login_url='/logout/')

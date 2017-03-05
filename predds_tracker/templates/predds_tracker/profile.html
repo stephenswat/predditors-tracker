@@ -22,6 +22,16 @@
     </div>
 </div>
 
+<br />
+<h2>Profile Options</h2>
+<b>This will also delete all your alts!</b>
+
+<form action="{% url 'update_profile' %}" method="POST">
+    {% csrf_token %}
+    {{ profile_form.as_p }}
+    <input type="submit" value="Submit" />
+</form>
+
 
 <br />
 <h2>Associated Alts</h2>

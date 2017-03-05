@@ -9,6 +9,12 @@ class AltInlineFormSet(forms.BaseInlineFormSet):
                 raise forms.ValidationError('Trying to alter an alt not owned by the user.')
 
 
+class ProfileSettingsForm(forms.ModelForm):
+    class Meta:
+        model = Character
+        fields = ['map_auto_update']
+
+
 class AltForm(forms.ModelForm):
     class Meta:
         model = Alt
