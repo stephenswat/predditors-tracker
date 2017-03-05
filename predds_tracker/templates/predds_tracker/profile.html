@@ -2,36 +2,61 @@
 {% block title %}Profile{% endblock %}
 {% block content %}
 
-<div class="page-header">
-  <h1>{{ user.get_full_name }}</h1>
+<br />
+<h2>Main Account Info</h2>
+<br />
+<div class="container">
+    <div class="row">
+      <div class="media">
+        <div class="media-left">
+          <img src="https://image.eveonline.com/Character/{{ user.id }}_128.jpg">
+        </div>
+        <div class="media-body">
+           <dl>
+              <dt>Name</dt><dd>{{ user.name }}</dd>
+              <dt>Corporation</dt><dd>{{ user.corporation_id }}</dd>
+              <dt>Alliance</dt><dd>{{ user.alliance_id }}</dd>
+           </dl> 
+        </div>
+      </div>
+    </div>
 </div>
 
-<h2>Public information</h2>
-<dl>
-  <dt>Corporation</dt><dd>{{ user.corporation_id }}</dd>
-  <dt>Alliance</dt><dd>{{ user.alliance_id }}</dd>
-</dl>
 
-<h2>Your alts</h2>
+<br />
+<h2>Associated Alts</h2>
 <p>Uncheck the checkboxes to stop tracking of certain alts.</p>
-<form method="POST" class="form-horizontal">
+<form method="POST">
     {% csrf_token %}
     {{ altform.management_form }}
 
-    <ul>
-        {% for form in altform %}
+    {% if altform|length > 0 %}
+      <table class ="table table-hover">
+        <thead>
+          <tr>
+            <th> Alt Name </th>
+            <th> Track? </th>
+          </tr>
+         </thead>
+        <tbody>
+      {% for form in altform %}
         {{ form.id }}
-        <li>{{ form.track }}&nbsp;&nbsp;{{ form.instance.name }} </li>
-        {% empty %}
-        <li>You don't have any! Blue Ice is disappointed!</li>
-        {% endfor %}
-    </ul>
-    <input type="submit" value="Submit" />
+        <tr>
+          <th> {{ form.instance.name }} </th>
+          <th> {{ form.track }} </th>
+        </tr>
+      {% endfor %}
+        </tbody>
+      </table>
+        <input type="submit" value="Submit" />
+    {% else %}
+      You don't have any! Blue Ice is disappointed!
+    {% endif %}
 </form>
 
 
-<h2>Delete account</h2>
-This will also delete all your alts!
+<h2>Delete Account</h2>
+<b>This will also delete all your alts!</b>
 
 <form action="{% url 'delete_account' %}" method="post">
     {% csrf_token %}
