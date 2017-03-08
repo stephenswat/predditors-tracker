@@ -117,6 +117,13 @@ class Character(EveCharacter, AbstractBaseUser, PermissionsMixin):
         default=False,
         help_text='Designates whether the user can log into this admin site.',
     )
+
+    map_auto_update = models.BooleanField(
+        'Map Autoupdate',
+        default=False,
+        help_text='Set map to auto-update or not',
+    )
+
     password = None
 
     USERNAME_FIELD = 'name'

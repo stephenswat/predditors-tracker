@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^log/$', views.log, name='log'),
     url(r'^alts/$', views.all_alts, name='alts'),
     url(r'^profile/delete/$', views.delete_account, name='delete_account'),
+    url(r'^profile/update_profile/$', views.update_profile, name='update_profile'),
     url(r'^profile/$', views.profile, name='profile'),
     url(r'^region/(?P<region_id>[0-9]+)/', include(regionpatterns)),
     url(r'^help/', views.help, name='help'),
