@@ -39,8 +39,6 @@ class UpdateLocations(CronJobBase):
                     elif 'structure_id' in res:
                         station_id = res['structure_id']
 
-                    res['solar_system_id'] = 20000686
-
                     if res['solar_system_id'] not in solar_systems:
                         print("What? %s had a weird system %d!" % (c.name, res['solar_system_id']))
                         continue
