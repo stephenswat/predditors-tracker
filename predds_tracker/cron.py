@@ -16,6 +16,7 @@ class UpdateLocations(CronJobBase):
     def do(self):
         print("Updating locations...")
 
+        solar_systems = {x['id'] for x in SolarSystem.objects.values('id').all()}
         session = FuturesSession(max_workers=20)
         results = {c: (
             session.get(c.get_location_url(), headers=c.get_headers()),
@@ -30,7 +31,6 @@ class UpdateLocations(CronJobBase):
                 try:
                     online = o.result()
                     res = {**l.result().json(), **s.result().json(), 'online': online.status_code == 200 and len(online.json()) > 0}
-                    print(res)
 
                     station_id = None
 
@@ -38,6 +38,12 @@ class UpdateLocations(CronJobBase):
                         station_id = res['station_id']
                     elif 'structure_id' in res:
                         station_id = res['structure_id']
+
+                    res['solar_system_id'] = 20000686
+
+                    if res['solar_system_id'] not in solar_systems:
+                        print("What? %s had a weird system %d!" % (c.name, res['solar_system_id']))
+                        continue
 
                     new_entry = LocationRecord(
                         character=c,
