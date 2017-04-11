@@ -8,12 +8,12 @@
 <div class="alert alert-info" role="alert"><strong>Heads up!</strong> This page has staff-only access and linking it to other might not work.</div>
 
 <tbody>
-{% for m in mains %}
-<h2>{{ m.get_full_name }} ({{ m.alts.count }} alts)</h2>
 <table class="table table-striped">
+{% for m in mains %}
+{% if m.alts.count > 0 %}
 <thead>
     <tr>
-        <th>Alt</th>
+        <th>{{ m.get_full_name }} ({{ m.alts.count }} alts)</th>
         <th>Online</th>
         <th>System</th>
         <th>Ship type</th>
@@ -27,7 +27,8 @@
   <td>{{ a.latest.ship_type }}</td>
 </tr>
 {% endfor %}
+{% endif %}
+{% endfor %}
 </tbody>
 </table>
-{% endfor %}
 {% endblock %}

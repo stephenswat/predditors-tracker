@@ -58,7 +58,7 @@ def log(request):
 def all_alts(request):
     return render(
         request, 'predds_tracker/alts.html',
-        context={'mains': Character.objects.all()}
+        context={'mains': Character.objects.prefetch_related('alts', 'alts__latest__system', 'alts__latest__ship_type').all()}
     )
 
 
