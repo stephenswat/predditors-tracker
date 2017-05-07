@@ -5,10 +5,7 @@
   <h1>Predditors alt tracker</h1>
 </div>
 
-<div class="alert alert-success">
-  <strong>Good news!</strong> You can now log your mains into this shit!
-</div>
-
+{% if important|length > 0 %}
 <h2>Important regions</h2>
 <div class="row">
 {% for x in regions %}
@@ -17,6 +14,7 @@
 {% endif %}
 {% endfor %}
 </div>
+{% endif %}
 
 <h2>All regions</h2>
 <div class="row">
