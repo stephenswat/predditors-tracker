@@ -30,7 +30,6 @@ class UpdateStatistics(CronJobBase):
 
         with transaction.atomic():
             for ssid, stats in data.items():
-                print(stats, type(stats), stats.get('ship_jumps', 0))
                 SystemStatistic(
                     time=time,
                     system_id=ssid,
