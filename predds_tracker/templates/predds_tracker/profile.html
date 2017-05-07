@@ -16,7 +16,7 @@
               <dt>Name</dt><dd>{{ user.name }}</dd>
               <dt>Corporation</dt><dd>{{ user.corporation_id }}</dd>
               <dt>Alliance</dt><dd>{{ user.alliance_id }}</dd>
-           </dl> 
+           </dl>
         </div>
       </div>
     </div>
@@ -24,7 +24,6 @@
 
 <br />
 <h2>Profile Options</h2>
-<b>This will also delete all your alts!</b>
 
 <form action="{% url 'update_profile' %}" method="POST">
     {% csrf_token %}
