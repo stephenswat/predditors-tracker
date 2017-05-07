@@ -12,6 +12,7 @@ INSTALLED_APPS = [
     'social_django',
     'predds_tracker',
     'eve_sde',
+    'system_statistics',
     'django_cron',
     'debug_toolbar'
 ]
@@ -40,7 +41,7 @@ SOCIAL_AUTH_PIPELINE = (
 )
 
 CRON_CLASSES = [
-    'predds_tracker.cron.UpdateStatistics',
+    'system_statistics.cron.UpdateStatistics',
     'predds_tracker.cron.UpdateLocations',
     'predds_tracker.cron.UpdateAlliances',
 ]

@@ -1,5 +1,5 @@
 from django_cron import CronJobBase, Schedule
-from predds_tracker.models import Alt, LocationRecord, Character, SystemStatistic, CHARACTER_INFO_URL
+from predds_tracker.models import Alt, LocationRecord, Character, CHARACTER_INFO_URL
 from xml.etree import ElementTree
 from django.db import transaction
 from datetime import datetime
@@ -77,35 +77,3 @@ class UpdateAlliances(CronJobBase):
                     c.update_data(request=d.result())
                 except Exception as e:
                     print(e)
-
-
-class UpdateStatistics(CronJobBase):
-    schedule = Schedule(run_every_mins=60)
-    code = 'predds_tracker.update_statistics'
-
-    def do(self):
-        print("Updating statistics...")
-        response = requests.get('https://api.eveonline.com/map/kills.xml.aspx')
-        rowset = ElementTree.fromstring(response.content).find('result').find('rowset')
-        time = datetime.now()
-
-        ship_kills = defaultdict(int)
-        pod_kills = defaultdict(int)
-        npc_kills = defaultdict(int)
-
-        for row in rowset:
-            ssid = int(row.attrib['solarSystemID'])
-            ship_kills[ssid] = int(row.attrib['shipKills'])
-            pod_kills[ssid] = int(row.attrib['podKills'])
-            npc_kills[ssid] = int(row.attrib['factionKills'])
-
-        with transaction.atomic():
-            for ssid in SolarSystem.objects.values_list('id'):
-                ssid = ssid[0]
-                SystemStatistic(
-                    time=time,
-                    system_id=ssid,
-                    ship_kills=ship_kills[ssid],
-                    pod_kills=pod_kills[ssid],
-                    npc_kills=npc_kills[ssid],
-                ).save()

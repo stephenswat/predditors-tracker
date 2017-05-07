@@ -1,5 +1,6 @@
-from predds_tracker.models import LocationRecord, Alt, Character, SystemStatistic, SystemMetadata
+from predds_tracker.models import LocationRecord, Alt, Character, SystemMetadata
 from predds_tracker.forms import DeleteAccountForm, AltSetForm, ProfileSettingsForm
+from system_statistics.models import SystemStatistic
 from eve_sde.models import Region, SolarSystem
 
 from django.shortcuts import render, get_object_or_404, redirect
