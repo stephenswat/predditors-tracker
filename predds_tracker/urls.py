@@ -11,7 +11,7 @@ regionpatterns = [
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^log/$', views.log, name='log'),
-    url(r'^alts/$', views.all_alts, name='alts'),
+    url(r'^alts/$', views.alts, name='alts'),
     url(r'^profile/delete/$', views.delete_account, name='delete_account'),
     url(r'^profile/update_profile/$', views.update_profile, name='update_profile'),
     url(r'^profile/$', views.profile, name='profile'),

@@ -55,11 +55,15 @@ def log(request):
 
 @login_required
 @user_passes_test(Character.alliance_valid, login_url='/logout/')
-@permission_required('predds_tracker.view_all_alts', raise_exception=True)
-def all_alts(request):
+def alts(request):
+    if request.user.has_perm('predds_tracker.view_all_alts'):
+        res = Character.objects.prefetch_related('alts', 'alts__latest__system', 'alts__latest__ship_type').all()
+    else:
+        res = Character.objects.prefetch_related('alts', 'alts__latest__system', 'alts__latest__ship_type').filter(id=request.user.id).all()
+
     return render(
         request, 'predds_tracker/alts.html',
-        context={'mains': Character.objects.prefetch_related('alts', 'alts__latest__system', 'alts__latest__ship_type').all()}
+        context={'mains': res}
     )
 
 
