@@ -23,10 +23,51 @@
 
 <hr>
 
+<h2>Result</h2>
+
 <div style="display: none;" id="warp_calc_result">
 Start when the fleet shows up on a dscan of <strong><span id="warp_calc_result_value"></span></strong> km.
 </div>
 
+<hr>
+
+<h2>How it works</h2>
+
+The velocity of a ship decelerating from warp in EVE is determined using the
+warp speed $k$, the time already spent in deceleration $t$ and a variable $j =
+-\min(2, \frac{k}{3})$ as follows:
+
+$$v(t) = k\cdot e^{jt}$$
+
+We find the intedefinite integral of this velocity:
+
+$$V(t) = \int k\cdot e^{jt} \text{d}t = \frac{k\cdot e^{jt}}{j}$$
+
+An equation for the distance left in warp is then found as:
+
+$$D(t) = V(\infty) - V(t) = \frac{-k\cdot e^{jt}}{j}$$
+
+To understand when the ship drops out of warp, we need to have a deviation
+threshold $d$ such that we consider a ship to be out of warp when it is less
+than $d$ from its destination. We can then find the time spent decelerating with
+the equation $D(t') = d$:
+
+$$D(t') = d \iff \frac{-k\cdot e^{jt'}}{j} = d \iff t' = \frac{\ln\frac{d\cdot j}{-k}}{j}$$
+
+From this point, we want to have a buffer of a certain length of time $b$. If
+you're bombing, for example, you would want a buffer of 12 seconds since bombs
+travel that far, plus maybe a few seconds to decloak and press the button. What
+we want to know is how far the enemy is away at that point in time. Remember
+that this point in time is $t' - b$, so we can calculate the distance at that
+point as $D(t' - b)$. When the enemies show up on a D-scan of this range, they
+will drop out of warp $b$ seconds later which is what we were after.
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML-full"></script>
 <script>
 var AU_TO_KM = 149597870.700;
 
