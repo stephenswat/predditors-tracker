@@ -1,0 +1,50 @@
+{% extends "predds_tracker/base.html" %}
+{% block title %}Warp Bomb Calculator{% endblock %}
+{% block content %}
+<div class="page-header">
+    <h1>Warp Bomb Calculator</h1>
+</div>
+
+<form id="warp_calc_form" action="javascript:calculate_values()">
+  <div class="form-group">
+    <label for="warp_calc_warp_speed_input">Warp speed</label>
+    <input type="number" class="form-control" id="warp_calc_warp_speed_input" placeholder="3.0" required>
+  </div>
+  <div class="form-group">
+    <label for="warp_calc_deviation_input">Max deviation</label>
+    <input type="number" class="form-control" id="warp_calc_deviation_input" value="7500" required>
+  </div>
+  <div class="form-group">
+    <label for="warp_calc_buffer">Time required</label>
+    <input type="number" class="form-control" id="warp_calc_buffer" placeholder="~14 for bombing" required>
+  </div>
+  <button type="submit" class="btn btn-primary btn-lg btn-block">Go!</button>
+</form>
+
+<hr>
+
+<div style="display: none;" id="warp_calc_result">
+Start when the fleet shows up on a dscan of <strong><span id="warp_calc_result_value"></span></strong> km.
+</div>
+
+<script>
+var AU_TO_KM = 149597870.700;
+
+function distance_left(k, j, t) {
+    return AU_TO_KM * (k / j) * Math.exp(-j * t);
+}
+
+function calculate_values() {
+    var v = parseInt(document.forms["warp_calc_form"]["warp_calc_warp_speed_input"].value);
+    var d = parseInt(document.forms["warp_calc_form"]["warp_calc_deviation_input"].value);
+    var t = parseInt(document.forms["warp_calc_form"]["warp_calc_buffer"].value);
+
+    var j = Math.min(v / 3.0, 2.0);
+
+    var t_decel = Math.log((j * t) / (v * AU_TO_KM)) / -j;
+
+    $('#warp_calc_result').show();
+    $('#warp_calc_result_value').text(Math.round(distance_left(v, j, Math.ceil(t_decel - t))).toLocaleString());
+}
+</script>
+{% endblock %}

@@ -14,6 +14,7 @@ INSTALLED_APPS = [
     'eve_sde',
     'system_statistics',
     'django_cron',
+    'tools',
     'debug_toolbar'
 ]
 
