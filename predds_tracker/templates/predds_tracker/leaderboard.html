@@ -1,0 +1,19 @@
+{% extends "predds_tracker/base.html" %}
+{% block title %}Camping Leaderboard{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>Camping Leaderboard</h1>
+</div>
+
+<ul>
+{% for x in data %}
+<li>{{ x.name }}:
+    <span title="{{ x.total_hours }} hours">
+        {% if x.years > 0 %}{{ x.years }} years, {% endif %}
+        {% if x.days > 0 %}{{ x.days }} days, {% endif %}
+        {{ x.hours }} hours
+    </span>
+</li>
+{% endfor %}
+</ul>
+{% endblock %}

@@ -18,6 +18,7 @@ urlpatterns = [
     url(r'^region/(?P<region_id>[0-9]+)/', include(regionpatterns)),
     url(r'^tools/', include('tools.urls')),
     url(r'^help/', views.help, name='help'),
+    url(r'^leaderboard/', views.leaderboard, name='leaderboard'),
     url(r'^logout/', auth_views.logout, {'next_page': '/'}, name='logout'),
     url(r'^login/warning/', views.login_warning, name='login_warning'),
     url(r'^', include('social_django.urls', namespace='social')),

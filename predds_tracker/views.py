@@ -5,7 +5,7 @@ from eve_sde.models import Region, SolarSystem
 
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
-from django.db.models import Max, F
+from django.db.models import Max, F, Count
 from collections import defaultdict
 
 
@@ -91,6 +91,22 @@ def map(request, region_id):
             'systems': {x.id: x for x in systems},
             'dotlan': ','.join(names),
             'coverage': 100*len(names) / systems.count()
+        }
+    )
+
+
+@login_required
+@user_passes_test(Character.alliance_valid, login_url='/logout/')
+def leaderboard(request):
+    data = [
+        {'name': x['character__main__name'], 'years': x['hours'] // 8760, 'days': (x['hours'] % 8760) // 24, 'hours': x['hours'] % 24, 'total_hours': x['hours']}
+        for x in LocationRecord.objects.filter(online=True).values('character__main__name').annotate(hours=(5.0*Count('online'))/60).order_by('-hours')[:25]
+    ]
+
+    return render(
+        request, 'predds_tracker/leaderboard.html',
+        context={
+            'data': data
         }
     )
 
