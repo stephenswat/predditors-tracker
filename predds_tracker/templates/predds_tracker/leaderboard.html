@@ -5,15 +5,15 @@
   <h1>Camping Leaderboard</h1>
 </div>
 
-<ul>
+<ol>
 {% for x in data %}
 <li>{{ x.name }}:
     <span title="{{ x.total_hours }} hours">
-        {% if x.years > 0 %}{{ x.years }} years, {% endif %}
-        {% if x.days > 0 %}{{ x.days }} days, {% endif %}
-        {{ x.hours }} hours
+        {% if x.years > 0 %}{{ x.years }} year{{ x.years|pluralize:",s" }}, {% endif %}
+        {% if x.days > 0 %}{{ x.days }} day{{ x.days|pluralize:",s" }} and {% endif %}
+        {{ x.hours }} hour{{ x.hours|pluralize:",s" }}
     </span>
 </li>
 {% endfor %}
-</ul>
+</ol>
 {% endblock %}
