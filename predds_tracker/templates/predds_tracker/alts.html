@@ -16,6 +16,8 @@
         <th>{{ m.get_full_name }} ({{ m.alts.count }} alts)</th>
         <th>Online</th>
         <th>System</th>
+        <th>Constellation</th>
+        <th>Region</th>
         <th>Ship type</th>
     </tr>
 </thead>
@@ -24,6 +26,8 @@
   <td>{{ a.name }}</td>
   <td>{{ a.latest.online }}</td>
   <td>{{ a.latest.system.name }}</td>
+  <td>{{ a.latest.system.constellation.name }}</td>
+  <td>{{ a.latest.system.constellation.region.name }}</td>
   <td>{{ a.latest.ship_type }}</td>
 </tr>
 {% endfor %}
