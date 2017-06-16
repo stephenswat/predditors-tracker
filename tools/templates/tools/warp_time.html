@@ -41,7 +41,7 @@ function calculate_values() {
 
     var j = Math.min(v / 3.0, 2.0);
 
-    var t_decel = Math.log((j * t) / (v * AU_TO_KM)) / -j;
+    var t_decel = Math.log((j * d) / (v * AU_TO_KM)) / -j;
 
     $('#warp_calc_result').show();
     $('#warp_calc_result_value').text(Math.round(distance_left(v, j, Math.ceil(t_decel - t))).toLocaleString());
