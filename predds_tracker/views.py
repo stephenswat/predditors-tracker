@@ -99,7 +99,7 @@ def map(request, region_id):
 
 @login_required
 @user_passes_test(Character.alliance_valid, login_url='/logout/')
-@cache_page(5 * 60)
+@cache_page(60 * 60)
 @vary_on_cookie
 def leaderboard(request):
     data = [
