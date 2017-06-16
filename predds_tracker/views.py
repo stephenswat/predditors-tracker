@@ -4,6 +4,7 @@ from system_statistics.models import SystemStatistic
 from eve_sde.models import Region, SolarSystem
 
 from django.views.decorators.cache import cache_page
+from django.views.decorators.vary import vary_on_cookie
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
 from django.db.models import Max, F, Count
@@ -99,6 +100,7 @@ def map(request, region_id):
 @login_required
 @user_passes_test(Character.alliance_valid, login_url='/logout/')
 @cache_page(5 * 60)
+@vary_on_cookie
 def leaderboard(request):
     data = [
         {'name': x['character__main__name'], 'years': x['hours'] // 8760, 'days': (x['hours'] % 8760) // 24, 'hours': x['hours'] % 24, 'total_hours': x['hours']}
