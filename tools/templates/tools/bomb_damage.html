@@ -1,0 +1,137 @@
+{% extends "predds_tracker/base.html" %}
+{% block title %}Bomb Damage Calculator{% endblock %}
+{% block content %}
+<div class="page-header">
+    <h1>Bomb Damage Calculator</h1>
+</div>
+
+<form id="warp_calc_form" action="#">
+    <div class="form-group">
+        <label for="signature_radius">Calculation type</label>
+        <input id="radio_ehp" name="calc_type" type="radio" value="ehp" checked/> EHP
+        <input name="calc_type" type="radio" value="raw" /> Raw HP and resists
+        <input name="calc_type" type="radio" value="ship" /> Ship type
+    </div>
+
+  <div class="form-group" id="calc_sig">
+    <label for="signature_radius">Signature radius (<span id="signature_radius_label"></span> m)</label>
+    <input id="signature_radius" type="range" min="0" max="400" step="1" />
+  </div>
+
+  <div class="form-group" id="calc_ehp">
+    <label for="target_ehp">Effective hitpoints (<span id="target_ehp_label"></span> HP)</label>
+    <input id="target_ehp" type="range" min="0" max="500" step="0.1" />
+  </div>
+
+  <div class="form-group" id="calc_raw">
+    <label for="damage_resistance">Resistance (<span id="damage_resistance_label"></span>%)</label>
+    <input id="damage_resistance" type="range" min="0" max="100" step="1" />
+    <label for="target_raw">Raw hitpoints (<span id="target_raw_label"></span> HP)</label>
+    <input id="target_raw" type="range" min="0" max="500" step="0.1" />
+  </div>
+
+  <div class="form-group" id="calc_ship">
+
+  </div>
+</form>
+
+<hr>
+
+<h2>Result</h2>
+
+<div id="warp_calc_result">
+
+<dl>
+<dt>Best-case</dt>
+<dd><strong><span id="bomb_damage_result_best"></span></strong> bombers required</dd>
+<dt>Worst-case</dt>
+<dd><strong><span id="bomb_damage_result_worst"></span></strong> bombers required</dd>
+</dl>
+
+</div>
+
+<script>
+$("#calc_raw").hide();
+$("#calc_ship").hide();
+$("#radio_ehp").prop("checked", true);
+$("#warp_calc_result").hide();
+
+update_labels();
+update_results();
+
+$('input[name=calc_type]', '#warp_calc_form').change(function() {
+    $("#calc_ehp").hide();
+    $("#calc_raw").hide();
+    $("#calc_ship").hide();
+
+    var typ = $('input[name=calc_type]:checked', '#warp_calc_form').val();
+
+    if (typ == "ehp") {
+        $("#calc_sig").show();
+        $("#calc_ehp").show();
+        $("#calc_raw").hide();
+        $("#calc_ship").hide();
+    } else if (typ == "raw") {
+        $("#calc_sig").show();
+        $("#calc_ehp").hide();
+        $("#calc_raw").show();
+        $("#calc_ship").hide();
+    } else if (typ == "ship") {
+        $("#calc_sig").hide();
+        $("#calc_ehp").hide();
+        $("#calc_raw").hide();
+        $("#calc_ship").show();
+    }
+});
+
+function update_labels() {
+    sig_radius = $("#signature_radius").val();
+    if (sig_radius >= 400) {
+        $("#signature_radius_label").text(">400");
+    } else {
+        $("#signature_radius_label").text(sig_radius);
+    }
+
+    resistance = $("#damage_resistance").val();
+    $("#damage_resistance_label").text(resistance);
+
+    ehp = Math.pow($("#target_ehp").val(), 2.0);
+    $("#target_ehp_label").text(Math.round(ehp).toLocaleString());
+
+    raw = Math.pow($("#target_raw").val(), 2.0);
+    $("#target_raw_label").text(Math.round(raw).toLocaleString());
+}
+
+function update_results() {
+    var sig = $("#signature_radius").val();
+    var res = $("#damage_resistance").val() / 100.0;
+    var ehp = Math.pow($("#target_ehp").val(), 2.0);
+    var raw = Math.pow($("#target_raw").val(), 2.0);
+
+    var bdm = Math.min(1.0, sig / 400.0);
+    var typ = $('input[name=calc_type]:checked', '#warp_calc_form').val();
+
+    var best, worst;
+
+    if (typ == "ehp") {
+        var best = ehp / (bdm * 8000);
+        var worst = ehp / (bdm * 6400);
+    } else if (typ == "raw") {
+        ehp = raw / (1 - res);
+        var best = ehp / (bdm * 8000);
+        var worst = ehp / (bdm * 6400);
+    } else if (typ == "ship") {
+        window.alert("This doesn't work yet fam");
+    }
+
+    $('#bomb_damage_result_best').text(Math.ceil(best));
+    $('#bomb_damage_result_worst').text(Math.ceil(worst));
+
+    $("#warp_calc_result").show();
+}
+
+$("input[type='range']").mousemove(update_labels);
+$("input[type='range']").change(update_results);
+
+</script>
+{% endblock %}
