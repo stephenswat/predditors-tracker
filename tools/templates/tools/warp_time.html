@@ -1,28 +1,52 @@
 {% extends "predds_tracker/base.html" %}
 {% block title %}Warp Bomb Calculator{% endblock %}
 {% block content %}
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
 <div class="page-header">
     <h1>Warp Bomb Calculator</h1>
 </div>
 
-<form id="warp_calc_form" action="javascript:calculate_values()">
+<form class="form-horizontal" id="warp_calc_form" action="javascript:calculate_values()">
   <div class="form-group">
-    <label for="warp_calc_warp_speed_input">Warp speed</label>
-    <input type="number" class="form-control" id="warp_calc_warp_speed_input" placeholder="3.0" step="0.01" required>
-    <button type="button" class="btn btn-secondary btn-sm" onclick="set_warp_speed(5.0);">Frigate</button>
-    <button type="button" class="btn btn-secondary btn-sm" onclick="set_warp_speed(4.5);">Destroyer</button>
-    <button type="button" class="btn btn-secondary btn-sm" onclick="set_warp_speed(3.0);">Cruiser</button>
-    <button type="button" class="btn btn-secondary btn-sm" onclick="set_warp_speed(2.7);">Battlecruiser</button>
-    <button type="button" class="btn btn-secondary btn-sm" onclick="set_warp_speed(2.0);">Battleship</button>
+    <label class="col-sm-2 control-label" for="warp_calc_warp_speed_input">Warp speed</label>
+    <div class="col-sm-10">
+        <input type="number" class="form-control" id="warp_calc_warp_speed_input" placeholder="3.0" step="0.01" required>
+    </div>
+
+    <div class="col-sm-2"></div>
+    <div class="col-sm-10">
+        <button type="button" class="btn btn-secondary btn-sm" onclick="set_warp_speed(5.0);">Frigate</button>
+        <button type="button" class="btn btn-secondary btn-sm" onclick="set_warp_speed(4.5);">Destroyer</button>
+        <button type="button" class="btn btn-secondary btn-sm" onclick="set_warp_speed(3.0);">Cruiser</button>
+        <button type="button" class="btn btn-secondary btn-sm" onclick="set_warp_speed(2.7);">Battlecruiser</button>
+        <button type="button" class="btn btn-secondary btn-sm" onclick="set_warp_speed(2.0);">Battleship</button>
+    </div>
   </div>
+
   <div class="form-group">
-    <label for="warp_calc_deviation_input">Max deviation</label>
-    <input type="number" class="form-control" id="warp_calc_deviation_input" value="5" step="0.001" required>
+    <label class="col-sm-2 control-label" for="warp_calc_deviation_input">Max deviation</label>
+    <div class="col-sm-10">
+        <input type="number" class="form-control" id="warp_calc_deviation_input" value="5" step="0.001" required>
+    </div>
   </div>
+
   <div class="form-group">
-    <label for="warp_calc_buffer">Time required</label>
-    <input type="number" class="form-control" id="warp_calc_buffer" placeholder="~14 for bombing" step="0.1" required>
+    <label class="col-sm-2 control-label" for="warp_calc_buffer">Time required</label>
+    <div class="col-sm-10">
+        <input type="number" class="form-control" id="warp_calc_buffer" placeholder="~14 for bombing" step="0.1" required>
+    </div>
   </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label" for="warp_calc_distance">Target distance</label>
+    <div class="col-sm-9">
+      <input type="number" class="form-control" placeholder="Optional" id="warp_calc_distance" step="0.1" disabled>
+    </div>
+    <input class="col-sm-1" data-toggle="toggle" data-on="AU" data-off="km" type="checkbox" id="warp_calc_use_au">
+  </div>
+
   <button type="submit" class="btn btn-primary btn-lg btn-block">Go!</button>
 </form>
 
@@ -35,9 +59,10 @@
 Start when the fleet shows up on a dscan of <strong><span
 id="warp_calc_result_value"></span></strong> km (<strong><span
 id="warp_calc_result_value_au"></span></strong> AU). You should round these
-values up a little to prevent rouding errors. This is valid only if the total
+values up a little to prevent rouding errors. <span
+id="warp_calc_result_min_distance_container">This is valid only if the total
 warp distance is at least <strong><span
-id="warp_calc_result_min_distance"></span></strong> AU.
+id="warp_calc_result_min_distance"></span></strong> AU.</span>
 
 </div>
 
@@ -108,22 +133,42 @@ function set_warp_speed(au) {
 }
 
 function calculate_values() {
-    var v = parseFloat(document.forms["warp_calc_form"]["warp_calc_warp_speed_input"].value);
+    var v_raw = parseFloat(document.forms["warp_calc_form"]["warp_calc_warp_speed_input"].value);
     var d = parseFloat(document.forms["warp_calc_form"]["warp_calc_deviation_input"].value);
     var t = parseFloat(document.forms["warp_calc_form"]["warp_calc_buffer"].value);
 
-    var j = Math.min(v / 3.0, 2.0);
+    var j = Math.min(v_raw / 3.0, 2.0);
+
+    var d_raw = document.forms["warp_calc_form"]["warp_calc_distance"].value;
+
+    var v;
+
+    if (d_raw.length == 0) {
+        $('#warp_calc_result_min_distance_container').show();
+        v = v_raw;
+    } else {
+        $('#warp_calc_result_min_distance_container').hide();
+        d_raw = parseFloat(d_raw) / (document.forms["warp_calc_form"]["warp_calc_use_au"].checked ? 1 : AU_TO_KM)
+        v = Math.min((d_raw * j * v_raw) / (v_raw + j), v_raw);
+    }
+
+    console.log(v);
 
     var t_decel = Math.log((j * d) / (v * AU_TO_KM)) / -j;
 
-    var b = t_decel - t;
-    console.log(b);
+    if (v < v_raw) {
+    } else {
 
-    var z = Math.round(distance_left(v, j, Math.max(0.0, b)) + (b < 0 ? -b * v * AU_TO_KM : 0));
+        var b = t_decel - t;
+        console.log(b);
+
+        var z = distance_left(v, j, Math.max(0.0, b));
+        z += b < 0 ? -b * v * AU_TO_KM : 0;
+    }
 
     $('#warp_calc_result').show();
-    $('#warp_calc_result_value').text(z.toLocaleString());
-    $('#warp_calc_result_value_au').text((z / AU_TO_KM).toLocaleString());
+    $('#warp_calc_result_value').text(Math.round(z).toLocaleString());
+    $('#warp_calc_result_value_au').text((Math.round(z) / AU_TO_KM).toLocaleString());
     $('#warp_calc_result_min_distance').text((v / j + 1).toLocaleString());
 }
 </script>
