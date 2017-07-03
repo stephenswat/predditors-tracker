@@ -35,7 +35,9 @@
 Start when the fleet shows up on a dscan of <strong><span
 id="warp_calc_result_value"></span></strong> km (<strong><span
 id="warp_calc_result_value_au"></span></strong> AU). You should round these
-values up a little to prevent rouding errors.
+values up a little to prevent rouding errors. This is valid only if the total
+warp distance is at least <strong><span
+id="warp_calc_result_min_distance"></span></strong> AU.
 
 </div>
 
@@ -122,6 +124,7 @@ function calculate_values() {
     $('#warp_calc_result').show();
     $('#warp_calc_result_value').text(z.toLocaleString());
     $('#warp_calc_result_value_au').text((z / AU_TO_KM).toLocaleString());
+    $('#warp_calc_result_min_distance').text((v / j + 1).toLocaleString());
 }
 </script>
 {% endblock %}
