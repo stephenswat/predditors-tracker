@@ -9,6 +9,11 @@
   <div class="form-group">
     <label for="warp_calc_warp_speed_input">Warp speed</label>
     <input type="number" class="form-control" id="warp_calc_warp_speed_input" placeholder="3.0" step="0.01" required>
+    <button type="button" class="btn btn-secondary btn-sm" onclick="set_warp_speed(5.0);">Frigate</button>
+    <button type="button" class="btn btn-secondary btn-sm" onclick="set_warp_speed(4.5);">Destroyer</button>
+    <button type="button" class="btn btn-secondary btn-sm" onclick="set_warp_speed(3.0);">Cruiser</button>
+    <button type="button" class="btn btn-secondary btn-sm" onclick="set_warp_speed(2.7);">Battlecruiser</button>
+    <button type="button" class="btn btn-secondary btn-sm" onclick="set_warp_speed(2.0);">Battleship</button>
   </div>
   <div class="form-group">
     <label for="warp_calc_deviation_input">Max deviation</label>
@@ -94,6 +99,10 @@ var AU_TO_KM = 149597870.700;
 
 function distance_left(k, j, t) {
     return AU_TO_KM * (k / j) * Math.exp(-j * t);
+}
+
+function set_warp_speed(au) {
+    document.forms["warp_calc_form"]["warp_calc_warp_speed_input"].value = au;
 }
 
 function calculate_values() {
