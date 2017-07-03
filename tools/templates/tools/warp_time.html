@@ -12,7 +12,7 @@
   </div>
   <div class="form-group">
     <label for="warp_calc_deviation_input">Max deviation</label>
-    <input type="number" class="form-control" id="warp_calc_deviation_input" value="7" step="0.001" required>
+    <input type="number" class="form-control" id="warp_calc_deviation_input" value="5" step="0.001" required>
   </div>
   <div class="form-group">
     <label for="warp_calc_buffer">Time required</label>
@@ -36,6 +36,22 @@ values up a little to prevent rouding errors.
 
 <hr>
 
+<h2>Input parameters</h2>
+
+The warp speed input should be set to the warp speed of the slowest ship in the
+warp bubble. For interceptors this value is 8.0, for frigates it is 5.0, for
+destoyers use 4.5, cruisers warp at 3.0, battlecruisers travel at 2.7 and
+battleships go 2.0 AU per second. Exceptions to these rules obviously exist and
+should be considered on a case-by-case basis. The deviation is the distance of
+the ships from their landing spot when the event happens. This should be as
+short as possible but not too short. A value of 5 kilometers is generally fine.
+The time required is dependent on what you want to do. For bombing, a good
+estimate is 15 seconds: 1 second for the scanner to communicate over comms, 1
+second to decloak, 1 second to launch the bomb and then 12 seconds for the bomb
+to travel.
+
+<hr>
+
 <h2>How it works</h2>
 
 The velocity of a ship decelerating from warp in EVE is determined using the
@@ -44,7 +60,7 @@ warp speed $k$, the time already spent in deceleration $t$ and a variable $j =
 
 $$v(t) = k\cdot e^{jt}$$
 
-We find the intedefinite integral of this velocity:
+We find the indefinite integral of this velocity:
 
 $$V(t) = \int k\cdot e^{jt} \text{d}t = \frac{k\cdot e^{jt}}{j}$$
 
