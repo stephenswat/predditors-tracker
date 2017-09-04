@@ -148,872 +148,1090 @@
 
 <g id="def30002642" transform="translate(35, 395)">
     <a xlink:href="http://evemaps.dotlan.net/system/Iyen-Oursta" target="_top">
-        <title>Iyen-Oursta: {{ systems.30002642.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002642 %} camped{% endif %}" style="fill: {{ systems.30002642.npc_kills | npc_kill_colour }};"/>
+        <title>Iyen-Oursta: { systems.30002642.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30002642 %}
+
+Campers: { camped.30002642|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002642 %} camped{% if request.user in camped.30002642 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30002642.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Iyen-Oursta</text>
     </a>
     {% if systems.30002642.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30002642.data.note %}title="{{ systems.30002642.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000168" transform="translate(785, 185)">
     <a xlink:href="http://evemaps.dotlan.net/system/Friggi" target="_top">
-        <title>Friggi: {{ systems.30000168.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000168 %} camped{% endif %}" style="fill: {{ systems.30000168.npc_kills | npc_kill_colour }};"/>
+        <title>Friggi: { systems.30000168.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000168 %}
+
+Campers: { camped.30000168|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000168 %} camped{% if request.user in camped.30000168 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000168.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Friggi</text>
     </a>
     {% if systems.30000168.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000168.data.note %}title="{{ systems.30000168.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000169" transform="translate(770, 135)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ihakana" target="_top">
-        <title>Ihakana: {{ systems.30000169.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000169 %} camped{% endif %}" style="fill: {{ systems.30000169.npc_kills | npc_kill_colour }};"/>
+        <title>Ihakana: { systems.30000169.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000169 %}
+
+Campers: { camped.30000169|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000169 %} camped{% if request.user in camped.30000169 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000169.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ihakana</text>
     </a>
     {% if systems.30000169.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000169.data.note %}title="{{ systems.30000169.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30010141" transform="translate(0, 290)">
     <a xlink:href="http://evemaps.dotlan.net/system/Sakenta" target="_top">
-        <title>Sakenta: {{ systems.30010141.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30010141 %} camped{% endif %}" style="fill: {{ systems.30010141.npc_kills | npc_kill_colour }};"/>
+        <title>Sakenta: { systems.30010141.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30010141 %}
+
+Campers: { camped.30010141|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30010141 %} camped{% if request.user in camped.30010141 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30010141.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Sakenta</text>
     </a>
     {% if systems.30010141.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30010141.data.note %}title="{{ systems.30010141.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000160" transform="translate(740, 515)">
     <a xlink:href="http://evemaps.dotlan.net/system/Reisen" target="_top">
-        <title>Reisen: {{ systems.30000160.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000160 %} camped{% endif %}" style="fill: {{ systems.30000160.npc_kills | npc_kill_colour }};"/>
+        <title>Reisen: { systems.30000160.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000160 %}
+
+Campers: { camped.30000160|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000160 %} camped{% if request.user in camped.30000160 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000160.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Reisen</text>
     </a>
     {% if systems.30000160.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000160.data.note %}title="{{ systems.30000160.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000161" transform="translate(670, 535)">
     <a xlink:href="http://evemaps.dotlan.net/system/Purjola" target="_top">
-        <title>Purjola: {{ systems.30000161.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000161 %} camped{% endif %}" style="fill: {{ systems.30000161.npc_kills | npc_kill_colour }};"/>
+        <title>Purjola: { systems.30000161.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000161 %}
+
+Campers: { camped.30000161|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000161 %} camped{% if request.user in camped.30000161 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000161.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Purjola</text>
     </a>
     {% if systems.30000161.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000161.data.note %}title="{{ systems.30000161.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000162" transform="translate(705, 575)">
     <a xlink:href="http://evemaps.dotlan.net/system/Maila" target="_top">
-        <title>Maila: {{ systems.30000162.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000162 %} camped{% endif %}" style="fill: {{ systems.30000162.npc_kills | npc_kill_colour }};"/>
+        <title>Maila: { systems.30000162.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000162 %}
+
+Campers: { camped.30000162|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000162 %} camped{% if request.user in camped.30000162 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000162.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Maila</text>
     </a>
     {% if systems.30000162.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000162.data.note %}title="{{ systems.30000162.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000163" transform="translate(795, 565)">
     <a xlink:href="http://evemaps.dotlan.net/system/Akora" target="_top">
-        <title>Akora: {{ systems.30000163.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000163 %} camped{% endif %}" style="fill: {{ systems.30000163.npc_kills | npc_kill_colour }};"/>
+        <title>Akora: { systems.30000163.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000163 %}
+
+Campers: { camped.30000163|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000163 %} camped{% if request.user in camped.30000163 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000163.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Akora</text>
     </a>
     {% if systems.30000163.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000163.data.note %}title="{{ systems.30000163.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000164" transform="translate(780, 600)">
     <a xlink:href="http://evemaps.dotlan.net/system/Messoya" target="_top">
-        <title>Messoya: {{ systems.30000164.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000164 %} camped{% endif %}" style="fill: {{ systems.30000164.npc_kills | npc_kill_colour }};"/>
+        <title>Messoya: { systems.30000164.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000164 %}
+
+Campers: { camped.30000164|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000164 %} camped{% if request.user in camped.30000164 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000164.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Messoya</text>
     </a>
     {% if systems.30000164.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000164.data.note %}title="{{ systems.30000164.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000165" transform="translate(785, 280)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ishisomo" target="_top">
-        <title>Ishisomo: {{ systems.30000165.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000165 %} camped{% endif %}" style="fill: {{ systems.30000165.npc_kills | npc_kill_colour }};"/>
+        <title>Ishisomo: { systems.30000165.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000165 %}
+
+Campers: { camped.30000165|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000165 %} camped{% if request.user in camped.30000165 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000165.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ishisomo</text>
     </a>
     {% if systems.30000165.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000165.data.note %}title="{{ systems.30000165.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000166" transform="translate(755, 235)">
     <a xlink:href="http://evemaps.dotlan.net/system/Airmia" target="_top">
-        <title>Airmia: {{ systems.30000166.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000166 %} camped{% endif %}" style="fill: {{ systems.30000166.npc_kills | npc_kill_colour }};"/>
+        <title>Airmia: { systems.30000166.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000166 %}
+
+Campers: { camped.30000166|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000166 %} camped{% if request.user in camped.30000166 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000166.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Airmia</text>
     </a>
     {% if systems.30000166.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000166.data.note %}title="{{ systems.30000166.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000167" transform="translate(830, 230)">
     <a xlink:href="http://evemaps.dotlan.net/system/Sakkikainen" target="_top">
-        <title>Sakkikainen: {{ systems.30000167.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000167 %} camped{% endif %}" style="fill: {{ systems.30000167.npc_kills | npc_kill_colour }};"/>
+        <title>Sakkikainen: { systems.30000167.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000167 %}
+
+Campers: { camped.30000167|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000167 %} camped{% if request.user in camped.30000167 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000167.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Sakkikainen</text>
     </a>
     {% if systems.30000167.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000167.data.note %}title="{{ systems.30000167.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000250" transform="translate(151, 1)">
     <a xlink:href="http://evemaps.dotlan.net/system/P3EN-E" target="_top">
-        <title>P3EN-E: {{ systems.30000250.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000250 %} camped{% endif %}" style="fill: {{ systems.30000250.npc_kills | npc_kill_colour }};"/>
+        <title>P3EN-E: { systems.30000250.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000250 %}
+
+Campers: { camped.30000250|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000250 %} camped{% if request.user in camped.30000250 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000250.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">P3EN-E</text>
     </a>
     {% if systems.30000250.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000250.data.note %}title="{{ systems.30000250.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30030141" transform="translate(200, 545)">
     <a xlink:href="http://evemaps.dotlan.net/system/Uitra" target="_top">
-        <title>Uitra: {{ systems.30030141.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30030141 %} camped{% endif %}" style="fill: {{ systems.30030141.npc_kills | npc_kill_colour }};"/>
+        <title>Uitra: { systems.30030141.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30030141 %}
+
+Campers: { camped.30030141|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30030141 %} camped{% if request.user in camped.30030141 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30030141.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Uitra</text>
     </a>
     {% if systems.30030141.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30030141.data.note %}title="{{ systems.30030141.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30002754" transform="translate(305, 235)">
     <a xlink:href="http://evemaps.dotlan.net/system/Alikara" target="_top">
-        <title>Alikara: {{ systems.30002754.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002754 %} camped{% endif %}" style="fill: {{ systems.30002754.npc_kills | npc_kill_colour }};"/>
+        <title>Alikara: { systems.30002754.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30002754 %}
+
+Campers: { camped.30002754|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002754 %} camped{% if request.user in camped.30002754 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30002754.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Alikara</text>
     </a>
     {% if systems.30002754.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30002754.data.note %}title="{{ systems.30002754.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000159" transform="translate(680, 495)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ikami" target="_top">
-        <title>Ikami: {{ systems.30000159.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000159 %} camped{% endif %}" style="fill: {{ systems.30000159.npc_kills | npc_kill_colour }};"/>
+        <title>Ikami: { systems.30000159.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000159 %}
+
+Campers: { camped.30000159|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000159 %} camped{% if request.user in camped.30000159 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000159.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ikami</text>
     </a>
     {% if systems.30000159.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000159.data.note %}title="{{ systems.30000159.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000158" transform="translate(785, 335)">
     <a xlink:href="http://evemaps.dotlan.net/system/Olo" target="_top">
-        <title>Olo: {{ systems.30000158.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000158 %} camped{% endif %}" style="fill: {{ systems.30000158.npc_kills | npc_kill_colour }};"/>
+        <title>Olo: { systems.30000158.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000158 %}
+
+Campers: { camped.30000158|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000158 %} camped{% if request.user in camped.30000158 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000158.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Olo</text>
     </a>
     {% if systems.30000158.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000158.data.note %}title="{{ systems.30000158.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000155" transform="translate(720, 345)">
     <a xlink:href="http://evemaps.dotlan.net/system/Obanen" target="_top">
-        <title>Obanen: {{ systems.30000155.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000155 %} camped{% endif %}" style="fill: {{ systems.30000155.npc_kills | npc_kill_colour }};"/>
+        <title>Obanen: { systems.30000155.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000155 %}
+
+Campers: { camped.30000155|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000155 %} camped{% if request.user in camped.30000155 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000155.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Obanen</text>
     </a>
     {% if systems.30000155.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000155.data.note %}title="{{ systems.30000155.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000154" transform="translate(650, 315)">
     <a xlink:href="http://evemaps.dotlan.net/system/Liekuri" target="_top">
-        <title>Liekuri: {{ systems.30000154.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000154 %} camped{% endif %}" style="fill: {{ systems.30000154.npc_kills | npc_kill_colour }};"/>
+        <title>Liekuri: { systems.30000154.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000154 %}
+
+Campers: { camped.30000154|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000154 %} camped{% if request.user in camped.30000154 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000154.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Liekuri</text>
     </a>
     {% if systems.30000154.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000154.data.note %}title="{{ systems.30000154.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000157" transform="translate(595, 370)">
     <a xlink:href="http://evemaps.dotlan.net/system/Otela" target="_top">
-        <title>Otela: {{ systems.30000157.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000157 %} camped{% endif %}" style="fill: {{ systems.30000157.npc_kills | npc_kill_colour }};"/>
+        <title>Otela: { systems.30000157.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000157 %}
+
+Campers: { camped.30000157|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000157 %} camped{% if request.user in camped.30000157 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000157.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Otela</text>
     </a>
     {% if systems.30000157.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000157.data.note %}title="{{ systems.30000157.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000156" transform="translate(574, 294)">
     <a xlink:href="http://evemaps.dotlan.net/system/Josameto" target="_top">
-        <title>Josameto: {{ systems.30000156.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000156 %} camped{% endif %}" style="fill: {{ systems.30000156.npc_kills | npc_kill_colour }};"/>
+        <title>Josameto: { systems.30000156.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000156 %}
+
+Campers: { camped.30000156|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000156 %} camped{% if request.user in camped.30000156 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000156.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Josameto</text>
     </a>
     {% if systems.30000156.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000156.data.note %}title="{{ systems.30000156.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000151" transform="translate(475, 360)">
     <a xlink:href="http://evemaps.dotlan.net/system/Uoyonen" target="_top">
-        <title>Uoyonen: {{ systems.30000151.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000151 %} camped{% endif %}" style="fill: {{ systems.30000151.npc_kills | npc_kill_colour }};"/>
+        <title>Uoyonen: { systems.30000151.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000151 %}
+
+Campers: { camped.30000151|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000151 %} camped{% if request.user in camped.30000151 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000151.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Uoyonen</text>
     </a>
     {% if systems.30000151.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000151.data.note %}title="{{ systems.30000151.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000150" transform="translate(550, 490)">
     <a xlink:href="http://evemaps.dotlan.net/system/Hurtoken" target="_top">
-        <title>Hurtoken: {{ systems.30000150.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000150 %} camped{% endif %}" style="fill: {{ systems.30000150.npc_kills | npc_kill_colour }};"/>
+        <title>Hurtoken: { systems.30000150.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000150 %}
+
+Campers: { camped.30000150|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000150 %} camped{% if request.user in camped.30000150 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000150.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Hurtoken</text>
     </a>
     {% if systems.30000150.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000150.data.note %}title="{{ systems.30000150.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000153" transform="translate(675, 390)">
     <a xlink:href="http://evemaps.dotlan.net/system/Poinen" target="_top">
-        <title>Poinen: {{ systems.30000153.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000153 %} camped{% endif %}" style="fill: {{ systems.30000153.npc_kills | npc_kill_colour }};"/>
+        <title>Poinen: { systems.30000153.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000153 %}
+
+Campers: { camped.30000153|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000153 %} camped{% if request.user in camped.30000153 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000153.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Poinen</text>
     </a>
     {% if systems.30000153.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000153.data.note %}title="{{ systems.30000153.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000152" transform="translate(525, 445)">
     <a xlink:href="http://evemaps.dotlan.net/system/Hampinen" target="_top">
-        <title>Hampinen: {{ systems.30000152.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000152 %} camped{% endif %}" style="fill: {{ systems.30000152.npc_kills | npc_kill_colour }};"/>
+        <title>Hampinen: { systems.30000152.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000152 %}
+
+Campers: { camped.30000152|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000152 %} camped{% if request.user in camped.30000152 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000152.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Hampinen</text>
     </a>
     {% if systems.30000152.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000152.data.note %}title="{{ systems.30000152.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30001393" transform="translate(302, 300)">
     <a xlink:href="http://evemaps.dotlan.net/system/Malkalen" target="_top">
-        <title>Malkalen: {{ systems.30001393.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001393 %} camped{% endif %}" style="fill: {{ systems.30001393.npc_kills | npc_kill_colour }};"/>
+        <title>Malkalen: { systems.30001393.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001393 %}
+
+Campers: { camped.30001393|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001393 %} camped{% if request.user in camped.30001393 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001393.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Malkalen</text>
     </a>
     {% if systems.30001393.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30001393.data.note %}title="{{ systems.30001393.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000142" transform="translate(224, 343)">
     <a xlink:href="http://evemaps.dotlan.net/system/Jita" target="_top">
-        <title>Jita: {{ systems.30000142.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000142 %} camped{% endif %}" style="fill: {{ systems.30000142.npc_kills | npc_kill_colour }};"/>
+        <title>Jita: { systems.30000142.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000142 %}
+
+Campers: { camped.30000142|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000142 %} camped{% if request.user in camped.30000142 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000142.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Jita</text>
     </a>
     {% if systems.30000142.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000142.data.note %}title="{{ systems.30000142.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000143" transform="translate(147, 327)">
     <a xlink:href="http://evemaps.dotlan.net/system/Niyabainen" target="_top">
-        <title>Niyabainen: {{ systems.30000143.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000143 %} camped{% endif %}" style="fill: {{ systems.30000143.npc_kills | npc_kill_colour }};"/>
+        <title>Niyabainen: { systems.30000143.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000143 %}
+
+Campers: { camped.30000143|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000143 %} camped{% if request.user in camped.30000143 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000143.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Niyabainen</text>
     </a>
     {% if systems.30000143.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000143.data.note %}title="{{ systems.30000143.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000140" transform="translate(226, 403)">
     <a xlink:href="http://evemaps.dotlan.net/system/Maurasi" target="_top">
-        <title>Maurasi: {{ systems.30000140.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000140 %} camped{% endif %}" style="fill: {{ systems.30000140.npc_kills | npc_kill_colour }};"/>
+        <title>Maurasi: { systems.30000140.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000140 %}
+
+Campers: { camped.30000140|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000140 %} camped{% if request.user in camped.30000140 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000140.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Maurasi</text>
     </a>
     {% if systems.30000140.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000140.data.note %}title="{{ systems.30000140.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000141" transform="translate(160, 480)">
     <a xlink:href="http://evemaps.dotlan.net/system/Kisogo" target="_top">
-        <title>Kisogo: {{ systems.30000141.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000141 %} camped{% endif %}" style="fill: {{ systems.30000141.npc_kills | npc_kill_colour }};"/>
+        <title>Kisogo: { systems.30000141.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000141 %}
+
+Campers: { camped.30000141|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000141 %} camped{% if request.user in camped.30000141 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000141.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Kisogo</text>
     </a>
     {% if systems.30000141.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000141.data.note %}title="{{ systems.30000141.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000146" transform="translate(445, 500)">
     <a xlink:href="http://evemaps.dotlan.net/system/Saisio" target="_top">
-        <title>Saisio: {{ systems.30000146.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000146 %} camped{% endif %}" style="fill: {{ systems.30000146.npc_kills | npc_kill_colour }};"/>
+        <title>Saisio: { systems.30000146.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000146 %}
+
+Campers: { camped.30000146|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000146 %} camped{% if request.user in camped.30000146 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000146.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Saisio</text>
     </a>
     {% if systems.30000146.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000146.data.note %}title="{{ systems.30000146.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000147" transform="translate(505, 525)">
     <a xlink:href="http://evemaps.dotlan.net/system/Abagawa" target="_top">
-        <title>Abagawa: {{ systems.30000147.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000147 %} camped{% endif %}" style="fill: {{ systems.30000147.npc_kills | npc_kill_colour }};"/>
+        <title>Abagawa: { systems.30000147.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000147 %}
+
+Campers: { camped.30000147|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000147 %} camped{% if request.user in camped.30000147 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000147.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Abagawa</text>
     </a>
     {% if systems.30000147.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000147.data.note %}title="{{ systems.30000147.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000144" transform="translate(146, 380)">
     <a xlink:href="http://evemaps.dotlan.net/system/Perimeter" target="_top">
-        <title>Perimeter: {{ systems.30000144.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000144 %} camped{% endif %}" style="fill: {{ systems.30000144.npc_kills | npc_kill_colour }};"/>
+        <title>Perimeter: { systems.30000144.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000144 %}
+
+Campers: { camped.30000144|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000144 %} camped{% if request.user in camped.30000144 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000144.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Perimeter</text>
     </a>
     {% if systems.30000144.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000144.data.note %}title="{{ systems.30000144.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000145" transform="translate(225, 279)">
     <a xlink:href="http://evemaps.dotlan.net/system/New Caldari" target="_top">
-        <title>New Caldari: {{ systems.30000145.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000145 %} camped{% endif %}" style="fill: {{ systems.30000145.npc_kills | npc_kill_colour }};"/>
+        <title>New Caldari: { systems.30000145.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000145 %}
+
+Campers: { camped.30000145|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000145 %} camped{% if request.user in camped.30000145 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000145.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">New Caldari</text>
     </a>
     {% if systems.30000145.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000145.data.note %}title="{{ systems.30000145.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000148" transform="translate(440, 450)">
     <a xlink:href="http://evemaps.dotlan.net/system/Jakanerva" target="_top">
-        <title>Jakanerva: {{ systems.30000148.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000148 %} camped{% endif %}" style="fill: {{ systems.30000148.npc_kills | npc_kill_colour }};"/>
+        <title>Jakanerva: { systems.30000148.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000148 %}
+
+Campers: { camped.30000148|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000148 %} camped{% if request.user in camped.30000148 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000148.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Jakanerva</text>
     </a>
     {% if systems.30000148.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000148.data.note %}title="{{ systems.30000148.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000149" transform="translate(455, 410)">
     <a xlink:href="http://evemaps.dotlan.net/system/Gekutami" target="_top">
-        <title>Gekutami: {{ systems.30000149.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000149 %} camped{% endif %}" style="fill: {{ systems.30000149.npc_kills | npc_kill_colour }};"/>
+        <title>Gekutami: { systems.30000149.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000149 %}
+
+Campers: { camped.30000149|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000149 %} camped{% if request.user in camped.30000149 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000149.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Gekutami</text>
     </a>
     {% if systems.30000149.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000149.data.note %}title="{{ systems.30000149.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30002802" transform="translate(25, 465)">
     <a xlink:href="http://evemaps.dotlan.net/system/Kusomonmon" target="_top">
-        <title>Kusomonmon: {{ systems.30002802.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002802 %} camped{% endif %}" style="fill: {{ systems.30002802.npc_kills | npc_kill_colour }};"/>
+        <title>Kusomonmon: { systems.30002802.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30002802 %}
+
+Campers: { camped.30002802|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002802 %} camped{% if request.user in camped.30002802 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30002802.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Kusomonmon</text>
     </a>
     {% if systems.30002802.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30002802.data.note %}title="{{ systems.30002802.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30002355" transform="translate(655, 740)">
     <a xlink:href="http://evemaps.dotlan.net/system/LXQ2-T" target="_top">
-        <title>LXQ2-T: {{ systems.30002355.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002355 %} camped{% endif %}" style="fill: {{ systems.30002355.npc_kills | npc_kill_colour }};"/>
+        <title>LXQ2-T: { systems.30002355.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30002355 %}
+
+Campers: { camped.30002355|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002355 %} camped{% if request.user in camped.30002355 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30002355.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">LXQ2-T</text>
     </a>
     {% if systems.30002355.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30002355.data.note %}title="{{ systems.30002355.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000137" transform="translate(35, 100)">
     <a xlink:href="http://evemaps.dotlan.net/system/Eskunen" target="_top">
-        <title>Eskunen: {{ systems.30000137.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000137 %} camped{% endif %}" style="fill: {{ systems.30000137.npc_kills | npc_kill_colour }};"/>
+        <title>Eskunen: { systems.30000137.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000137 %}
+
+Campers: { camped.30000137|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000137 %} camped{% if request.user in camped.30000137 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000137.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Eskunen</text>
     </a>
     {% if systems.30000137.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000137.data.note %}title="{{ systems.30000137.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000136" transform="translate(80, 145)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ohmahailen" target="_top">
-        <title>Ohmahailen: {{ systems.30000136.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000136 %} camped{% endif %}" style="fill: {{ systems.30000136.npc_kills | npc_kill_colour }};"/>
+        <title>Ohmahailen: { systems.30000136.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000136 %}
+
+Campers: { camped.30000136|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000136 %} camped{% if request.user in camped.30000136 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000136.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ohmahailen</text>
     </a>
     {% if systems.30000136.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000136.data.note %}title="{{ systems.30000136.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000135" transform="translate(0, 145)">
     <a xlink:href="http://evemaps.dotlan.net/system/Outuni" target="_top">
-        <title>Outuni: {{ systems.30000135.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000135 %} camped{% endif %}" style="fill: {{ systems.30000135.npc_kills | npc_kill_colour }};"/>
+        <title>Outuni: { systems.30000135.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000135 %}
+
+Campers: { camped.30000135|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000135 %} camped{% if request.user in camped.30000135 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000135.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Outuni</text>
     </a>
     {% if systems.30000135.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000135.data.note %}title="{{ systems.30000135.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000134" transform="translate(45, 190)">
     <a xlink:href="http://evemaps.dotlan.net/system/Hykkota" target="_top">
-        <title>Hykkota: {{ systems.30000134.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000134 %} camped{% endif %}" style="fill: {{ systems.30000134.npc_kills | npc_kill_colour }};"/>
+        <title>Hykkota: { systems.30000134.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000134 %}
+
+Campers: { camped.30000134|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000134 %} camped{% if request.user in camped.30000134 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000134.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Hykkota</text>
     </a>
     {% if systems.30000134.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000134.data.note %}title="{{ systems.30000134.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000133" transform="translate(134, 243)">
     <a xlink:href="http://evemaps.dotlan.net/system/Hirtamon" target="_top">
-        <title>Hirtamon: {{ systems.30000133.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000133 %} camped{% endif %}" style="fill: {{ systems.30000133.npc_kills | npc_kill_colour }};"/>
+        <title>Hirtamon: { systems.30000133.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000133 %}
+
+Campers: { camped.30000133|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000133 %} camped{% if request.user in camped.30000133 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000133.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Hirtamon</text>
     </a>
     {% if systems.30000133.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000133.data.note %}title="{{ systems.30000133.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000132" transform="translate(66, 229)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ansila" target="_top">
-        <title>Ansila: {{ systems.30000132.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000132 %} camped{% endif %}" style="fill: {{ systems.30000132.npc_kills | npc_kill_colour }};"/>
+        <title>Ansila: { systems.30000132.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000132 %}
+
+Campers: { camped.30000132|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000132 %} camped{% if request.user in camped.30000132 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000132.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ansila</text>
     </a>
     {% if systems.30000132.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000132.data.note %}title="{{ systems.30000132.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000131" transform="translate(485, 620)">
     <a xlink:href="http://evemaps.dotlan.net/system/Nomaa" target="_top">
-        <title>Nomaa: {{ systems.30000131.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000131 %} camped{% endif %}" style="fill: {{ systems.30000131.npc_kills | npc_kill_colour }};"/>
+        <title>Nomaa: { systems.30000131.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000131 %}
+
+Campers: { camped.30000131|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000131 %} camped{% if request.user in camped.30000131 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000131.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Nomaa</text>
     </a>
     {% if systems.30000131.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000131.data.note %}title="{{ systems.30000131.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000130" transform="translate(200, 620)">
     <a xlink:href="http://evemaps.dotlan.net/system/Shihuken" target="_top">
-        <title>Shihuken: {{ systems.30000130.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000130 %} camped{% endif %}" style="fill: {{ systems.30000130.npc_kills | npc_kill_colour }};"/>
+        <title>Shihuken: { systems.30000130.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000130 %}
+
+Campers: { camped.30000130|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000130 %} camped{% if request.user in camped.30000130 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000130.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Shihuken</text>
     </a>
     {% if systems.30000130.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000130.data.note %}title="{{ systems.30000130.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30003446" transform="translate(800, 740)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ofage" target="_top">
-        <title>Ofage: {{ systems.30003446.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30003446 %} camped{% endif %}" style="fill: {{ systems.30003446.npc_kills | npc_kill_colour }};"/>
+        <title>Ofage: { systems.30003446.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30003446 %}
+
+Campers: { camped.30003446|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30003446 %} camped{% if request.user in camped.30003446 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30003446.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ofage</text>
     </a>
     {% if systems.30003446.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30003446.data.note %}title="{{ systems.30003446.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000139" transform="translate(95, 490)">
     <a xlink:href="http://evemaps.dotlan.net/system/Urlen" target="_top">
-        <title>Urlen: {{ systems.30000139.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000139 %} camped{% endif %}" style="fill: {{ systems.30000139.npc_kills | npc_kill_colour }};"/>
+        <title>Urlen: { systems.30000139.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000139 %}
+
+Campers: { camped.30000139|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000139 %} camped{% if request.user in camped.30000139 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000139.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Urlen</text>
     </a>
     {% if systems.30000139.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000139.data.note %}title="{{ systems.30000139.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000138" transform="translate(94, 272)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ikuchi" target="_top">
-        <title>Ikuchi: {{ systems.30000138.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000138 %} camped{% endif %}" style="fill: {{ systems.30000138.npc_kills | npc_kill_colour }};"/>
+        <title>Ikuchi: { systems.30000138.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000138 %}
+
+Campers: { camped.30000138|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000138 %} camped{% if request.user in camped.30000138 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000138.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ikuchi</text>
     </a>
     {% if systems.30000138.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000138.data.note %}title="{{ systems.30000138.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30020141" transform="translate(265, 580)">
     <a xlink:href="http://evemaps.dotlan.net/system/Senda" target="_top">
-        <title>Senda: {{ systems.30020141.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30020141 %} camped{% endif %}" style="fill: {{ systems.30020141.npc_kills | npc_kill_colour }};"/>
+        <title>Senda: { systems.30020141.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30020141 %}
+
+Campers: { camped.30020141|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30020141 %} camped{% if request.user in camped.30020141 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30020141.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Senda</text>
     </a>
     {% if systems.30020141.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30020141.data.note %}title="{{ systems.30020141.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000205" transform="translate(150, 40)">
     <a xlink:href="http://evemaps.dotlan.net/system/Obe" target="_top">
-        <title>Obe: {{ systems.30000205.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000205 %} camped{% endif %}" style="fill: {{ systems.30000205.npc_kills | npc_kill_colour }};"/>
+        <title>Obe: { systems.30000205.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000205 %}
+
+Campers: { camped.30000205|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000205 %} camped{% if request.user in camped.30000205 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000205.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Obe</text>
     </a>
     {% if systems.30000205.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000205.data.note %}title="{{ systems.30000205.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000204" transform="translate(225, 40)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ohkunen" target="_top">
-        <title>Ohkunen: {{ systems.30000204.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000204 %} camped{% endif %}" style="fill: {{ systems.30000204.npc_kills | npc_kill_colour }};"/>
+        <title>Ohkunen: { systems.30000204.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000204 %}
+
+Campers: { camped.30000204|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000204 %} camped{% if request.user in camped.30000204 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000204.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ohkunen</text>
     </a>
     {% if systems.30000204.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000204.data.note %}title="{{ systems.30000204.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000207" transform="translate(400, 40)">
     <a xlink:href="http://evemaps.dotlan.net/system/Osaa" target="_top">
-        <title>Osaa: {{ systems.30000207.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000207 %} camped{% endif %}" style="fill: {{ systems.30000207.npc_kills | npc_kill_colour }};"/>
+        <title>Osaa: { systems.30000207.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000207 %}
+
+Campers: { camped.30000207|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000207 %} camped{% if request.user in camped.30000207 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000207.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Osaa</text>
     </a>
     {% if systems.30000207.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000207.data.note %}title="{{ systems.30000207.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000206" transform="translate(225, 95)">
     <a xlink:href="http://evemaps.dotlan.net/system/Wirashoda" target="_top">
-        <title>Wirashoda: {{ systems.30000206.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000206 %} camped{% endif %}" style="fill: {{ systems.30000206.npc_kills | npc_kill_colour }};"/>
+        <title>Wirashoda: { systems.30000206.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000206 %}
+
+Campers: { camped.30000206|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000206 %} camped{% if request.user in camped.30000206 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000206.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Wirashoda</text>
     </a>
     {% if systems.30000206.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000206.data.note %}title="{{ systems.30000206.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000201" transform="translate(300, 95)">
     <a xlink:href="http://evemaps.dotlan.net/system/Uchoshi" target="_top">
-        <title>Uchoshi: {{ systems.30000201.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000201 %} camped{% endif %}" style="fill: {{ systems.30000201.npc_kills | npc_kill_colour }};"/>
+        <title>Uchoshi: { systems.30000201.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000201 %}
+
+Campers: { camped.30000201|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000201 %} camped{% if request.user in camped.30000201 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000201.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Uchoshi</text>
     </a>
     {% if systems.30000201.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000201.data.note %}title="{{ systems.30000201.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000200" transform="translate(595, 665)">
     <a xlink:href="http://evemaps.dotlan.net/system/Akkio" target="_top">
-        <title>Akkio: {{ systems.30000200.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000200 %} camped{% endif %}" style="fill: {{ systems.30000200.npc_kills | npc_kill_colour }};"/>
+        <title>Akkio: { systems.30000200.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000200 %}
+
+Campers: { camped.30000200|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000200 %} camped{% if request.user in camped.30000200 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000200.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Akkio</text>
     </a>
     {% if systems.30000200.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000200.data.note %}title="{{ systems.30000200.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000203" transform="translate(355, 5)">
     <a xlink:href="http://evemaps.dotlan.net/system/Eruka" target="_top">
-        <title>Eruka: {{ systems.30000203.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000203 %} camped{% endif %}" style="fill: {{ systems.30000203.npc_kills | npc_kill_colour }};"/>
+        <title>Eruka: { systems.30000203.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000203 %}
+
+Campers: { camped.30000203|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000203 %} camped{% if request.user in camped.30000203 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000203.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Eruka</text>
     </a>
     {% if systems.30000203.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000203.data.note %}title="{{ systems.30000203.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000202" transform="translate(300, 40)">
     <a xlink:href="http://evemaps.dotlan.net/system/Mastakomon" target="_top">
-        <title>Mastakomon: {{ systems.30000202.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000202 %} camped{% endif %}" style="fill: {{ systems.30000202.npc_kills | npc_kill_colour }};"/>
+        <title>Mastakomon: { systems.30000202.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000202 %}
+
+Campers: { camped.30000202|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000202 %} camped{% if request.user in camped.30000202 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000202.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Mastakomon</text>
     </a>
     {% if systems.30000202.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000202.data.note %}title="{{ systems.30000202.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000124" transform="translate(355, 415)">
     <a xlink:href="http://evemaps.dotlan.net/system/Kylmabe" target="_top">
-        <title>Kylmabe: {{ systems.30000124.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000124 %} camped{% endif %}" style="fill: {{ systems.30000124.npc_kills | npc_kill_colour }};"/>
+        <title>Kylmabe: { systems.30000124.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000124 %}
+
+Campers: { camped.30000124|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000124 %} camped{% if request.user in camped.30000124 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000124.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Kylmabe</text>
     </a>
     {% if systems.30000124.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000124.data.note %}title="{{ systems.30000124.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000125" transform="translate(370, 455)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ahtulaima" target="_top">
-        <title>Ahtulaima: {{ systems.30000125.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000125 %} camped{% endif %}" style="fill: {{ systems.30000125.npc_kills | npc_kill_colour }};"/>
+        <title>Ahtulaima: { systems.30000125.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000125 %}
+
+Campers: { camped.30000125|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000125 %} camped{% if request.user in camped.30000125 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000125.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ahtulaima</text>
     </a>
     {% if systems.30000125.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000125.data.note %}title="{{ systems.30000125.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000126" transform="translate(410, 645)">
     <a xlink:href="http://evemaps.dotlan.net/system/Geras" target="_top">
-        <title>Geras: {{ systems.30000126.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000126 %} camped{% endif %}" style="fill: {{ systems.30000126.npc_kills | npc_kill_colour }};"/>
+        <title>Geras: { systems.30000126.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000126 %}
+
+Campers: { camped.30000126|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000126 %} camped{% if request.user in camped.30000126 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000126.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Geras</text>
     </a>
     {% if systems.30000126.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000126.data.note %}title="{{ systems.30000126.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000127" transform="translate(265, 675)">
     <a xlink:href="http://evemaps.dotlan.net/system/Sirseshin" target="_top">
-        <title>Sirseshin: {{ systems.30000127.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000127 %} camped{% endif %}" style="fill: {{ systems.30000127.npc_kills | npc_kill_colour }};"/>
+        <title>Sirseshin: { systems.30000127.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000127 %}
+
+Campers: { camped.30000127|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000127 %} camped{% if request.user in camped.30000127 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000127.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Sirseshin</text>
     </a>
     {% if systems.30000127.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000127.data.note %}title="{{ systems.30000127.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000120" transform="translate(335, 485)">
     <a xlink:href="http://evemaps.dotlan.net/system/Mitsolen" target="_top">
-        <title>Mitsolen: {{ systems.30000120.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000120 %} camped{% endif %}" style="fill: {{ systems.30000120.npc_kills | npc_kill_colour }};"/>
+        <title>Mitsolen: { systems.30000120.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000120 %}
+
+Campers: { camped.30000120|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000120 %} camped{% if request.user in camped.30000120 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000120.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Mitsolen</text>
     </a>
     {% if systems.30000120.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000120.data.note %}title="{{ systems.30000120.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000121" transform="translate(240, 445)">
     <a xlink:href="http://evemaps.dotlan.net/system/Jatate" target="_top">
-        <title>Jatate: {{ systems.30000121.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000121 %} camped{% endif %}" style="fill: {{ systems.30000121.npc_kills | npc_kill_colour }};"/>
+        <title>Jatate: { systems.30000121.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000121 %}
+
+Campers: { camped.30000121|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000121 %} camped{% if request.user in camped.30000121 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000121.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Jatate</text>
     </a>
     {% if systems.30000121.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000121.data.note %}title="{{ systems.30000121.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000122" transform="translate(360, 520)">
     <a xlink:href="http://evemaps.dotlan.net/system/Mahtista" target="_top">
-        <title>Mahtista: {{ systems.30000122.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000122 %} camped{% endif %}" style="fill: {{ systems.30000122.npc_kills | npc_kill_colour }};"/>
+        <title>Mahtista: { systems.30000122.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000122 %}
+
+Campers: { camped.30000122|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000122 %} camped{% if request.user in camped.30000122 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000122.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Mahtista</text>
     </a>
     {% if systems.30000122.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000122.data.note %}title="{{ systems.30000122.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000123" transform="translate(265, 480)">
     <a xlink:href="http://evemaps.dotlan.net/system/Vaankalen" target="_top">
-        <title>Vaankalen: {{ systems.30000123.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000123 %} camped{% endif %}" style="fill: {{ systems.30000123.npc_kills | npc_kill_colour }};"/>
+        <title>Vaankalen: { systems.30000123.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000123 %}
+
+Campers: { camped.30000123|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000123 %} camped{% if request.user in camped.30000123 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000123.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Vaankalen</text>
     </a>
     {% if systems.30000123.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000123.data.note %}title="{{ systems.30000123.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000128" transform="translate(305, 640)">
     <a xlink:href="http://evemaps.dotlan.net/system/Tuuriainas" target="_top">
-        <title>Tuuriainas: {{ systems.30000128.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000128 %} camped{% endif %}" style="fill: {{ systems.30000128.npc_kills | npc_kill_colour }};"/>
+        <title>Tuuriainas: { systems.30000128.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000128 %}
+
+Campers: { camped.30000128|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000128 %} camped{% if request.user in camped.30000128 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000128.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Tuuriainas</text>
     </a>
     {% if systems.30000128.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000128.data.note %}title="{{ systems.30000128.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000129" transform="translate(135, 575)">
     <a xlink:href="http://evemaps.dotlan.net/system/Unpas" target="_top">
-        <title>Unpas: {{ systems.30000129.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000129 %} camped{% endif %}" style="fill: {{ systems.30000129.npc_kills | npc_kill_colour }};"/>
+        <title>Unpas: { systems.30000129.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000129 %}
+
+Campers: { camped.30000129|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000129 %} camped{% if request.user in camped.30000129 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000129.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Unpas</text>
     </a>
     {% if systems.30000129.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000129.data.note %}title="{{ systems.30000129.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30002062" transform="translate(535, 695)">
     <a xlink:href="http://evemaps.dotlan.net/system/Todifrauan" target="_top">
-        <title>Todifrauan: {{ systems.30002062.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002062 %} camped{% endif %}" style="fill: {{ systems.30002062.npc_kills | npc_kill_colour }};"/>
+        <title>Todifrauan: { systems.30002062.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30002062 %}
+
+Campers: { camped.30002062|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002062 %} camped{% if request.user in camped.30002062 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30002062.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Todifrauan</text>
     </a>
     {% if systems.30002062.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30002062.data.note %}title="{{ systems.30002062.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000191" transform="translate(565, 75)">
     <a xlink:href="http://evemaps.dotlan.net/system/Walvalin" target="_top">
-        <title>Walvalin: {{ systems.30000191.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000191 %} camped{% endif %}" style="fill: {{ systems.30000191.npc_kills | npc_kill_colour }};"/>
+        <title>Walvalin: { systems.30000191.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000191 %}
+
+Campers: { camped.30000191|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000191 %} camped{% if request.user in camped.30000191 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000191.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Walvalin</text>
     </a>
     {% if systems.30000191.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000191.data.note %}title="{{ systems.30000191.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30021407" transform="translate(145, 205)">
     <a xlink:href="http://evemaps.dotlan.net/system/Aokannitoh" target="_top">
-        <title>Aokannitoh: {{ systems.30021407.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30021407 %} camped{% endif %}" style="fill: {{ systems.30021407.npc_kills | npc_kill_colour }};"/>
+        <title>Aokannitoh: { systems.30021407.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30021407 %}
+
+Campers: { camped.30021407|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30021407 %} camped{% if request.user in camped.30021407 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30021407.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Aokannitoh</text>
     </a>
     {% if systems.30021407.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30021407.data.note %}title="{{ systems.30021407.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000193" transform="translate(410, 95)">
     <a xlink:href="http://evemaps.dotlan.net/system/Vouskiaho" target="_top">
-        <title>Vouskiaho: {{ systems.30000193.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000193 %} camped{% endif %}" style="fill: {{ systems.30000193.npc_kills | npc_kill_colour }};"/>
+        <title>Vouskiaho: { systems.30000193.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000193 %}
+
+Campers: { camped.30000193|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000193 %} camped{% if request.user in camped.30000193 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000193.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Vouskiaho</text>
     </a>
     {% if systems.30000193.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000193.data.note %}title="{{ systems.30000193.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000192" transform="translate(565, 40)">
     <a xlink:href="http://evemaps.dotlan.net/system/Otanuomi" target="_top">
-        <title>Otanuomi: {{ systems.30000192.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000192 %} camped{% endif %}" style="fill: {{ systems.30000192.npc_kills | npc_kill_colour }};"/>
+        <title>Otanuomi: { systems.30000192.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000192 %}
+
+Campers: { camped.30000192|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000192 %} camped{% if request.user in camped.30000192 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000192.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Otanuomi</text>
     </a>
     {% if systems.30000192.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000192.data.note %}title="{{ systems.30000192.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000195" transform="translate(745, 635)">
     <a xlink:href="http://evemaps.dotlan.net/system/Tasti" target="_top">
-        <title>Tasti: {{ systems.30000195.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000195 %} camped{% endif %}" style="fill: {{ systems.30000195.npc_kills | npc_kill_colour }};"/>
+        <title>Tasti: { systems.30000195.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000195 %}
+
+Campers: { camped.30000195|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000195 %} camped{% if request.user in camped.30000195 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000195.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Tasti</text>
     </a>
     {% if systems.30000195.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000195.data.note %}title="{{ systems.30000195.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000194" transform="translate(650, 100)">
     <a xlink:href="http://evemaps.dotlan.net/system/Otsela" target="_top">
-        <title>Otsela: {{ systems.30000194.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000194 %} camped{% endif %}" style="fill: {{ systems.30000194.npc_kills | npc_kill_colour }};"/>
+        <title>Otsela: { systems.30000194.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000194 %}
+
+Campers: { camped.30000194|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000194 %} camped{% if request.user in camped.30000194 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000194.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Otsela</text>
     </a>
     {% if systems.30000194.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000194.data.note %}title="{{ systems.30000194.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000197" transform="translate(730, 690)">
     <a xlink:href="http://evemaps.dotlan.net/system/Uemon" target="_top">
-        <title>Uemon: {{ systems.30000197.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000197 %} camped{% endif %}" style="fill: {{ systems.30000197.npc_kills | npc_kill_colour }};"/>
+        <title>Uemon: { systems.30000197.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000197 %}
+
+Campers: { camped.30000197|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000197 %} camped{% if request.user in camped.30000197 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000197.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Uemon</text>
     </a>
     {% if systems.30000197.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000197.data.note %}title="{{ systems.30000197.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000196" transform="translate(680, 660)">
     <a xlink:href="http://evemaps.dotlan.net/system/Otosela" target="_top">
-        <title>Otosela: {{ systems.30000196.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000196 %} camped{% endif %}" style="fill: {{ systems.30000196.npc_kills | npc_kill_colour }};"/>
+        <title>Otosela: { systems.30000196.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000196 %}
+
+Campers: { camped.30000196|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000196 %} camped{% if request.user in camped.30000196 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000196.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Otosela</text>
     </a>
     {% if systems.30000196.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000196.data.note %}title="{{ systems.30000196.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000199" transform="translate(800, 705)">
     <a xlink:href="http://evemaps.dotlan.net/system/Fuskunen" target="_top">
-        <title>Fuskunen: {{ systems.30000199.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000199 %} camped{% endif %}" style="fill: {{ systems.30000199.npc_kills | npc_kill_colour }};"/>
+        <title>Fuskunen: { systems.30000199.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000199 %}
+
+Campers: { camped.30000199|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000199 %} camped{% if request.user in camped.30000199 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000199.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Fuskunen</text>
     </a>
     {% if systems.30000199.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000199.data.note %}title="{{ systems.30000199.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000198" transform="translate(655, 705)">
     <a xlink:href="http://evemaps.dotlan.net/system/Paala" target="_top">
-        <title>Paala: {{ systems.30000198.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000198 %} camped{% endif %}" style="fill: {{ systems.30000198.npc_kills | npc_kill_colour }};"/>
+        <title>Paala: { systems.30000198.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000198 %}
+
+Campers: { camped.30000198|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000198 %} camped{% if request.user in camped.30000198 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000198.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Paala</text>
     </a>
     {% if systems.30000198.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000198.data.note %}title="{{ systems.30000198.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000119" transform="translate(305, 445)">
     <a xlink:href="http://evemaps.dotlan.net/system/Itamo" target="_top">
-        <title>Itamo: {{ systems.30000119.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000119 %} camped{% endif %}" style="fill: {{ systems.30000119.npc_kills | npc_kill_colour }};"/>
+        <title>Itamo: { systems.30000119.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000119 %}
+
+Campers: { camped.30000119|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000119 %} camped{% if request.user in camped.30000119 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000119.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Itamo</text>
     </a>
     {% if systems.30000119.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000119.data.note %}title="{{ systems.30000119.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30001379" transform="translate(60, 335)">
     <a xlink:href="http://evemaps.dotlan.net/system/Tunttaras" target="_top">
-        <title>Tunttaras: {{ systems.30001379.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001379 %} camped{% endif %}" style="fill: {{ systems.30001379.npc_kills | npc_kill_colour }};"/>
+        <title>Tunttaras: { systems.30001379.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001379 %}
+
+Campers: { camped.30001379|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001379 %} camped{% if request.user in camped.30001379 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001379.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Tunttaras</text>
     </a>
     {% if systems.30001379.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30001379.data.note %}title="{{ systems.30001379.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30002440" transform="translate(890, 515)">
     <a xlink:href="http://evemaps.dotlan.net/system/BWF-ZZ" target="_top">
-        <title>BWF-ZZ: {{ systems.30002440.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002440 %} camped{% endif %}" style="fill: {{ systems.30002440.npc_kills | npc_kill_colour }};"/>
+        <title>BWF-ZZ: { systems.30002440.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30002440 %}
+
+Campers: { camped.30002440|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002440 %} camped{% if request.user in camped.30002440 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30002440.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">BWF-ZZ</text>
     </a>
     {% if systems.30002440.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30002440.data.note %}title="{{ systems.30002440.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30002791" transform="translate(45, 590)">
     <a xlink:href="http://evemaps.dotlan.net/system/Sirppala" target="_top">
-        <title>Sirppala: {{ systems.30002791.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002791 %} camped{% endif %}" style="fill: {{ systems.30002791.npc_kills | npc_kill_colour }};"/>
+        <title>Sirppala: { systems.30002791.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30002791 %}
+
+Campers: { camped.30002791|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002791 %} camped{% if request.user in camped.30002791 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30002791.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Sirppala</text>
     </a>
     {% if systems.30002791.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30002791.data.note %}title="{{ systems.30002791.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000186" transform="translate(810, 510)">
     <a xlink:href="http://evemaps.dotlan.net/system/Oijanen" target="_top">
-        <title>Oijanen: {{ systems.30000186.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000186 %} camped{% endif %}" style="fill: {{ systems.30000186.npc_kills | npc_kill_colour }};"/>
+        <title>Oijanen: { systems.30000186.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000186 %}
+
+Campers: { camped.30000186|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000186 %} camped{% if request.user in camped.30000186 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000186.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Oijanen</text>
     </a>
     {% if systems.30000186.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000186.data.note %}title="{{ systems.30000186.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000187" transform="translate(885, 315)">
     <a xlink:href="http://evemaps.dotlan.net/system/Wuos" target="_top">
-        <title>Wuos: {{ systems.30000187.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000187 %} camped{% endif %}" style="fill: {{ systems.30000187.npc_kills | npc_kill_colour }};"/>
+        <title>Wuos: { systems.30000187.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000187 %}
+
+Campers: { camped.30000187|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000187 %} camped{% if request.user in camped.30000187 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000187.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Wuos</text>
     </a>
     {% if systems.30000187.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000187.data.note %}title="{{ systems.30000187.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000184" transform="translate(920, 355)">
     <a xlink:href="http://evemaps.dotlan.net/system/Uminas" target="_top">
-        <title>Uminas: {{ systems.30000184.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000184 %} camped{% endif %}" style="fill: {{ systems.30000184.npc_kills | npc_kill_colour }};"/>
+        <title>Uminas: { systems.30000184.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000184 %}
+
+Campers: { camped.30000184|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000184 %} camped{% if request.user in camped.30000184 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000184.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Uminas</text>
     </a>
     {% if systems.30000184.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000184.data.note %}title="{{ systems.30000184.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000185" transform="translate(810, 470)">
     <a xlink:href="http://evemaps.dotlan.net/system/Airaken" target="_top">
-        <title>Airaken: {{ systems.30000185.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000185 %} camped{% endif %}" style="fill: {{ systems.30000185.npc_kills | npc_kill_colour }};"/>
+        <title>Airaken: { systems.30000185.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000185 %}
+
+Campers: { camped.30000185|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000185 %} camped{% if request.user in camped.30000185 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000185.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Airaken</text>
     </a>
     {% if systems.30000185.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000185.data.note %}title="{{ systems.30000185.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000182" transform="translate(855, 350)">
     <a xlink:href="http://evemaps.dotlan.net/system/Inaya" target="_top">
-        <title>Inaya: {{ systems.30000182.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000182 %} camped{% endif %}" style="fill: {{ systems.30000182.npc_kills | npc_kill_colour }};"/>
+        <title>Inaya: { systems.30000182.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000182 %}
+
+Campers: { camped.30000182|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000182 %} camped{% if request.user in camped.30000182 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000182.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Inaya</text>
     </a>
     {% if systems.30000182.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000182.data.note %}title="{{ systems.30000182.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000183" transform="translate(870, 430)">
     <a xlink:href="http://evemaps.dotlan.net/system/Nuken" target="_top">
-        <title>Nuken: {{ systems.30000183.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000183 %} camped{% endif %}" style="fill: {{ systems.30000183.npc_kills | npc_kill_colour }};"/>
+        <title>Nuken: { systems.30000183.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000183 %}
+
+Campers: { camped.30000183|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000183 %} camped{% if request.user in camped.30000183 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000183.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Nuken</text>
     </a>
     {% if systems.30000183.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000183.data.note %}title="{{ systems.30000183.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000180" transform="translate(805, 390)">
     <a xlink:href="http://evemaps.dotlan.net/system/Osmon" target="_top">
-        <title>Osmon: {{ systems.30000180.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000180 %} camped{% endif %}" style="fill: {{ systems.30000180.npc_kills | npc_kill_colour }};"/>
+        <title>Osmon: { systems.30000180.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000180 %}
+
+Campers: { camped.30000180|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000180 %} camped{% if request.user in camped.30000180 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000180.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Osmon</text>
     </a>
     {% if systems.30000180.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000180.data.note %}title="{{ systems.30000180.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000181" transform="translate(810, 435)">
     <a xlink:href="http://evemaps.dotlan.net/system/Korsiki" target="_top">
-        <title>Korsiki: {{ systems.30000181.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000181 %} camped{% endif %}" style="fill: {{ systems.30000181.npc_kills | npc_kill_colour }};"/>
+        <title>Korsiki: { systems.30000181.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000181 %}
+
+Campers: { camped.30000181|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000181 %} camped{% if request.user in camped.30000181 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000181.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Korsiki</text>
     </a>
     {% if systems.30000181.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000181.data.note %}title="{{ systems.30000181.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000188" transform="translate(565, 170)">
     <a xlink:href="http://evemaps.dotlan.net/system/Hentogaira" target="_top">
-        <title>Hentogaira: {{ systems.30000188.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000188 %} camped{% endif %}" style="fill: {{ systems.30000188.npc_kills | npc_kill_colour }};"/>
+        <title>Hentogaira: { systems.30000188.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000188 %}
+
+Campers: { camped.30000188|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000188 %} camped{% if request.user in camped.30000188 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000188.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Hentogaira</text>
     </a>
     {% if systems.30000188.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000188.data.note %}title="{{ systems.30000188.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000189" transform="translate(565, 130)">
     <a xlink:href="http://evemaps.dotlan.net/system/Kiainti" target="_top">
-        <title>Kiainti: {{ systems.30000189.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000189 %} camped{% endif %}" style="fill: {{ systems.30000189.npc_kills | npc_kill_colour }};"/>
+        <title>Kiainti: { systems.30000189.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000189 %}
+
+Campers: { camped.30000189|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000189 %} camped{% if request.user in camped.30000189 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000189.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Kiainti</text>
     </a>
     {% if systems.30000189.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000189.data.note %}title="{{ systems.30000189.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30002475" transform="translate(535, 650)">
     <a xlink:href="http://evemaps.dotlan.net/system/EOA-ZC" target="_top">
-        <title>EOA-ZC: {{ systems.30002475.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002475 %} camped{% endif %}" style="fill: {{ systems.30002475.npc_kills | npc_kill_colour }};"/>
+        <title>EOA-ZC: { systems.30002475.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30002475 %}
+
+Campers: { camped.30002475|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002475 %} camped{% if request.user in camped.30002475 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30002475.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">EOA-ZC</text>
     </a>
     {% if systems.30002475.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30002475.data.note %}title="{{ systems.30002475.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30002788" transform="translate(100, 665)">
     <a xlink:href="http://evemaps.dotlan.net/system/Inaro" target="_top">
-        <title>Inaro: {{ systems.30002788.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002788 %} camped{% endif %}" style="fill: {{ systems.30002788.npc_kills | npc_kill_colour }};"/>
+        <title>Inaro: { systems.30002788.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30002788 %}
+
+Campers: { camped.30002788|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002788 %} camped{% if request.user in camped.30002788 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30002788.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Inaro</text>
     </a>
     {% if systems.30002788.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30002788.data.note %}title="{{ systems.30002788.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30002780" transform="translate(304, 375)">
     <a xlink:href="http://evemaps.dotlan.net/system/Muvolailen" target="_top">
-        <title>Muvolailen: {{ systems.30002780.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002780 %} camped{% endif %}" style="fill: {{ systems.30002780.npc_kills | npc_kill_colour }};"/>
+        <title>Muvolailen: { systems.30002780.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30002780 %}
+
+Campers: { camped.30002780|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002780 %} camped{% if request.user in camped.30002780 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30002780.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Muvolailen</text>
     </a>
     {% if systems.30002780.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30002780.data.note %}title="{{ systems.30002780.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000190" transform="translate(485, 100)">
     <a xlink:href="http://evemaps.dotlan.net/system/Vasala" target="_top">
-        <title>Vasala: {{ systems.30000190.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000190 %} camped{% endif %}" style="fill: {{ systems.30000190.npc_kills | npc_kill_colour }};"/>
+        <title>Vasala: { systems.30000190.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000190 %}
+
+Campers: { camped.30000190|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000190 %} camped{% if request.user in camped.30000190 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000190.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Vasala</text>
     </a>
     {% if systems.30000190.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000190.data.note %}title="{{ systems.30000190.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30001448" transform="translate(82, 39)">
     <a xlink:href="http://evemaps.dotlan.net/system/Hakonen" target="_top">
-        <title>Hakonen: {{ systems.30001448.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001448 %} camped{% endif %}" style="fill: {{ systems.30001448.npc_kills | npc_kill_colour }};"/>
+        <title>Hakonen: { systems.30001448.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001448 %}
+
+Campers: { camped.30001448|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001448 %} camped{% if request.user in camped.30001448 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001448.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Hakonen</text>
     </a>
     {% if systems.30001448.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30001448.data.note %}title="{{ systems.30001448.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000179" transform="translate(685, 265)">
     <a xlink:href="http://evemaps.dotlan.net/system/Silen" target="_top">
-        <title>Silen: {{ systems.30000179.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000179 %} camped{% endif %}" style="fill: {{ systems.30000179.npc_kills | npc_kill_colour }};"/>
+        <title>Silen: { systems.30000179.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000179 %}
+
+Campers: { camped.30000179|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000179 %} camped{% if request.user in camped.30000179 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000179.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Silen</text>
     </a>
     {% if systems.30000179.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000179.data.note %}title="{{ systems.30000179.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000178" transform="translate(550, 220)">
     <a xlink:href="http://evemaps.dotlan.net/system/Akkilen" target="_top">
-        <title>Akkilen: {{ systems.30000178.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000178 %} camped{% endif %}" style="fill: {{ systems.30000178.npc_kills | npc_kill_colour }};"/>
+        <title>Akkilen: { systems.30000178.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000178 %}
+
+Campers: { camped.30000178|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000178 %} camped{% if request.user in camped.30000178 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000178.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Akkilen</text>
     </a>
     {% if systems.30000178.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000178.data.note %}title="{{ systems.30000178.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30001363" transform="translate(306, 335)">
     <a xlink:href="http://evemaps.dotlan.net/system/Sobaseki" target="_top">
-        <title>Sobaseki: {{ systems.30001363.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001363 %} camped{% endif %}" style="fill: {{ systems.30001363.npc_kills | npc_kill_colour }};"/>
+        <title>Sobaseki: { systems.30001363.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001363 %}
+
+Campers: { camped.30001363|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001363 %} camped{% if request.user in camped.30001363 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001363.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Sobaseki</text>
     </a>
     {% if systems.30001363.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30001363.data.note %}title="{{ systems.30001363.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000173" transform="translate(535, 260)">
     <a xlink:href="http://evemaps.dotlan.net/system/Vattuolen" target="_top">
-        <title>Vattuolen: {{ systems.30000173.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000173 %} camped{% endif %}" style="fill: {{ systems.30000173.npc_kills | npc_kill_colour }};"/>
+        <title>Vattuolen: { systems.30000173.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000173 %}
+
+Campers: { camped.30000173|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000173 %} camped{% if request.user in camped.30000173 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000173.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Vattuolen</text>
     </a>
     {% if systems.30000173.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000173.data.note %}title="{{ systems.30000173.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000172" transform="translate(835, 95)">
     <a xlink:href="http://evemaps.dotlan.net/system/Otomainen" target="_top">
-        <title>Otomainen: {{ systems.30000172.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000172 %} camped{% endif %}" style="fill: {{ systems.30000172.npc_kills | npc_kill_colour }};"/>
+        <title>Otomainen: { systems.30000172.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000172 %}
+
+Campers: { camped.30000172|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000172 %} camped{% if request.user in camped.30000172 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000172.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Otomainen</text>
     </a>
     {% if systems.30000172.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000172.data.note %}title="{{ systems.30000172.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000171" transform="translate(875, 135)">
     <a xlink:href="http://evemaps.dotlan.net/system/Otitoh" target="_top">
-        <title>Otitoh: {{ systems.30000171.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000171 %} camped{% endif %}" style="fill: {{ systems.30000171.npc_kills | npc_kill_colour }};"/>
+        <title>Otitoh: { systems.30000171.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000171 %}
+
+Campers: { camped.30000171|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000171 %} camped{% if request.user in camped.30000171 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000171.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Otitoh</text>
     </a>
     {% if systems.30000171.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000171.data.note %}title="{{ systems.30000171.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000170" transform="translate(900, 220)">
     <a xlink:href="http://evemaps.dotlan.net/system/Vahunomi" target="_top">
-        <title>Vahunomi: {{ systems.30000170.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000170 %} camped{% endif %}" style="fill: {{ systems.30000170.npc_kills | npc_kill_colour }};"/>
+        <title>Vahunomi: { systems.30000170.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000170 %}
+
+Campers: { camped.30000170|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000170 %} camped{% if request.user in camped.30000170 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000170.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Vahunomi</text>
     </a>
     {% if systems.30000170.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000170.data.note %}title="{{ systems.30000170.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000177" transform="translate(330, 180)">
     <a xlink:href="http://evemaps.dotlan.net/system/Ukkalen" target="_top">
-        <title>Ukkalen: {{ systems.30000177.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000177 %} camped{% endif %}" style="fill: {{ systems.30000177.npc_kills | npc_kill_colour }};"/>
+        <title>Ukkalen: { systems.30000177.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000177 %}
+
+Campers: { camped.30000177|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000177 %} camped{% if request.user in camped.30000177 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000177.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ukkalen</text>
     </a>
     {% if systems.30000177.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000177.data.note %}title="{{ systems.30000177.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000176" transform="translate(400, 200)">
     <a xlink:href="http://evemaps.dotlan.net/system/Keikaken" target="_top">
-        <title>Keikaken: {{ systems.30000176.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000176 %} camped{% endif %}" style="fill: {{ systems.30000176.npc_kills | npc_kill_colour }};"/>
+        <title>Keikaken: { systems.30000176.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000176 %}
+
+Campers: { camped.30000176|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000176 %} camped{% if request.user in camped.30000176 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000176.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Keikaken</text>
     </a>
     {% if systems.30000176.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000176.data.note %}title="{{ systems.30000176.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000175" transform="translate(615, 250)">
     <a xlink:href="http://evemaps.dotlan.net/system/Soshin" target="_top">
-        <title>Soshin: {{ systems.30000175.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000175 %} camped{% endif %}" style="fill: {{ systems.30000175.npc_kills | npc_kill_colour }};"/>
+        <title>Soshin: { systems.30000175.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000175 %}
+
+Campers: { camped.30000175|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000175 %} camped{% if request.user in camped.30000175 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000175.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Soshin</text>
     </a>
     {% if systems.30000175.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000175.data.note %}title="{{ systems.30000175.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
 </g>
 <g id="def30000174" transform="translate(470, 220)">
     <a xlink:href="http://evemaps.dotlan.net/system/Onuse" target="_top">
-        <title>Onuse: {{ systems.30000174.npc_kills }} NPC kills</title>
-        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000174 %} camped{% endif %}" style="fill: {{ systems.30000174.npc_kills | npc_kill_colour }};"/>
+        <title>Onuse: { systems.30000174.npc_kills } NPC kills{% if perms.predds_tracker.view_all_alts and camped.30000174 %}
+
+Campers: { camped.30000174|join:", " }{% endif %}</title>
+        <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30000174 %} camped{% if request.user in camped.30000174 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30000174.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Onuse</text>
     </a>
     {% if systems.30000174.data.important %}<text x="60" y="30" class="exclam" text-anchor="middle" {% if systems.30000174.data.note %}title="{{ systems.30000174.data.note }}"{% endif %}>&#x26A0;</text>{% endif %}
