@@ -169,7 +169,7 @@
     <a xlink:href="http://evemaps.dotlan.net/system/Nomash" target="_top">
         <title>Nomash: {{ systems.30002219.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30002219 %}
 
-Campers: {{ camped.30002219|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30002219 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002219 %} camped{% if request.user in camped.30002219 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30002219.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Nomash</text>
     </a>
@@ -179,7 +179,7 @@ Campers: {{ camped.30002219|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Joppaya" target="_top">
         <title>Joppaya: {{ systems.30002210.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30002210 %}
 
-Campers: {{ camped.30002210|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30002210 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002210 %} camped{% if request.user in camped.30002210 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30002210.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Joppaya</text>
     </a>
@@ -189,7 +189,7 @@ Campers: {{ camped.30002210|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Sakhti" target="_top">
         <title>Sakhti: {{ systems.30002215.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30002215 %}
 
-Campers: {{ camped.30002215|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30002215 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002215 %} camped{% if request.user in camped.30002215 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30002215.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Sakhti</text>
     </a>
@@ -199,7 +199,7 @@ Campers: {{ camped.30002215|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Aldali" target="_top">
         <title>Aldali: {{ systems.30002216.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30002216 %}
 
-Campers: {{ camped.30002216|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30002216 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002216 %} camped{% if request.user in camped.30002216 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30002216.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Aldali</text>
     </a>
@@ -209,7 +209,7 @@ Campers: {{ camped.30002216|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Bhizheba" target="_top">
         <title>Bhizheba: {{ systems.30002282.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30002282 %}
 
-Campers: {{ camped.30002282|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30002282 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002282 %} camped{% if request.user in camped.30002282 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30002282.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Bhizheba</text>
     </a>
@@ -219,7 +219,7 @@ Campers: {{ camped.30002282|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Safilbab" target="_top">
         <title>Safilbab: {{ systems.30031672.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30031672 %}
 
-Campers: {{ camped.30031672|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30031672 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30031672 %} camped{% if request.user in camped.30031672 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30031672.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Safilbab</text>
     </a>
@@ -229,7 +229,7 @@ Campers: {{ camped.30031672|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Unkah" target="_top">
         <title>Unkah: {{ systems.30001679.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001679 %}
 
-Campers: {{ camped.30001679|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001679 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001679 %} camped{% if request.user in camped.30001679 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001679.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Unkah</text>
     </a>
@@ -239,7 +239,7 @@ Campers: {{ camped.30001679|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Atoosh" target="_top">
         <title>Atoosh: {{ systems.30001678.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001678 %}
 
-Campers: {{ camped.30001678|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001678 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001678 %} camped{% if request.user in camped.30001678 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001678.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Atoosh</text>
     </a>
@@ -249,7 +249,7 @@ Campers: {{ camped.30001678|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Thashkarai" target="_top">
         <title>Thashkarai: {{ systems.30001677.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001677 %}
 
-Campers: {{ camped.30001677|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001677 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001677 %} camped{% if request.user in camped.30001677 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001677.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Thashkarai</text>
     </a>
@@ -259,7 +259,7 @@ Campers: {{ camped.30001677|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Mimen" target="_top">
         <title>Mimen: {{ systems.30001676.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001676 %}
 
-Campers: {{ camped.30001676|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001676 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001676 %} camped{% if request.user in camped.30001676 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001676.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Mimen</text>
     </a>
@@ -269,7 +269,7 @@ Campers: {{ camped.30001676|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Sacalan" target="_top">
         <title>Sacalan: {{ systems.30001675.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001675 %}
 
-Campers: {{ camped.30001675|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001675 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001675 %} camped{% if request.user in camped.30001675 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001675.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Sacalan</text>
     </a>
@@ -279,7 +279,7 @@ Campers: {{ camped.30001675|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Hilaban" target="_top">
         <title>Hilaban: {{ systems.30001674.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001674 %}
 
-Campers: {{ camped.30001674|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001674 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001674 %} camped{% if request.user in camped.30001674 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001674.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Hilaban</text>
     </a>
@@ -289,7 +289,7 @@ Campers: {{ camped.30001674|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Shesha" target="_top">
         <title>Shesha: {{ systems.30001673.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001673 %}
 
-Campers: {{ camped.30001673|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001673 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001673 %} camped{% if request.user in camped.30001673 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001673.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Shesha</text>
     </a>
@@ -299,7 +299,7 @@ Campers: {{ camped.30001673|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Emrayur" target="_top">
         <title>Emrayur: {{ systems.30001672.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001672 %}
 
-Campers: {{ camped.30001672|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001672 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001672 %} camped{% if request.user in camped.30001672 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001672.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Emrayur</text>
     </a>
@@ -309,7 +309,7 @@ Campers: {{ camped.30001672|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Tash-Murkon Prime" target="_top">
         <title>Tash-Murkon Prime: {{ systems.30001671.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001671 %}
 
-Campers: {{ camped.30001671|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001671 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001671 %} camped{% if request.user in camped.30001671 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001671.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Tash-Murkon Prime</text>
     </a>
@@ -319,7 +319,7 @@ Campers: {{ camped.30001671|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Baviasi" target="_top">
         <title>Baviasi: {{ systems.30001670.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001670 %}
 
-Campers: {{ camped.30001670|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001670 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001670 %} camped{% if request.user in camped.30001670 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001670.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Baviasi</text>
     </a>
@@ -329,7 +329,7 @@ Campers: {{ camped.30001670|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Seitam" target="_top">
         <title>Seitam: {{ systems.30041672.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30041672 %}
 
-Campers: {{ camped.30041672|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30041672 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30041672 %} camped{% if request.user in camped.30041672 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30041672.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Seitam</text>
     </a>
@@ -339,7 +339,7 @@ Campers: {{ camped.30041672|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Y-MPWL" target="_top">
         <title>Y-MPWL: {{ systems.30003726.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30003726 %}
 
-Campers: {{ camped.30003726|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30003726 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30003726 %} camped{% if request.user in camped.30003726 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30003726.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Y-MPWL</text>
     </a>
@@ -349,7 +349,7 @@ Campers: {{ camped.30003726|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Yong" target="_top">
         <title>Yong: {{ systems.30001668.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001668 %}
 
-Campers: {{ camped.30001668|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001668 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001668 %} camped{% if request.user in camped.30001668 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001668.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Yong</text>
     </a>
@@ -359,7 +359,7 @@ Campers: {{ camped.30001668|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Pimebeka" target="_top">
         <title>Pimebeka: {{ systems.30001669.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001669 %}
 
-Campers: {{ camped.30001669|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001669 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001669 %} camped{% if request.user in camped.30001669 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001669.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Pimebeka</text>
     </a>
@@ -369,7 +369,7 @@ Campers: {{ camped.30001669|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Chamume" target="_top">
         <title>Chamume: {{ systems.30001664.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001664 %}
 
-Campers: {{ camped.30001664|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001664 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001664 %} camped{% if request.user in camped.30001664 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001664.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Chamume</text>
     </a>
@@ -379,7 +379,7 @@ Campers: {{ camped.30001664|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Nuzair" target="_top">
         <title>Nuzair: {{ systems.30001665.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001665 %}
 
-Campers: {{ camped.30001665|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001665 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001665 %} camped{% if request.user in camped.30001665 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001665.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Nuzair</text>
     </a>
@@ -389,7 +389,7 @@ Campers: {{ camped.30001665|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Pera" target="_top">
         <title>Pera: {{ systems.30001666.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001666 %}
 
-Campers: {{ camped.30001666|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001666 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001666 %} camped{% if request.user in camped.30001666 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001666.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Pera</text>
     </a>
@@ -399,7 +399,7 @@ Campers: {{ camped.30001666|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Shousran" target="_top">
         <title>Shousran: {{ systems.30001667.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001667 %}
 
-Campers: {{ camped.30001667|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001667 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001667 %} camped{% if request.user in camped.30001667 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001667.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Shousran</text>
     </a>
@@ -409,7 +409,7 @@ Campers: {{ camped.30001667|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Dabrid" target="_top">
         <title>Dabrid: {{ systems.30001660.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001660 %}
 
-Campers: {{ camped.30001660|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001660 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001660 %} camped{% if request.user in camped.30001660 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001660.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Dabrid</text>
     </a>
@@ -419,7 +419,7 @@ Campers: {{ camped.30001660|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Gyerzen" target="_top">
         <title>Gyerzen: {{ systems.30001661.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001661 %}
 
-Campers: {{ camped.30001661|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001661 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001661 %} camped{% if request.user in camped.30001661 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001661.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Gyerzen</text>
     </a>
@@ -429,7 +429,7 @@ Campers: {{ camped.30001661|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Hibi" target="_top">
         <title>Hibi: {{ systems.30001662.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001662 %}
 
-Campers: {{ camped.30001662|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001662 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001662 %} camped{% if request.user in camped.30001662 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001662.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Hibi</text>
     </a>
@@ -439,7 +439,7 @@ Campers: {{ camped.30001662|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Gemodi" target="_top">
         <title>Gemodi: {{ systems.30001663.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001663 %}
 
-Campers: {{ camped.30001663|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001663 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001663 %} camped{% if request.user in camped.30001663 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001663.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Gemodi</text>
     </a>
@@ -449,7 +449,7 @@ Campers: {{ camped.30001663|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Taru" target="_top">
         <title>Taru: {{ systems.30001703.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001703 %}
 
-Campers: {{ camped.30001703|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001703 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001703 %} camped{% if request.user in camped.30001703 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001703.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Taru</text>
     </a>
@@ -459,7 +459,7 @@ Campers: {{ camped.30001703|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Nafrivik" target="_top">
         <title>Nafrivik: {{ systems.30001702.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001702 %}
 
-Campers: {{ camped.30001702|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001702 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001702 %} camped{% if request.user in camped.30001702 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001702.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Nafrivik</text>
     </a>
@@ -469,7 +469,7 @@ Campers: {{ camped.30001702|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Yanuel" target="_top">
         <title>Yanuel: {{ systems.30001701.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001701 %}
 
-Campers: {{ camped.30001701|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001701 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001701 %} camped{% if request.user in camped.30001701 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001701.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Yanuel</text>
     </a>
@@ -479,7 +479,7 @@ Campers: {{ camped.30001701|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Remoriu" target="_top">
         <title>Remoriu: {{ systems.30001700.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001700 %}
 
-Campers: {{ camped.30001700|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001700 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001700 %} camped{% if request.user in camped.30001700 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001700.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Remoriu</text>
     </a>
@@ -489,7 +489,7 @@ Campers: {{ camped.30001700|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Phoren" target="_top">
         <title>Phoren: {{ systems.30001707.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001707 %}
 
-Campers: {{ camped.30001707|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001707 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001707 %} camped{% if request.user in camped.30001707 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001707.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Phoren</text>
     </a>
@@ -499,7 +499,7 @@ Campers: {{ camped.30001707|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Jinizu" target="_top">
         <title>Jinizu: {{ systems.30001706.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001706 %}
 
-Campers: {{ camped.30001706|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001706 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001706 %} camped{% if request.user in camped.30001706 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001706.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Jinizu</text>
     </a>
@@ -509,7 +509,7 @@ Campers: {{ camped.30001706|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Azhgabid" target="_top">
         <title>Azhgabid: {{ systems.30001705.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001705 %}
 
-Campers: {{ camped.30001705|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001705 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001705 %} camped{% if request.user in camped.30001705 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001705.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Azhgabid</text>
     </a>
@@ -519,7 +519,7 @@ Campers: {{ camped.30001705|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Arkoz" target="_top">
         <title>Arkoz: {{ systems.30001704.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001704 %}
 
-Campers: {{ camped.30001704|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001704 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001704 %} camped{% if request.user in camped.30001704 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001704.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Arkoz</text>
     </a>
@@ -529,7 +529,7 @@ Campers: {{ camped.30001704|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Ferira" target="_top">
         <title>Ferira: {{ systems.30001709.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001709 %}
 
-Campers: {{ camped.30001709|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001709 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001709 %} camped{% if request.user in camped.30001709 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001709.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ferira</text>
     </a>
@@ -539,7 +539,7 @@ Campers: {{ camped.30001709|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Asezai" target="_top">
         <title>Asezai: {{ systems.30001708.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001708 %}
 
-Campers: {{ camped.30001708|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001708 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001708 %} camped{% if request.user in camped.30001708 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001708.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Asezai</text>
     </a>
@@ -549,7 +549,7 @@ Campers: {{ camped.30001708|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Turba" target="_top">
         <title>Turba: {{ systems.30004098.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30004098 %}
 
-Campers: {{ camped.30004098|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30004098 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30004098 %} camped{% if request.user in camped.30004098 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30004098.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Turba</text>
     </a>
@@ -559,7 +559,7 @@ Campers: {{ camped.30004098|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Elmed" target="_top">
         <title>Elmed: {{ systems.30004149.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30004149 %}
 
-Campers: {{ camped.30004149|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30004149 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30004149 %} camped{% if request.user in camped.30004149 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30004149.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Elmed</text>
     </a>
@@ -569,7 +569,7 @@ Campers: {{ camped.30004149|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Nafomeh" target="_top">
         <title>Nafomeh: {{ systems.30001651.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001651 %}
 
-Campers: {{ camped.30001651|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001651 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001651 %} camped{% if request.user in camped.30001651 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001651.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Nafomeh</text>
     </a>
@@ -579,7 +579,7 @@ Campers: {{ camped.30001651|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Riramia" target="_top">
         <title>Riramia: {{ systems.30001650.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001650 %}
 
-Campers: {{ camped.30001650|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001650 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001650 %} camped{% if request.user in camped.30001650 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001650.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Riramia</text>
     </a>
@@ -589,7 +589,7 @@ Campers: {{ camped.30001650|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Jarzalad" target="_top">
         <title>Jarzalad: {{ systems.30001653.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001653 %}
 
-Campers: {{ camped.30001653|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001653 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001653 %} camped{% if request.user in camped.30001653 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001653.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Jarzalad</text>
     </a>
@@ -599,7 +599,7 @@ Campers: {{ camped.30001653|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Pimsu" target="_top">
         <title>Pimsu: {{ systems.30001652.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001652 %}
 
-Campers: {{ camped.30001652|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001652 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001652 %} camped{% if request.user in camped.30001652 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001652.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Pimsu</text>
     </a>
@@ -609,7 +609,7 @@ Campers: {{ camped.30001652|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Imeshasa" target="_top">
         <title>Imeshasa: {{ systems.30001655.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001655 %}
 
-Campers: {{ camped.30001655|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001655 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001655 %} camped{% if request.user in camped.30001655 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001655.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Imeshasa</text>
     </a>
@@ -619,7 +619,7 @@ Campers: {{ camped.30001655|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Matyas" target="_top">
         <title>Matyas: {{ systems.30001654.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001654 %}
 
-Campers: {{ camped.30001654|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001654 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001654 %} camped{% if request.user in camped.30001654 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001654.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Matyas</text>
     </a>
@@ -629,7 +629,7 @@ Campers: {{ camped.30001654|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Seil" target="_top">
         <title>Seil: {{ systems.30001657.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001657 %}
 
-Campers: {{ camped.30001657|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001657 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001657 %} camped{% if request.user in camped.30001657 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001657.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Seil</text>
     </a>
@@ -639,7 +639,7 @@ Campers: {{ camped.30001657|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Ivih" target="_top">
         <title>Ivih: {{ systems.30001656.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001656 %}
 
-Campers: {{ camped.30001656|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001656 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001656 %} camped{% if request.user in camped.30001656 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001656.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ivih</text>
     </a>
@@ -649,7 +649,7 @@ Campers: {{ camped.30001656|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Sehmosh" target="_top">
         <title>Sehmosh: {{ systems.30001659.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001659 %}
 
-Campers: {{ camped.30001659|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001659 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001659 %} camped{% if request.user in camped.30001659 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001659.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Sehmosh</text>
     </a>
@@ -659,7 +659,7 @@ Campers: {{ camped.30001659|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Mani" target="_top">
         <title>Mani: {{ systems.30001658.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001658 %}
 
-Campers: {{ camped.30001658|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001658 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001658 %} camped{% if request.user in camped.30001658 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001658.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Mani</text>
     </a>
@@ -669,7 +669,7 @@ Campers: {{ camped.30001658|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Pasha" target="_top">
         <title>Pasha: {{ systems.30021672.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30021672 %}
 
-Campers: {{ camped.30021672|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30021672 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30021672 %} camped{% if request.user in camped.30021672 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30021672.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Pasha</text>
     </a>
@@ -679,7 +679,7 @@ Campers: {{ camped.30021672|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Yeder" target="_top">
         <title>Yeder: {{ systems.30001710.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001710 %}
 
-Campers: {{ camped.30001710|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001710 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001710 %} camped{% if request.user in camped.30001710 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001710.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Yeder</text>
     </a>
@@ -689,7 +689,7 @@ Campers: {{ camped.30001710|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Azerakish" target="_top">
         <title>Azerakish: {{ systems.30001711.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001711 %}
 
-Campers: {{ camped.30001711|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001711 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001711 %} camped{% if request.user in camped.30001711 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001711.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Azerakish</text>
     </a>
@@ -699,7 +699,7 @@ Campers: {{ camped.30001711|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Lari" target="_top">
         <title>Lari: {{ systems.30001712.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001712 %}
 
-Campers: {{ camped.30001712|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001712 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001712 %} camped{% if request.user in camped.30001712 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001712.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Lari</text>
     </a>
@@ -709,7 +709,7 @@ Campers: {{ camped.30001712|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Yasud" target="_top">
         <title>Yasud: {{ systems.30001713.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001713 %}
 
-Campers: {{ camped.30001713|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001713 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001713 %} camped{% if request.user in camped.30001713 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001713.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Yasud</text>
     </a>
@@ -719,7 +719,7 @@ Campers: {{ camped.30001713|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Ghishul" target="_top">
         <title>Ghishul: {{ systems.30001714.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001714 %}
 
-Campers: {{ camped.30001714|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001714 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001714 %} camped{% if request.user in camped.30001714 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001714.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ghishul</text>
     </a>
@@ -729,7 +729,7 @@ Campers: {{ camped.30001714|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Moutid" target="_top">
         <title>Moutid: {{ systems.30001715.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001715 %}
 
-Campers: {{ camped.30001715|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001715 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001715 %} camped{% if request.user in camped.30001715 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001715.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Moutid</text>
     </a>
@@ -739,7 +739,7 @@ Campers: {{ camped.30001715|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Goni" target="_top">
         <title>Goni: {{ systems.30001716.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001716 %}
 
-Campers: {{ camped.30001716|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001716 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001716 %} camped{% if request.user in camped.30001716 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001716.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Goni</text>
     </a>
@@ -749,7 +749,7 @@ Campers: {{ camped.30001716|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Adar" target="_top">
         <title>Adar: {{ systems.30001717.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001717 %}
 
-Campers: {{ camped.30001717|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001717 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001717 %} camped{% if request.user in camped.30001717 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001717.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Adar</text>
     </a>
@@ -759,7 +759,7 @@ Campers: {{ camped.30001717|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Paye" target="_top">
         <title>Paye: {{ systems.30001718.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001718 %}
 
-Campers: {{ camped.30001718|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001718 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001718 %} camped{% if request.user in camped.30001718 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001718.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Paye</text>
     </a>
@@ -769,7 +769,7 @@ Campers: {{ camped.30001718|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Sagain" target="_top">
         <title>Sagain: {{ systems.30001719.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001719 %}
 
-Campers: {{ camped.30001719|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001719 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001719 %} camped{% if request.user in camped.30001719 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001719.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Sagain</text>
     </a>
@@ -779,7 +779,7 @@ Campers: {{ camped.30001719|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Goram" target="_top">
         <title>Goram: {{ systems.30001646.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001646 %}
 
-Campers: {{ camped.30001646|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001646 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001646 %} camped{% if request.user in camped.30001646 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001646.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Goram</text>
     </a>
@@ -789,7 +789,7 @@ Campers: {{ camped.30001646|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Anjedin" target="_top">
         <title>Anjedin: {{ systems.30001647.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001647 %}
 
-Campers: {{ camped.30001647|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001647 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001647 %} camped{% if request.user in camped.30001647 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001647.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Anjedin</text>
     </a>
@@ -799,7 +799,7 @@ Campers: {{ camped.30001647|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Tividu" target="_top">
         <title>Tividu: {{ systems.30001644.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001644 %}
 
-Campers: {{ camped.30001644|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001644 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001644 %} camped{% if request.user in camped.30001644 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001644.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Tividu</text>
     </a>
@@ -809,7 +809,7 @@ Campers: {{ camped.30001644|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Tendhyes" target="_top">
         <title>Tendhyes: {{ systems.30001645.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001645 %}
 
-Campers: {{ camped.30001645|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001645 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001645 %} camped{% if request.user in camped.30001645 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001645.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Tendhyes</text>
     </a>
@@ -819,7 +819,7 @@ Campers: {{ camped.30001645|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Adahum" target="_top">
         <title>Adahum: {{ systems.30001648.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001648 %}
 
-Campers: {{ camped.30001648|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001648 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001648 %} camped{% if request.user in camped.30001648 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001648.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Adahum</text>
     </a>
@@ -829,7 +829,7 @@ Campers: {{ camped.30001648|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Ahrosseas" target="_top">
         <title>Ahrosseas: {{ systems.30001649.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001649 %}
 
-Campers: {{ camped.30001649|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001649 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001649 %} camped{% if request.user in camped.30001649 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001649.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ahrosseas</text>
     </a>
@@ -839,7 +839,7 @@ Campers: {{ camped.30001649|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Nosodnis" target="_top">
         <title>Nosodnis: {{ systems.30001725.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001725 %}
 
-Campers: {{ camped.30001725|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001725 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001725 %} camped{% if request.user in camped.30001725 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001725.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Nosodnis</text>
     </a>
@@ -849,7 +849,7 @@ Campers: {{ camped.30001725|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Rumida" target="_top">
         <title>Rumida: {{ systems.30001724.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001724 %}
 
-Campers: {{ camped.30001724|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001724 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001724 %} camped{% if request.user in camped.30001724 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001724.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Rumida</text>
     </a>
@@ -859,7 +859,7 @@ Campers: {{ camped.30001724|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Rand" target="_top">
         <title>Rand: {{ systems.30001727.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001727 %}
 
-Campers: {{ camped.30001727|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001727 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001727 %} camped{% if request.user in camped.30001727 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001727.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Rand</text>
     </a>
@@ -869,7 +869,7 @@ Campers: {{ camped.30001727|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Iswa" target="_top">
         <title>Iswa: {{ systems.30001726.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001726 %}
 
-Campers: {{ camped.30001726|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001726 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001726 %} camped{% if request.user in camped.30001726 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001726.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Iswa</text>
     </a>
@@ -879,7 +879,7 @@ Campers: {{ camped.30001726|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Saminer" target="_top">
         <title>Saminer: {{ systems.30001721.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001721 %}
 
-Campers: {{ camped.30001721|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001721 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001721 %} camped{% if request.user in camped.30001721 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001721.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Saminer</text>
     </a>
@@ -889,7 +889,7 @@ Campers: {{ camped.30001721|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Modun" target="_top">
         <title>Modun: {{ systems.30001720.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001720 %}
 
-Campers: {{ camped.30001720|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001720 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001720 %} camped{% if request.user in camped.30001720 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001720.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Modun</text>
     </a>
@@ -899,7 +899,7 @@ Campers: {{ camped.30001720|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Assiad" target="_top">
         <title>Assiad: {{ systems.30001723.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001723 %}
 
-Campers: {{ camped.30001723|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001723 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001723 %} camped{% if request.user in camped.30001723 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001723.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Assiad</text>
     </a>
@@ -909,7 +909,7 @@ Campers: {{ camped.30001723|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Marthia" target="_top">
         <title>Marthia: {{ systems.30001722.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001722 %}
 
-Campers: {{ camped.30001722|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001722 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001722 %} camped{% if request.user in camped.30001722 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001722.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Marthia</text>
     </a>
@@ -919,7 +919,7 @@ Campers: {{ camped.30001722|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Sinid" target="_top">
         <title>Sinid: {{ systems.30001729.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001729 %}
 
-Campers: {{ camped.30001729|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001729 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001729 %} camped{% if request.user in camped.30001729 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001729.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Sinid</text>
     </a>
@@ -929,7 +929,7 @@ Campers: {{ camped.30001729|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Sizamod" target="_top">
         <title>Sizamod: {{ systems.30001728.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001728 %}
 
-Campers: {{ camped.30001728|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001728 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001728 %} camped{% if request.user in camped.30001728 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001728.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Sizamod</text>
     </a>
@@ -939,7 +939,7 @@ Campers: {{ camped.30001728|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Judra" target="_top">
         <title>Judra: {{ systems.30001738.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001738 %}
 
-Campers: {{ camped.30001738|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001738 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001738 %} camped{% if request.user in camped.30001738 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001738.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Judra</text>
     </a>
@@ -949,7 +949,7 @@ Campers: {{ camped.30001738|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Sharios" target="_top">
         <title>Sharios: {{ systems.30001739.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001739 %}
 
-Campers: {{ camped.30001739|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001739 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001739 %} camped{% if request.user in camped.30001739 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001739.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Sharios</text>
     </a>
@@ -959,7 +959,7 @@ Campers: {{ camped.30001739|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Zith" target="_top">
         <title>Zith: {{ systems.30001732.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001732 %}
 
-Campers: {{ camped.30001732|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001732 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001732 %} camped{% if request.user in camped.30001732 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001732.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Zith</text>
     </a>
@@ -969,7 +969,7 @@ Campers: {{ camped.30001732|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Tew" target="_top">
         <title>Tew: {{ systems.30001733.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001733 %}
 
-Campers: {{ camped.30001733|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001733 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001733 %} camped{% if request.user in camped.30001733 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001733.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Tew</text>
     </a>
@@ -979,7 +979,7 @@ Campers: {{ camped.30001733|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Alra" target="_top">
         <title>Alra: {{ systems.30001730.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001730 %}
 
-Campers: {{ camped.30001730|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001730 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001730 %} camped{% if request.user in camped.30001730 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001730.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Alra</text>
     </a>
@@ -989,7 +989,7 @@ Campers: {{ camped.30001730|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Ilas" target="_top">
         <title>Ilas: {{ systems.30001731.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001731 %}
 
-Campers: {{ camped.30001731|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001731 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001731 %} camped{% if request.user in camped.30001731 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001731.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ilas</text>
     </a>
@@ -999,7 +999,7 @@ Campers: {{ camped.30001731|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Esa" target="_top">
         <title>Esa: {{ systems.30001736.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001736 %}
 
-Campers: {{ camped.30001736|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001736 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001736 %} camped{% if request.user in camped.30001736 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001736.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Esa</text>
     </a>
@@ -1009,7 +1009,7 @@ Campers: {{ camped.30001736|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Hath" target="_top">
         <title>Hath: {{ systems.30001737.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001737 %}
 
-Campers: {{ camped.30001737|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001737 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001737 %} camped{% if request.user in camped.30001737 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001737.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Hath</text>
     </a>
@@ -1019,7 +1019,7 @@ Campers: {{ camped.30001737|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Zehru" target="_top">
         <title>Zehru: {{ systems.30001734.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001734 %}
 
-Campers: {{ camped.30001734|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001734 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001734 %} camped{% if request.user in camped.30001734 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001734.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Zehru</text>
     </a>
@@ -1029,7 +1029,7 @@ Campers: {{ camped.30001734|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Uhodoh" target="_top">
         <title>Uhodoh: {{ systems.30001735.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001735 %}
 
-Campers: {{ camped.30001735|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001735 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001735 %} camped{% if request.user in camped.30001735 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001735.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Uhodoh</text>
     </a>
@@ -1039,7 +1039,7 @@ Campers: {{ camped.30001735|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Uanim" target="_top">
         <title>Uanim: {{ systems.30004091.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30004091 %}
 
-Campers: {{ camped.30004091|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30004091 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30004091 %} camped{% if request.user in camped.30004091 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30004091.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Uanim</text>
     </a>
@@ -1049,7 +1049,7 @@ Campers: {{ camped.30004091|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Siyi" target="_top">
         <title>Siyi: {{ systems.30001699.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001699 %}
 
-Campers: {{ camped.30001699|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001699 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001699 %} camped{% if request.user in camped.30001699 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001699.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Siyi</text>
     </a>
@@ -1059,7 +1059,7 @@ Campers: {{ camped.30001699|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Gaknem" target="_top">
         <title>Gaknem: {{ systems.30001698.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001698 %}
 
-Campers: {{ camped.30001698|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001698 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001698 %} camped{% if request.user in camped.30001698 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001698.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Gaknem</text>
     </a>
@@ -1069,7 +1069,7 @@ Campers: {{ camped.30001698|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Nehkiah" target="_top">
         <title>Nehkiah: {{ systems.30001695.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001695 %}
 
-Campers: {{ camped.30001695|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001695 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001695 %} camped{% if request.user in camped.30001695 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001695.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Nehkiah</text>
     </a>
@@ -1079,7 +1079,7 @@ Campers: {{ camped.30001695|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Abai" target="_top">
         <title>Abai: {{ systems.30001694.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001694 %}
 
-Campers: {{ camped.30001694|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001694 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001694 %} camped{% if request.user in camped.30001694 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001694.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Abai</text>
     </a>
@@ -1089,7 +1089,7 @@ Campers: {{ camped.30001694|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Ahkour" target="_top">
         <title>Ahkour: {{ systems.30001697.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001697 %}
 
-Campers: {{ camped.30001697|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001697 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001697 %} camped{% if request.user in camped.30001697 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001697.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ahkour</text>
     </a>
@@ -1099,7 +1099,7 @@ Campers: {{ camped.30001697|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Iro" target="_top">
         <title>Iro: {{ systems.30001696.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001696 %}
 
-Campers: {{ camped.30001696|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001696 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001696 %} camped{% if request.user in camped.30001696 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001696.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Iro</text>
     </a>
@@ -1109,7 +1109,7 @@ Campers: {{ camped.30001696|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Mimime" target="_top">
         <title>Mimime: {{ systems.30001691.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001691 %}
 
-Campers: {{ camped.30001691|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001691 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001691 %} camped{% if request.user in camped.30001691 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001691.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Mimime</text>
     </a>
@@ -1119,7 +1119,7 @@ Campers: {{ camped.30001691|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Hostni" target="_top">
         <title>Hostni: {{ systems.30001690.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001690 %}
 
-Campers: {{ camped.30001690|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001690 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001690 %} camped{% if request.user in camped.30001690 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001690.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Hostni</text>
     </a>
@@ -1129,7 +1129,7 @@ Campers: {{ camped.30001690|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Perdan" target="_top">
         <title>Perdan: {{ systems.30001693.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001693 %}
 
-Campers: {{ camped.30001693|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001693 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001693 %} camped{% if request.user in camped.30001693 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001693.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Perdan</text>
     </a>
@@ -1139,7 +1139,7 @@ Campers: {{ camped.30001693|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Kibursha" target="_top">
         <title>Kibursha: {{ systems.30001692.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001692 %}
 
-Campers: {{ camped.30001692|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001692 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001692 %} camped{% if request.user in camped.30001692 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001692.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Kibursha</text>
     </a>
@@ -1149,7 +1149,7 @@ Campers: {{ camped.30001692|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Gousoviba" target="_top">
         <title>Gousoviba: {{ systems.30003858.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30003858 %}
 
-Campers: {{ camped.30003858|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30003858 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30003858 %} camped{% if request.user in camped.30003858 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30003858.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Gousoviba</text>
     </a>
@@ -1159,7 +1159,7 @@ Campers: {{ camped.30003858|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Kari" target="_top">
         <title>Kari: {{ systems.30001742.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001742 %}
 
-Campers: {{ camped.30001742|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001742 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001742 %} camped{% if request.user in camped.30001742 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001742.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Kari</text>
     </a>
@@ -1169,7 +1169,7 @@ Campers: {{ camped.30001742|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Ahteer" target="_top">
         <title>Ahteer: {{ systems.30001741.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001741 %}
 
-Campers: {{ camped.30001741|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001741 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001741 %} camped{% if request.user in camped.30001741 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001741.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ahteer</text>
     </a>
@@ -1179,7 +1179,7 @@ Campers: {{ camped.30001741|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Arakor" target="_top">
         <title>Arakor: {{ systems.30001740.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001740 %}
 
-Campers: {{ camped.30001740|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001740 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001740 %} camped{% if request.user in camped.30001740 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001740.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Arakor</text>
     </a>
@@ -1189,7 +1189,7 @@ Campers: {{ camped.30001740|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Khopa" target="_top">
         <title>Khopa: {{ systems.30003490.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30003490 %}
 
-Campers: {{ camped.30003490|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30003490 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30003490 %} camped{% if request.user in camped.30003490 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30003490.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Khopa</text>
     </a>
@@ -1199,7 +1199,7 @@ Campers: {{ camped.30003490|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Jarshitsan" target="_top">
         <title>Jarshitsan: {{ systems.30002263.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30002263 %}
 
-Campers: {{ camped.30002263|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30002263 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002263 %} camped{% if request.user in camped.30002263 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30002263.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Jarshitsan</text>
     </a>
@@ -1209,7 +1209,7 @@ Campers: {{ camped.30002263|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Keshirou" target="_top">
         <title>Keshirou: {{ systems.30001682.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001682 %}
 
-Campers: {{ camped.30001682|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001682 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001682 %} camped{% if request.user in camped.30001682 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001682.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Keshirou</text>
     </a>
@@ -1219,7 +1219,7 @@ Campers: {{ camped.30001682|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Nasesharafa" target="_top">
         <title>Nasesharafa: {{ systems.30001683.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001683 %}
 
-Campers: {{ camped.30001683|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001683 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001683 %} camped{% if request.user in camped.30001683 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001683.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Nasesharafa</text>
     </a>
@@ -1229,7 +1229,7 @@ Campers: {{ camped.30001683|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Hoona" target="_top">
         <title>Hoona: {{ systems.30001680.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001680 %}
 
-Campers: {{ camped.30001680|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001680 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001680 %} camped{% if request.user in camped.30001680 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001680.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Hoona</text>
     </a>
@@ -1239,7 +1239,7 @@ Campers: {{ camped.30001680|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Teshkat" target="_top">
         <title>Teshkat: {{ systems.30001681.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001681 %}
 
-Campers: {{ camped.30001681|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001681 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001681 %} camped{% if request.user in camped.30001681 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001681.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Teshkat</text>
     </a>
@@ -1249,7 +1249,7 @@ Campers: {{ camped.30001681|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Rethan" target="_top">
         <title>Rethan: {{ systems.30001686.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001686 %}
 
-Campers: {{ camped.30001686|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001686 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001686 %} camped{% if request.user in camped.30001686 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001686.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Rethan</text>
     </a>
@@ -1259,7 +1259,7 @@ Campers: {{ camped.30001686|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Lossa" target="_top">
         <title>Lossa: {{ systems.30001687.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001687 %}
 
-Campers: {{ camped.30001687|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001687 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001687 %} camped{% if request.user in camped.30001687 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001687.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Lossa</text>
     </a>
@@ -1269,7 +1269,7 @@ Campers: {{ camped.30001687|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Tirbam" target="_top">
         <title>Tirbam: {{ systems.30001684.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001684 %}
 
-Campers: {{ camped.30001684|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001684 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001684 %} camped{% if request.user in camped.30001684 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001684.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Tirbam</text>
     </a>
@@ -1279,7 +1279,7 @@ Campers: {{ camped.30001684|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Ordat" target="_top">
         <title>Ordat: {{ systems.30001685.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001685 %}
 
-Campers: {{ camped.30001685|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001685 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001685 %} camped{% if request.user in camped.30001685 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001685.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Ordat</text>
     </a>
@@ -1289,7 +1289,7 @@ Campers: {{ camped.30001685|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Onazel" target="_top">
         <title>Onazel: {{ systems.30001688.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001688 %}
 
-Campers: {{ camped.30001688|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001688 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001688 %} camped{% if request.user in camped.30001688 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001688.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Onazel</text>
     </a>
@@ -1299,7 +1299,7 @@ Campers: {{ camped.30001688|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Asesamy" target="_top">
         <title>Asesamy: {{ systems.30001689.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30001689 %}
 
-Campers: {{ camped.30001689|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30001689 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30001689 %} camped{% if request.user in camped.30001689 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30001689.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Asesamy</text>
     </a>
@@ -1309,7 +1309,7 @@ Campers: {{ camped.30001689|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Andabiar" target="_top">
         <title>Andabiar: {{ systems.30003485.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30003485 %}
 
-Campers: {{ camped.30003485|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30003485 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30003485 %} camped{% if request.user in camped.30003485 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30003485.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Andabiar</text>
     </a>
@@ -1319,7 +1319,7 @@ Campers: {{ camped.30003485|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Kerepa" target="_top">
         <title>Kerepa: {{ systems.30011672.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30011672 %}
 
-Campers: {{ camped.30011672|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30011672 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30011672 %} camped{% if request.user in camped.30011672 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30011672.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Kerepa</text>
     </a>
@@ -1329,7 +1329,7 @@ Campers: {{ camped.30011672|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Artoun" target="_top">
         <title>Artoun: {{ systems.30002278.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30002278 %}
 
-Campers: {{ camped.30002278|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30002278 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30002278 %} camped{% if request.user in camped.30002278 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30002278.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Artoun</text>
     </a>
@@ -1339,7 +1339,7 @@ Campers: {{ camped.30002278|join:", " }}{% endif %}</title>
     <a xlink:href="http://evemaps.dotlan.net/system/Biphi" target="_top">
         <title>Biphi: {{ systems.30003561.npc_kills }} NPC kills{% if perms.predds_tracker.view_all_alts and camped.30003561 %}
 
-Campers: {{ camped.30003561|join:", " }}{% endif %}</title>
+Campers: {% for c in camped.30003561 %}{{ c.main }} ({{ c }}){% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}</title>
         <rect x="4" y="3.5" rx="11" ry="11" width="50" height="22" class="s{% if camped.30003561 %} camped{% if request.user in camped.30003561 %}-self{% endif %}{% endif %}" style="fill: {{ systems.30003561.npc_kills | npc_kill_colour }};"/>
         <text x="28" y="18" class="ss" text-anchor="middle">Biphi</text>
     </a>

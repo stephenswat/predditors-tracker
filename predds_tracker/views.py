@@ -83,7 +83,7 @@ def map(request, region_id):
 
     for x in campers:
         names.add(x.latest.system.name)
-        camp_mains[x.latest.system.id].add(x.main)
+        camp_mains[x.latest.system.id].add(x)
 
     return render(
         request, 'predds_tracker/maps/%d.svg' % int(region_id),
