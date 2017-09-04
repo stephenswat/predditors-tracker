@@ -78,18 +78,18 @@ def map(request, region_id):
     latest = SystemStatistic.objects.aggregate(Max('time'))['time__max']
     systems = SolarSystem.objects.select_related('data').filter(constellation__region__id=region_id).filter(statistics__time=latest).annotate(npc_kills=F('statistics__npc_kills'))
 
-    count = defaultdict(bool)
+    camp_mains = defaultdict(set)
     names = set()
 
     for x in campers:
         names.add(x.latest.system.name)
-        count[x.latest.system.id] = True
+        camp_mains[x.latest.system.id].add(x.main)
 
     return render(
         request, 'predds_tracker/maps/%d.svg' % int(region_id),
         context={
             'region': get_object_or_404(Region, id=region_id),
-            'camped': dict(count),
+            'camped': dict(camp_mains),
             'systems': {x.id: x for x in systems},
             'dotlan': ','.join(names),
             'coverage': 100*len(names) / systems.count()
