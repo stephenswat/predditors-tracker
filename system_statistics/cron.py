@@ -8,7 +8,7 @@ from collections import defaultdict
 from datetime import datetime
 
 class UpdateStatistics(CronJobBase):
-    schedule = Schedule(run_every_mins=60)
+    schedule = Schedule(run_every_mins=10)
     code = 'system_statistics.update_statistics'
 
     def do(self):
