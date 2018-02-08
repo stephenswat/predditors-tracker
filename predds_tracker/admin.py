@@ -21,8 +21,6 @@ class AltAdmin(admin.ModelAdmin):
         (None, {'fields': (
             'name',
             'id',
-            'corporation_id',
-            'alliance_id'
         )}),
         ('Tracker', {'fields': (
             'main',
@@ -33,8 +31,6 @@ class AltAdmin(admin.ModelAdmin):
     readonly_fields = (
         'id',
         'name',
-        'corporation_id',
-        'alliance_id',
         'data'
     )
 
@@ -58,8 +54,6 @@ class UserAdmin(admin.ModelAdmin):
         (None, {'fields': (
             'id',
             'name',
-            'corporation_id',
-            'alliance_id',
             'last_login'
         )}),
         ('Permissions', {'fields': (
@@ -84,8 +78,6 @@ class UserAdmin(admin.ModelAdmin):
     readonly_fields = (
         'id',
         'name',
-        'corporation_id',
-        'alliance_id',
         'data',
         'last_login'
     )

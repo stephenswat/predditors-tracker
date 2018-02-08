@@ -58,22 +58,3 @@ class UpdateLocations(CronJobBase):
                     c.save()
                 except Exception as e:
                     print(e)
-
-
-class UpdateAlliances(CronJobBase):
-    schedule = Schedule(run_every_mins=60)
-    code = 'predds_tracker.update_alliances'
-
-    def do(self):
-        print("Updating alliances...")
-
-        session = FuturesSession(max_workers=20)
-        results = {c: session.get(c.update_data_url()) for c in Character.objects.filter()}
-
-        with transaction.atomic():
-            for c, d in results.items():
-                try:
-                    print(c)
-                    c.update_data(request=d.result())
-                except Exception as e:
-                    print(e)

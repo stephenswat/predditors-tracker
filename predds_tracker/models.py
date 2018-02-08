@@ -27,14 +27,6 @@ class EveCharacter(models.Model):
         null=True
     )
 
-    corporation_id = models.BigIntegerField(
-        null=True
-    )
-
-    alliance_id = models.BigIntegerField(
-        null=True
-    )
-
     @property
     def access_token(self):
         """
@@ -66,19 +58,9 @@ class EveCharacter(models.Model):
 
         return self.data.extra_data
 
-    def alliance_valid(self):
-        return self.alliance_id in settings.VALID_ALLIANCE_IDS
-
-    def update_data_url(self):
-        return CHARACTER_INFO_URL % self.id
-
-    def update_data(self, request=None):
-        data = (request or requests.get(self.update_data_url())).json()
-
+    def update_data(self):
+        data = requests.get(CHARACTER_INFO_URL % self.id).json()
         self.name = data['name']
-        self.corporation_id = data['corporation_id']
-        self.alliance_id = data.get('alliance_id', None)
-
         self.save()
 
     def get_full_name(self):

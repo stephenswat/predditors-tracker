@@ -47,7 +47,6 @@ def update_profile(request):
         return redirect('/profile')
 
 @login_required
-@user_passes_test(Character.alliance_valid, login_url='/logout/')
 def log(request):
     return render(
         request, 'predds_tracker/log.html',
@@ -56,7 +55,6 @@ def log(request):
 
 
 @login_required
-@user_passes_test(Character.alliance_valid, login_url='/logout/')
 def alts(request):
     prefetch = ['alts', 'alts__latest__system', 'alts__latest__system__constellation', 'alts__latest__system__constellation__region', 'alts__latest__ship_type']
 
@@ -72,7 +70,6 @@ def alts(request):
 
 
 @login_required
-@user_passes_test(Character.alliance_valid, login_url='/logout/')
 def map(request, region_id):
     campers = Alt.objects.select_related('latest__system').filter(latest__system__constellation__region__id=region_id, latest__online=True)
     latest = SystemStatistic.objects.aggregate(Max('time'))['time__max']
@@ -98,7 +95,6 @@ def map(request, region_id):
 
 
 @login_required
-@user_passes_test(Character.alliance_valid, login_url='/logout/')
 @cache_page(60 * 60)
 @vary_on_cookie
 def leaderboard(request):

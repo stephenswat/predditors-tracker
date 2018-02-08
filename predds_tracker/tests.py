@@ -34,25 +34,3 @@ class MapColourTests(unittest.TestCase):
         self.assertEqual(
             Color('#DC4D37'), map_colour.npc_kill_colour(1000)
         )
-
-class CharacterTests(unittest.TestCase):
-    def setUp(self):
-        self.ccp_cart = Character(id=92025524)
-        self.placeholder = Character(id=1206632531, alliance_id=5)
-        self.ccp_cart.update_data()
-        self.placeholder.update_data()
-
-    def testCharacterCorporationIDIsCorrect(self):
-        self.assertEqual(
-            self.ccp_cart.corporation_id, 98356193
-        )
-
-    def testCharacterAllianceIDIsCorrect(self):
-        self.assertEqual(
-            self.ccp_cart.alliance_id, 434243723
-        )
-
-    def testCharacterAllianceIDIsNull(self):
-        self.assertEqual(
-            self.placeholder.alliance_id, None
-        )

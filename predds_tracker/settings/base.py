@@ -39,12 +39,12 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.associate_user',
     'social_core.pipeline.social_auth.load_extra_data',
     'predds_tracker.pipeline.create_alt',
+    'predds_tracker.pipeline.reject_alliance',
 )
 
 CRON_CLASSES = [
     'system_statistics.cron.UpdateStatistics',
     'predds_tracker.cron.UpdateLocations',
-    'predds_tracker.cron.UpdateAlliances',
 ]
 
 ROOT_URLCONF = 'predds_tracker.urls'
